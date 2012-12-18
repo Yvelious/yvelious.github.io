@@ -1,0 +1,21 @@
+.b-dl-list {
+    margin-bottom: 18px;
+    float: left;
+}
+
+.b-dl-list dt {
+    float: left;
+    clear: both;
+   
+    text-align: right;
+    width: 160px;
+    padding-right: 10px;
+
+
+}
+
+.b-dl-list dd {
+    float: left;
+
+
+}

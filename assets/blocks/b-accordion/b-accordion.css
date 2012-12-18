@@ -1,0 +1,72 @@
+/* =ACCORDION
+---------------------------------------------------------
+*/
+
+
+.b-accordion .accordion-group {
+    margin-bottom: 6px;
+    background-color: #fff;
+    background-color: rgba(255,255,255, .5);
+    border: none;
+}
+
+.b-accordion .accordion-inner {
+    border-top: 1px solid #ED5A00;
+}
+
+.b-accordion p,
+.b-accordion ul,
+.b-accordion ol {
+    color: #020202;
+}
+
+.b-accordion h4 {
+    color:#020202;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.b-accordion .accordion-heading {
+    padding-left: 16px;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.b-accordion .accordion-heading a {
+    font-size: 20px;
+    padding: 0;
+    text-decoration: none;
+}
+
+.b-accordion .accordion-body.in {
+    background-color: #fff9c1;
+    border-radius: 4px;
+}
+
+.b-accordion .accordion-toggle:before,
+.b-accordion .active .collapsed.accordion-toggle:before {
+    content:'+';
+    position: absolute;
+    right:18px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    font-family:Arial, sans-serif;
+    background: rgba(255, 255, 255, .5);
+    width: 30px;
+    height: 100%;
+}
+
+
+.b-accordion .active .accordion-toggle:before {
+    content:'-';
+    background: #fff;
+}
+
+.b-accordion .accordion-toggle:hover:before {
+    background: #fff !important;
+}
+
+/* =END ACCORDION
+---------------------------------------------------------
+*/
