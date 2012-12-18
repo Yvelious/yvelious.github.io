@@ -8,7 +8,6 @@
     <title>CV | Stas Levyshev</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script>
         <!--
@@ -18,14 +17,104 @@
     <script src="js/modernizr-2.5.3-respond-1.1.0.min.js"></script>
 </head>
 <body>
-<!-- .b-page -->
-<div class="b-page">
+<!-- .b-wrap-all -->
+<div class="b-wrap">
+
+    <header class="b-nav navbar">
+
+           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+           </a>
+           <nav class="nav-collapse collapse">
+               <ul class="nav">
+                   <li><a href="#about" class="b-nav__link">Обо мне</a></li>
+                   <li><a href="#experience" class="b-nav__link">Опыт работы</a></li>
+                   <li><a href="#folio" class="b-nav__link">Портфолио</a></li>
+                   <li><a href="#contact" class="b-nav__link"> Контакты</a></li>
+               </ul>
+           </nav>
+        <!--/.nav-collapse -->
+
+        <!-- /.navbar-inner -->
+    </header>
+
+
+
+
+
+
+        <div class="b-page-wrap container-fluid" >
+
+            <section class="b-page row-fluid" id="home">
+
+                  <!--circle-->
+                  <div class="b-circle-wrap">
+                       <div class="b-circle"></div>
+                       <img src="i/userpic.png" class="b-circle__userpic" alt="Stas Levyshev">
+                       <hgroup class="b-circle-hgroup"><span class="b-circle__aka">a.k.a Yvelious</span>
+                           <h1 class="b-circle__heading">Стас Левищев</h1>
+                           <h2 class="b-circle__position">WEB-designer & HTML-coder</h2>
+                       </hgroup>
+                       <a class="b-circle__links_cv" href="pdf/cv_en_Levischev.pdf">CV-Resume</a>
+                  </div>
+                  <!--end circle-->
+
+            </section>
+
+            <section class="b-page row-fluid " id="about">
+                <div class="b-page__inner">
+                    <h1>Обо мне</h1>
+
+
+
+
+
+
+
+                    </div>
+            </section>
+
+            <section class="b-page row-fluid " id="experience">
+                <div class="b-page__inner">
+                <h1>Опыт работы</h1>
+                    </div>
+            </section>
+
+            <section class="b-page row-fluid " id="folio">
+                <div class="b-page__inner">
+                <h1>Портфолио</h1>
+                    </div>
+            </section>
+
+            <section class="b-page row-fluid " id="contact">
+                <div class="b-page__inner">
+                    <h1>Контакты</h1>
+                </div>
+            </section>
+
+
+        </div>
+
+
+        <footer class="b-footer">
+            <div class="container-fluid">
+                <div class="row-fluid">
+                       <p class="b-copy">Copyright © 2012 Стас Левищев.</p>
+
+                    <!--btn to home-->
+                    <a class="b-home-btn" href="#home">To home</a>
+                </div>
+            </div>
+        </footer>
 
 </div>
-<!-- end .b-page -->
+<!-- /.b-wrap-all -->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
 
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

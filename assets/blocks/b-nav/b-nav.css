@@ -1,0 +1,38 @@
+.b-nav {
+    background-color:rgba(255,255,255, .5);
+    overflow: hidden;
+    text-align: center;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0, .2);
+       -moz-box-shadow: 0 1px 2px rgba(0,0,0, .2);
+            box-shadow: 0 1px 2px rgba(0,0,0, .2);
+
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+
+}
+
+.b-nav nav {
+    display: inline-block;
+    text-align: center;
+}
+
+.b-nav nav .active .b-nav__link,
+.b-nav nav .active .b-nav__link:hover,
+.b-nav nav .b-nav__link:hover {
+    background-color:transparent;
+    box-shadow: none;
+}
+
+a.b-nav__link {
+    font-family: "univers", serif;
+    font-size: 22px;
+    color:#a20000 !important;
+    text-shadow: 1px 1px 1px rgba(255,255,255, .6) !important; ;
+}
+
+a.b-nav__link:hover,
+.active a.b-nav__link:hover{
+
+    color: #020202 !important;
+}

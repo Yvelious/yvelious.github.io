@@ -1,0 +1,54 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #ed5a00;
+    background-image: url(../../../i/bg-body.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+
+.b-wrap {
+    height: 100%;
+    position : relative;
+    overflow: hidden;
+
+}
+
+
+.b-page-wrap {
+
+    height: 500%;
+    position: relative;
+    margin: auto;
+    max-width: 1200px;
+
+
+
+}
+
+.b-page {
+    height: 20%;
+    display: table;
+    position: relative;
+
+}
+
+.b-page__inner {
+
+    padding: 60px 0;
+    position: relative;
+    max-width: 940px;
+    margin: auto;
+
+    vertical-align: middle;
+    display: table-cell;
+
+
+}
+
+
+
+

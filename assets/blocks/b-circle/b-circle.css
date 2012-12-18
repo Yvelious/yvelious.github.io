@@ -1,0 +1,118 @@
+.b-circle-hgroup {
+    padding-top:36%;
+    position:relative;
+    z-index:999;
+    left:30%;
+}
+
+
+
+/* Create the animation blocks */
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-moz-keyframes spin {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+@-ms-keyframes spin {
+ from {
+-ms-transform: rotate(0deg);
+}
+to {
+	-ms-transform: rotate(360deg);
+}
+}
+.b-circle-wrap {
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-left: -160px;
+    margin-top: -160px;
+
+    width:320px;
+    height:320px;
+}
+.b-circle {
+    background: #c30005; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2MzMDAwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3NzAwMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, rgba(195, 0, 0, 1) 0%, rgba(119, 0, 0, 1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(195, 0, 0, 1)), color-stop(100%, rgba(119, 0, 0, 1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(195, 0, 0, 1) 0%, rgba(119, 0, 0, 1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(195, 0, 0, 1) 0%, rgba(119, 0, 0, 1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(195, 0, 0, 1) 0%, rgba(119, 0, 0, 1) 100%); /* IE10+ */
+    background: linear-gradient(top, rgba(195, 0, 0, 1) 0%, rgba(119, 0, 0, 1) 100%); /* W3C */
+    border-radius: 50%;
+    position:absolute;
+    width:100%;
+    height:100%;
+    color: #fff;
+    background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, rgba(244, 33, 33, 1) 0%, rgba(119, 0, 0, 1) 100%, red 95%);
+    background-image: -webkit-radial-gradient(45px 45px, circle cover, rgba(244, 33, 33, 1) , rgba(119, 0, 0, 1) );
+    background-image: radial-gradient(45px 45px 45deg, circle cover, rgba(244, 33, 33, 1) 0%, rgba(119, 0, 0, 1) 100%, red 95%);
+    /* webkit chrome, safari, mobile */
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 3s; /* 3 seconds */
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    /* mozilla ff */
+    -moz-animation-name: spin;
+    -moz-animation-duration: 3s; /* 3 seconds */
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    /* microsoft ie */
+    -ms-animation-name: spin;
+    -ms-animation-duration: 3s; /* 3 seconds */
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+}
+.b-circle__heading {
+    font:40px/40px "univers", Tahoma, sans-serif;
+    color: #fff;
+    margin-bottom: 0;
+    text-transform: none;
+}
+.b-circle__aka {
+    font-size: 13px;
+    color:#f2f2f2;
+}
+.b-circle__position {
+    color:#fff;
+    font-size: 13px;
+    line-height: 18px;
+    color:#f2f2f2;
+}
+.b-circle__userpic {
+    position: absolute;
+    top:30%;
+    left:-15%;
+    z-index:999;
+}
+a.b-circle__links_cv {
+    font-size: 20px;
+    font-family: "univers", sans-serif;
+    position: absolute;
+    text-decoration: none;
+    bottom: 60px;
+    left:41%;
+    color:#fff;
+}
+a.b-circle__links_cv:hover {
+    color: #f2f2f2;
+}
+.b-circle__links_cv:before {
+    content: url(../../../i/cv_pic.png);
+    position: absolute;
+    margin-left: -32px;
+    margin-top: -9px;
+}
