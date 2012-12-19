@@ -7,6 +7,10 @@
     list-style:none;
     margin-left: 1.3em;
 }
+.b-vlist li {
+
+    padding-bottom: 5px;
+}
 
 .b-vlist LI:before
 { padding:0;
@@ -14,7 +18,7 @@
     list-style:none;
     position: absolute;
     margin-left: -1.3em;
-    content: "— ";
+    content: "—";
 }
 
 /*ie*/

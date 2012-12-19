@@ -12,6 +12,8 @@
 
 .b-accordion .accordion-inner {
     border-top: 1px solid #ED5A00;
+    padding-bottom: 0;
+    padding-top: 18px;
 }
 
 .b-accordion p,
