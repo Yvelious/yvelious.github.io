@@ -32,6 +32,7 @@ a.b-nav__link {
 }
 
 a.b-nav__link:hover,
+.nav .active a.b-nav__link,
 .active a.b-nav__link:hover{
 
     color: #020202 !important;

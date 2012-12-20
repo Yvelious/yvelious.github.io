@@ -17,7 +17,25 @@ $(function(){
 
 
 $(function () {
-    $('#myTab a:last').tab('show');
+    $('#myTab a:first').tab('show');
     })
 
 
+/* menu
+ /* ---------------------------------------------------------------------- */
+
+
+
+$(function(){
+
+    $(".nav li").click(function(){
+        $(".nav li").removeClass("active");
+        $(this).addClass("active");
+    });
+
+    $(".b-home-btn").click(function(){
+        $(".nav li").removeClass("active");
+
+    });
+
+})
