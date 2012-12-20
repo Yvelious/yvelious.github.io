@@ -1,0 +1,29 @@
+.b-carousel {
+    width:460px;
+    height: 158px;
+
+}
+
+
+.b-carousel .carousel-caption {
+
+    padding: 4px 10px;
+    padding-top: 6px;
+    
+    
+}
+
+
+
+.carousel-control {
+
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-decoration: none;
+}
+
+.carousel-control a:hover {
+
+    text-decoration: none;
+}
