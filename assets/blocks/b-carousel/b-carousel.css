@@ -9,8 +9,7 @@
 
     padding: 4px 10px;
     padding-top: 6px;
-    
-    
+
 }
 
 
@@ -20,7 +19,9 @@
     width: 20px;
     height: 20px;
     line-height: 20px;
-    text-decoration: none;
+    text-decoration: none !important;
+    color:#fff !important;
+
 }
 
 .carousel-control a:hover {
