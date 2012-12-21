@@ -26,15 +26,18 @@ $(function () {
 
 
 
+
+
+
 $(function(){
 
-    $(".nav li").click(function(){
-        $(".nav li").removeClass("active");
+    $(".b-nav .nav li").click(function(){
+        $(".b-nav .nav li").removeClass("active");
         $(this).addClass("active");
     });
 
     $(".b-home-btn").click(function(){
-        $(".nav li").removeClass("active");
+        $(".b-nav .nav li").removeClass("active");
 
     });
 
