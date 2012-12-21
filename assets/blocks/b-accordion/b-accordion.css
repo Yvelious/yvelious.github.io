@@ -22,10 +22,15 @@
     color: #020202;
 }
 
-.b-accordion h4 {
-    color:#020202;
-    font-weight: bold;
+.carousel-caption h4,
+.carousel-caption h4 a,
+.carousel-caption span {
+    color:#fff;
     margin-bottom: 6px;
+    font-size: 13px;
+    font-family: Verdana, sans-serif;
+    line-height: 20px;
+
 }
 
 .b-accordion .accordion-heading {

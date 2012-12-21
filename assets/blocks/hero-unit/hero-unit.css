@@ -1,15 +1,21 @@
 .hero-unit {
-    padding: 18px;
+
     background: rgba(255, 255, 255, .5);
-    padding-bottom: 6px;
+
 
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-    min-width: 203px;
-    min-height: 124px;
-    margin-bottom: 18px;
-    margin-right: 18px;
+    margin-bottom: 15px;
+
+
+    padding: 20px;
+    padding-bottom: 6px;
+
+}
+
+.hero-unit:last-child {
+    margin-right: 0;
 }
 
 .hero-unit  .b-label {
@@ -17,4 +23,9 @@
     display: block;
     margin-bottom: 8px;
     text-align: center;
+}
+
+
+#contact .hero-unit {
+    min-height: 140px;
 }
