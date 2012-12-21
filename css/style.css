@@ -7,6 +7,7 @@
 @import url(../assets/blocks/utils/u-helpers/u-helpers.css);
 @import url(../assets/blocks/t-typo/t-typo.css);
 @import url(../assets/blocks/g-global/g-global.css);
+@import url(../assets/blocks/b-page/b-page.css);
 @import url(../assets/blocks/b-nav/b-nav.css);
 @import url(../assets/blocks/b-circle/b-circle.css);
 @import url(../assets/blocks/b-footer/b-footer.css);
@@ -21,5 +22,4 @@
 @import url(../assets/blocks/b-carousel/b-carousel.css);
 @import url(../assets/blocks/hero-unit/hero-unit.css);
 @import url(../assets/blocks/i-darkbox/i-darkbox.css);
-
 
