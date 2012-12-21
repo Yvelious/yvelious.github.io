@@ -18,7 +18,8 @@
 
 .b-accordion p,
 .b-accordion ul,
-.b-accordion ol {
+.b-accordion ol,
+.b-accordion h4 {
     color: #020202;
 }
 
