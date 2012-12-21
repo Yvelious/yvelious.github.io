@@ -58,7 +58,7 @@ $(function(){
 $(function() {
 
     // выбираем элемент #flowplanes и делаем из него скролл. используем плагины circular и navigator
-    $(".b-page-wrap").scrollable({ circular: true, mousewheel: true,  vertical:true }).navigator({
+    $(".b-page-wrap").scrollable({ circular: true, mousewheel: false,  vertical:true }).navigator({
 
         // для навигации используем #flowtabs
         navi: ".b-nav",
