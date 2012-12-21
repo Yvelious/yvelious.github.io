@@ -37,3 +37,14 @@ a.b-nav__link:hover,
 
     color: #020202 !important;
 }
+
+
+a.active a.b-nav__link:focus {
+    background: none;
+}
+
+.navbar .nav .active > a:focus {
+    background: none;
+    box-shadow: none;
+    outline: none;
+}
