@@ -1,10 +1,10 @@
 
 .b-page-wrap {
 
-    height: 500%;
+   
     position: relative;
     margin: auto;
-    max-width: 1200px;
+    height: 100%;
 
 
 
@@ -14,14 +14,23 @@
     height: 20%;
     display: table;
     position: relative;
+}
 
+#home.b-page {
+    width: 100%;
+    position: relative;
+}
+
+.b-page-wrap .items {
+    position: relative;
+    height:500%;
 }
 
 .b-page__inner {
 
     padding: 60px 0;
     position: relative;
-    max-width: 940px;
+
     margin: auto;
 
     vertical-align: middle;

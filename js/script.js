@@ -50,3 +50,28 @@ $(function(){
     $(function(){
         $( 'a[data-darkbox=darkbox]' ).darkbox();
     })
+
+
+/* scrollable
+ /* ---------------------------------------------------------------------- */
+
+$(function() {
+
+    // выбираем элемент #flowplanes и делаем из него скролл. используем плагины circular и navigator
+    $(".b-page-wrap").scrollable({ circular: true, mousewheel: false,  vertical:true }).navigator({
+
+        // для навигации используем #flowtabs
+        navi: ".b-nav",
+
+        // выбираем теги А внутри навигации для закладок (не прямые потомку)
+        naviItem: 'li',
+
+        // назначаем класс "current" для текущего тега А в навигаторе
+        activeClass: 'active',
+
+        // активируем кнопки назад/вперед браузера
+        history: true
+
+    });
+});
+

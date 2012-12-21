@@ -1,11 +1,9 @@
 .b-photo {
-
     width:80px;
     height: auto;
-
 }
 
 .b-photo.pull-left {
-
-    margin-right:18px ;
+    margin-right:18px;
+    margin-bottom: 14px;
 }

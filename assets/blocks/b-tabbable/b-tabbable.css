@@ -4,19 +4,29 @@
 
 }
 
+.b-tabbable .well {
+    background: none;
+    border: none;
+}
+
 .b-tabbable .nav-tabs {
     margin-right: 2px;
     border: 0;
+    margin-left: 20px;
+    margin-bottom: 2px;
+
 }
 
 .b-tabbable .tab-content {
 
     background: rgba(255,255,255, .5);
-    float: left;
-    padding: 18px;
+    position: relative;
+
+
     -webkit-border-radius: 0 4px 4px 4px;
     -moz-border-radius: 0 4px 4px 4px;
     border-radius: 0 4px 4px 4px;
+
 
 }
 
@@ -44,8 +54,9 @@
 }
 
 
-.b-tabbable .nav > li > a {
+.b-tabbable .nav-tabs > li > a {
     background:#fff;
+    padding:10px 20px;
 
 }
 
