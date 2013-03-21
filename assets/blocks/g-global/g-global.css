@@ -5,8 +5,8 @@ html, body {
 body {
     background-color: #ed5a00;
     background-image: url(../../../i/bg-body.png);
-    background-position: center top;
-    background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: repeat-x;
 }
 
 
