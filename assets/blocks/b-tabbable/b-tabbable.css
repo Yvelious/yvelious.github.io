@@ -121,3 +121,19 @@
 
  }
 
+
+@media (max-width:979px) { 
+
+
+
+.tab-pane .offset1 {
+
+    margin-left: 0;
+    
+
+}
+
+
+
+
+}
