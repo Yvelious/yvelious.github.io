@@ -9,6 +9,7 @@
     position: fixed;
     z-index: 9999;
     width: 100%;
+    min-height: 40px;
 
 }
 
@@ -47,4 +48,114 @@ a.active a.b-nav__link:focus {
     background: none;
     box-shadow: none;
     outline: none;
+}
+
+
+.navbar-toggle {
+    display:none;
+}
+
+
+@media (max-width: 979px) {
+
+    .nav-collapse .nav > li {
+        float: left;
+    }
+
+    .nav-collapse, .nav-collapse.collapse {
+        height: auto;
+    }
+
+    .nav-collapse .nav > li > a {
+        font-weight: normal;
+    }
+
+    .nav-collapse .nav > li > a:hover, .nav-collapse .dropdown-menu a:hover {
+        background: none;
+    }
+
+
+
+
+
+
+
+}
+
+
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+
+    .b-nav {
+        background-color: #faddcb;
+    }
+    .b-nav nav li {
+        width: 100%;
+        display: block;
+        float: none;
+        }
+
+    .navbar-toggle {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        padding: 0;
+        background: none;
+        border:none;
+        z-index: 999;
+        }
+
+
+    .navbar-toggle .icon-bar {
+        display: block;
+        width: 18px;
+        height: 3px;
+        background-color: #a20000;
+        border-radius: 0;
+        margin-bottom: 3px;
+        }
+
+    .navbar-toggle:hover .icon-bar {
+        
+        background-color: rgba(225,68,0, 1);
+
+    }
+
+        
+
+    .nav-collapse, .nav-collapse.collapse {
+        height: 0;
+        
+        }
+
+
+    .nav-collapse .nav>li>a {
+        -webkit-border-radius: 0;
+                border-radius: 0;
+
+        }
+
+
+    .b-nav nav {
+        display: block;
+    }
+
+.nav-collapse .nav>li>a:hover, 
+.nav-collapse .dropdown-menu a:hover {
+    
+    background-color: #FFF;
+}
+
+}
+
+
+
+@media (min-width: 768px) {
+
+    .nav-collapse, .nav-collapse.collapse {
+        height: auto !important
+    }
+
 }

@@ -2,3 +2,15 @@
     font-size: 12px;
     padding-top: 14px;
 }
+
+
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+	.b-copy {
+		text-align: center;
+	}
+
+ }
+ 
+

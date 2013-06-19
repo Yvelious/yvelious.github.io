@@ -101,18 +101,119 @@ to {
 a.b-circle__links_cv {
     font-size: 20px;
     font-family: "univers", sans-serif;
-    position: absolute;
     text-decoration: none;
-    bottom: 60px;
-    left:41%;
+    line-height: 36px;
     color:#fff;
 }
+
 a.b-circle__links_cv:hover {
     color: #f2f2f2;
 }
-.b-circle__links_cv:before {
-    content: url(../../../i/cv_pic.png);
-    position: absolute;
-    margin-left: -32px;
-    margin-top: -9px;
+
+
+.b-circle__links_cv img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+@media (min-width: 767px) { 
+
+a.b-circle__links_cv_top {
+    display: none !important;
+}
+
+}
+
+@media (max-width: 767px) { 
+
+   .b-circle-wrap {
+       margin-top: 0;
+       margin-left: 0;
+       top:0;
+       left: 0;
+       position: relative;
+       width: 100%;
+       height: auto;
+       padding-bottom: 36px;
+       
+   }
+
+   .b-circle {
+       border-radius:0;
+       width: 100%;
+       border-bottom: 1px solid #970c0c;
+       -webkit-box-shadow: 0 1px 6px rgba(0,0,0, .3);
+               box-shadow: 0 1px 6px rgba(0,0,0, .3);
+            /* webkit chrome, safari, mobile */
+        -webkit-animation-name: none;
+        
+        /* mozilla ff */
+        -moz-animation-name: none;
+       
+        -moz-animation-timing-function: none;
+        /* microsoft ie */
+        -ms-animation-name: none;
+   
+   }
+
+
+   .b-circle-hgroup {
+        padding-top:0;
+        left:0;
+        position: relative;
+        padding-top: 200px;
+        text-align: center;
+    }
+
+    .b-circle__userpic {
+        top:40%;
+        margin-top: -76px;
+        left:50%;
+        margin-left: -57px;
+       
+    }
+
+    a.b-circle__links_cv {
+        
+       position: relative;
+       bottom:auto;
+       text-align: center;
+       left:auto;
+       }
+
+
+    a.b-circle__links_cv_top {
+        position: fixed;
+        display: block;
+        top:0;
+        left:20px;
+        z-index:9999;
+        color: #a20000;
+        font-size: 16px;
+        line-height: 36px
+          
+    }
+
+      a.b-circle__links_cv_top:hover  {
+          color: rgba(225,68,0, 1);
+      }
+
+
+    a.b-circle__links_cv_top img {
+        width: 16px;
+        height: auto;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: -1px;
+    }
+
+
+    .b-circle__position {
+        margin-bottom: 36px;
+       
+    }
+        
+
+
 }

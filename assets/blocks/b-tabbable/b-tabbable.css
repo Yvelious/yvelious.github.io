@@ -85,3 +85,39 @@
     background: rgba(255,255,255, .5);
     color:#E14400
 }
+
+
+
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+
+    .b-tabbable .tab-pane {
+        min-width: 300px;
+    }
+
+.nav-tabs {
+   text-align: center; 
+   margin-left: 0 !important;
+
+}
+
+
+.nav-tabs li {
+    
+    text-align: center;
+    display: inline-block;
+    float: none;
+}
+
+
+.tab-pane .span3.well {
+    width: auto;
+    display: inline-block;
+    vertical-align: top;  
+
+}
+
+
+ }
+

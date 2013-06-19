@@ -40,3 +40,18 @@
 }
 
 
+@media (max-width: 767px) { 
+
+.b-page {
+    height: auto;
+    width: 100%;
+   
+}
+
+.b-page-wrap .items {
+    position: relative;
+    height: auto;
+}
+
+}
+

@@ -8,6 +8,10 @@
         <title>Стас Левищев | CV</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
+        <meta name="viewport" content="width=320, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>   
+        <link rel="apple-touch-icon" href="apple_icon.png" />
+
+
         <link rel="stylesheet" href="css/style.css">
         <script>
             <!--
@@ -19,21 +23,30 @@
     <body>
         <!-- .b-wrap-all -->
         <div class="b-wrap">
+
             <!--header-->
             <header class="b-nav navbar">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse" >
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
                <nav class="nav-collapse collapse">
                    <ul class="nav">
-                       <li class="active"><a href="#" class="b-nav__link">Главная</a></li>
-                       <li><a href="#" class="b-nav__link">Обо мне</a></li>
-                       <li><a href="#" class="b-nav__link">Опыт работы</a></li>
-                       <li><a href="#" class="b-nav__link">Портфолио</a></li>
-                       <li><a href="#" class="b-nav__link"> Контакты</a></li>
+                       <li class="active"><a href="#home" class="b-nav__link">Главная</a></li>
+                       <li><a href="#about" class="b-nav__link">Обо мне</a></li>
+                       <li><a href="#experience" class="b-nav__link">Опыт работы</a></li>
+                       <li><a href="#folio" class="b-nav__link">Портфолио</a></li>
+                       <li><a href="#contact" class="b-nav__link"> Контакты</a></li>
                    </ul>
                </nav>
             </header>
             <!--end header-->
             <!--b-pages-->
-            <div class="b-page-wrap container" >
+            <div class="b-page-wrap container">
+              <a class="b-circle__links_cv b-circle__links_cv_top" href="pdf/cv_en_Levischev.pdf" >
+                <img src="i/cv_pic.png" alt="">Download CV</a>
+
                 <div class="items">
                     <!--general page-->
                     <section class="b-page row" id="home">
@@ -44,8 +57,8 @@
                             <hgroup class="b-circle-hgroup"><span class="b-circle__aka">a.k.a Yvelious</span>
                                 <h1 class="b-circle__heading">Стас Левищев</h1>
                                 <h2 class="b-circle__position">WEB-designer & HTML-coder</h2>
+                                <a class="b-circle__links_cv" href="pdf/cv_en_Levischev.pdf"><img src="i/cv_pic.png" alt="">CV-Resume</a>
                             </hgroup>
-                            <a class="b-circle__links_cv" href="pdf/cv_en_Levischev.pdf">CV-Resume</a>
                         </div>
                         <!--end circle-->
                     </section>
@@ -220,6 +233,7 @@
                                              <li>Borschik</li>
                                              <li>CSScomb</li>
                                              <li>Bower</li>
+                                             <li>Grunt</li>
                                           </ul>
                                       </div>
                                       <div class="span3 well">
@@ -402,7 +416,7 @@
         <!--js-->
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.js"></script>
         <script type="text/javascript" src="js/jquery.tools.min.js"></script>
         <script type="text/javascript" src="js/jquery.darkbox.min.js"></script>
         <script src="js/script.js"></script>

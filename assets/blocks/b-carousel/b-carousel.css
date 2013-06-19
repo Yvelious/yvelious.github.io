@@ -30,3 +30,23 @@
 }
 
 
+
+@media (max-width: 480px) { 
+	
+.b-carousel .carousel-caption {
+	overflow: hidden;
+	text-align: center;
+}
+
+.carousel-caption h4,
+.carousel-caption span {
+	text-align: center;
+	float: none;
+}
+
+ }
+ 
+
+
+
+

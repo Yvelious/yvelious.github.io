@@ -166,3 +166,13 @@ ul {}
 
 li {}
 
+
+
+@media (max-width: 767px) { 
+
+    h1 {
+        text-align: center;
+    }
+
+    }
+

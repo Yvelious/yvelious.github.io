@@ -6,16 +6,28 @@
 .b-dl-list dt {
     float: left;
     clear: both;
-   
     text-align: right;
     width: 160px;
     padding-right: 10px;
-
-
 }
 
 .b-dl-list dd {
     float: left;
 
+
+}
+
+
+
+@media (max-width: 320px) { 
+
+.b-dl-list dt {
+    text-align: left;
+    float: none;
+}
+
+.b-dl-list dd {
+    margin-bottom: 8px;
+}
 
 }

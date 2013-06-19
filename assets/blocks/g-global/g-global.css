@@ -1,5 +1,6 @@
 html, body {
     height: 100%;
+    min-width: 300px;
 }
 
 body {
@@ -7,6 +8,7 @@ body {
     background-image: url(../../../i/bg-body.png);
     background-position: center;
     background-repeat: repeat-x;
+    background-attachment: fixed;
 }
 
 
@@ -16,5 +18,20 @@ body {
     overflow: hidden;
 
 }
+
+
+
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+    .b-wrap {
+    height: auto;
+    position: relative;
+    overflow: visible;
+
+
+}
+
+ }
 
 
