@@ -12,8 +12,13 @@
 
 .b-page {
     height: 20%;
-    display: table;
     position: relative;
+}
+
+.b-page > .span12 {
+    
+    display: table;
+    height: 100%;
 }
 
 #home.b-page {
@@ -32,7 +37,7 @@
     position: relative;
     vertical-align: middle;
     display: table-cell;
-
+   float: none;
 
 }
 

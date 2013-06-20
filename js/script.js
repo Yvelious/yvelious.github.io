@@ -58,7 +58,7 @@ $(function ts() {
 
     if (_page > 768) {
 
-            $(".b-page-wrap").scrollable({ circular: true, mousewheel: false,  vertical:true }).navigator({
+            $(".b-page-wrap").scrollable({ circular: false, mousewheel: false,  vertical:true }).navigator({
             navi: ".b-nav",
             naviItem: 'li',
             activeClass: 'active',
