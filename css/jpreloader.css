@@ -17,25 +17,17 @@ top:100%
 }
 #jpreLoader{
 
-	margin-top: -13px;
+	margin-top: -3px;
 	width:300px;
-	height:25px;
+	height: 4px;
 	background-color: #fff;
-	
-	border-radius:5px;
-	-moz-border-radius:5px;
-	-webkit-border-radius:5px;
-	
-	-webkit-box-shadow: inset 0 0 5px rgba(0,0,0, .3);
-	        box-shadow: inset 0 0 5px rgba(0,0,0, .3);
-	
 
 }
+
 #jpreBar {
-	border-radius:5px;
-	-moz-border-radius:5px;
-	-webkit-border-radius:5px;
-	    background-color: #E14400;
+
+	background-color: #E14400;
+	height: 4px;
 	
 
 	
@@ -49,9 +41,8 @@ top:100%
 }
 #jprePercentage {
 	color:#fff;
-	line-height: 25px;
-	font-family:'univers';
-
+	line-height: 36px;
+	font-family:Verdana;
 	font-weight:bold;
 	text-align:center;
 	top: -100%;
