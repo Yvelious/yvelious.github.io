@@ -96,3 +96,18 @@ $(".navbar-toggle").click(function () {
 $(".b-circle__links_cv_top").toggle();
 
 });
+
+
+/* preloader
+ /* ---------------------------------------------------------------------- */
+
+$(document).ready(function() {
+        $('body').jpreLoader(
+        {
+        loaderVPos: '50%'
+
+
+        }
+            );
+
+    });
