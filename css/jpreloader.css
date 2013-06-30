@@ -17,22 +17,18 @@ top:100%
 }
 #jpreLoader{
 
-	margin-top: -3px;
-	width:300px;
+
+	width:100%;
 	height: 4px;
 	background-color: #fff;
+  top: 0;
 
 }
 
 #jpreBar {
 
 	background-color: #E14400;
-	height: 4px;
-	
-
-	
-
-		
+	height: 4px;		
 	animation: progress 2s linear infinite;
 	-moz-animation: progress 2s linear infinite;
 	-webkit-animation: progress 2s linear infinite;
@@ -41,10 +37,12 @@ top:100%
 }
 #jprePercentage {
 	color:#fff;
-	line-height: 36px;
+	line-height: 26px;
+  font-size: 20px;
 	font-family:Verdana;
-	font-weight:bold;
 	text-align:center;
+  display: none;
+
 	top: -100%;
 	
 

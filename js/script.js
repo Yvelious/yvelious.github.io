@@ -104,7 +104,7 @@ $(".b-circle__links_cv_top").toggle();
 $(document).ready(function() {
         $('body').jpreLoader(
         {
-        loaderVPos: '50%'
+        loaderVPos: '0'
 
 
         }
