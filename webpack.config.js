@@ -5,10 +5,12 @@ const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+// const InlineCriticalCSSPlugin = require('./InlineCriticalCSSPlugin'); // Укажите путь к файлу плагина
 
 const isProd = process.env.NODE_ENV === "production";
 const isDev = process.env.NODE_ENV === "development";
 const isDevServer = process.env.NODE_ENV === "server";
+
 const getCssFilename = (isProd, chunkName) => {
     if (isProd) {
         if (chunkName === 'main') {
@@ -17,6 +19,40 @@ const getCssFilename = (isProd, chunkName) => {
         return '[name].[contenthash].css';
     }
     return '[name].css';
+};
+
+class InlineCriticalCSSPlugin {
+    apply(compiler) {
+        compiler.hooks.compilation.tap('InlineCriticalCSSPlugin', (compilation) => {
+            HtmlWebpackPlugin.getHooks(compilation).alterAssetTags.tap(
+                'InlineCriticalCSSPlugin',
+                (data) => {
+                    // Получаем критический CSS из ассетов
+                    const criticalCSS = compilation.assets['critical.css']
+                        ? compilation.assets['critical.css'].source()
+                        : '';
+
+                    // Создаем тег <style> с критическим CSS
+                    const inlineStyleTag = {
+                        tagName: 'style',
+                        voidTag: false,
+                        attributes: { type: 'text/css' },
+                        innerHTML: criticalCSS,
+                    };
+
+                    // Фильтруем теги, исключая <link href="critical.css">
+                    data.assetTags.styles = data.assetTags.styles.filter(tag =>
+                        !tag.attributes?.href?.includes('critical.css')
+                    );
+
+                    // Добавляем инлайн-стили в теги <head>
+                    data.assetTags.styles.push(inlineStyleTag);
+
+                    return data;
+                }
+            );
+        });
+    }
 };
 
 module.exports = {
@@ -89,30 +125,7 @@ module.exports = {
             filename: 'index.html',
             inject: true,
         }),
-        {
-            apply: (compiler) => {
-                compiler.hooks.compilation.tap('AddChunksPlugin', (compilation) => {
-                    HtmlWebpackPlugin.getHooks(compilation).alterAssetTagGroups.tap(
-                        'InlineCriticalCSSPlugin',
-                        (data) => {
-                            const inlineStyleTag = {
-                                tagName: 'style',
-                                voidTag: false,
-                                attributes: {type: 'text/css'},
-                                innerHTML: compilation.assets['critical.css'] ? compilation.assets['critical.css'].source() : '',
-                            };
-                            data.headTags = data.headTags.filter(item => item.attributes.href != 'critical.css')
-                            // Add <style> to head tags
-                            data.headTags.push(inlineStyleTag);
-
-                            return data;
-                        }
-                    );
-
-                });
-            },
-        },
-
+        ...(isProd ? [new InlineCriticalCSSPlugin()] : []),
         ...(!isDevServer ? [
             new MiniCssExtractPlugin({
                 // filename: isProd ? "[name].[contenthash].css" : "[name].css",
