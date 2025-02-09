@@ -86,7 +86,7 @@ module.exports = {
                         loader: 'css-loader',
                         options: {sourceMap: true}
                     },
-                    {
+                    /*{
                         loader: 'postcss-loader', // Подключает PostCSS
                         options: {
                             postcssOptions: {
@@ -99,7 +99,7 @@ module.exports = {
                                 ],
                             },
                         },
-                    },
+                    }*/,
                     {
                         loader: 'sass-loader',
                         options: {sourceMap: true}
@@ -218,7 +218,6 @@ module.exports = {
             },
         },
     },
-
     devServer: {
         static: {
             directory: path.resolve(__dirname, 'dist'),
@@ -227,7 +226,14 @@ module.exports = {
         port: 3000,
         hot: true, // 🔥 Enable HMR!
         liveReload: false, // DISABLE liveReload as it reloads the page
-        watchFiles: ['src/**/*.{html,js,scss}'],
+        watchFiles: ['src/**/*.{html,js,scss}', 'index.html'],
         open: true,
+        client: {
+            overlay: false, // Здесь отключается overlay с ошибками и предупреждениями в браузере
+        },
+
     },
 };
+
+
+
