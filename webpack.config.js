@@ -87,6 +87,20 @@ module.exports = {
                         options: {sourceMap: true}
                     },
                     {
+                        loader: 'postcss-loader', // Подключает PostCSS
+                        options: {
+                            postcssOptions: {
+                                plugins: [
+                                    require('autoprefixer')(
+                                        {
+                                            overrideBrowserslist: ['last 2 versions', '> 1%'], // Настройка браузеров
+                                        }
+                                    ), // Автопрефиксы
+                                ],
+                            },
+                        },
+                    },
+                    {
                         loader: 'sass-loader',
                         options: {sourceMap: true}
                     }
