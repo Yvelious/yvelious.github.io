@@ -13,26 +13,26 @@ const isDevServer = process.env.NODE_ENV === "server";
 
 const getCssFilename = (isProd, chunkName) => {
     if (isProd) {
+        // needs because stranged case created main instead enhance
         if (chunkName === 'main') {
-            return 'critical.css';
+            return 'enhanced.[contenthash].css';
         }
-        return '[name].[contenthash].css';
     }
     return '[name].css';
 };
 
-class InlineCriticalCSSPlugin {
+class optimizedCriticalandEnhancedCSSPlugin {
     apply(compiler) {
         compiler.hooks.compilation.tap('InlineCriticalCSSPlugin', (compilation) => {
             HtmlWebpackPlugin.getHooks(compilation).alterAssetTags.tap(
                 'InlineCriticalCSSPlugin',
                 (data) => {
-                    // Получаем критический CSS из ассетов
+                    // get source of critical css
                     const criticalCSS = compilation.assets['critical.css']
                         ? compilation.assets['critical.css'].source()
                         : '';
 
-                    // Создаем тег <style> с критическим CSS
+                    // create tag <style> with critical css
                     const inlineStyleTag = {
                         tagName: 'style',
                         voidTag: false,
@@ -40,14 +40,22 @@ class InlineCriticalCSSPlugin {
                         innerHTML: criticalCSS,
                     };
 
-                    // Фильтруем теги, исключая <link href="critical.css">
+                    // remove  link to critical css
                     data.assetTags.styles = data.assetTags.styles.filter(tag =>
-                        !tag.attributes?.href?.includes('critical.css')
+                        !tag.attributes?.href?.includes('critical')
+                    );
+                    data.assetTags.styles = data.assetTags.styles.map(tag => {
+                        if (/^enhanced.*\.css$/i.test(tag.attributes?.href)) {
+                            tag.attributes.rel = 'preload';
+                            tag.attributes.as = 'style';
+                            tag.attributes.onload = "this.onload=null;this.rel='stylesheet'";
+                        }
+                        return tag;
+                    }
                     );
 
-                    // Добавляем инлайн-стили в теги <head>
-                    data.assetTags.styles.push(inlineStyleTag);
-
+                    // add inline css inside <head>
+                    data.assetTags.styles.unshift(inlineStyleTag);
                     return data;
                 }
             );
@@ -86,20 +94,22 @@ module.exports = {
                         loader: 'css-loader',
                         options: {sourceMap: true}
                     },
-                    /*{
-                        loader: 'postcss-loader', // Подключает PostCSS
+                    ...(isProd ? [{
+                        loader: 'postcss-loader', // connect PostCSS
                         options: {
                             postcssOptions: {
                                 plugins: [
+                                    require('postcss-import'),
                                     require('autoprefixer')(
                                         {
                                             overrideBrowserslist: ['last 2 versions', '> 1%'], // Настройка браузеров
                                         }
-                                    ), // Автопрефиксы
+                                    ),
+                                    require('postcss-preset-env'),
                                 ],
                             },
                         },
-                    }*/,
+                    }]:[]),
                     {
                         loader: 'sass-loader',
                         options: {sourceMap: true}
@@ -130,19 +140,19 @@ module.exports = {
                     },
                 },
             },
+
         ],
     },
 
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'index.html',
+            template: './index.html',
             filename: 'index.html',
             inject: true,
         }),
-        ...(isProd ? [new InlineCriticalCSSPlugin()] : []),
+        ...(isProd ?  [new optimizedCriticalandEnhancedCSSPlugin()] : []),
         ...(!isDevServer ? [
             new MiniCssExtractPlugin({
-                // filename: isProd ? "[name].[contenthash].css" : "[name].css",
                 filename: (pathData) => getCssFilename(isProd, pathData.chunk.name),
 
             })] : []),
@@ -207,33 +217,41 @@ module.exports = {
                     test: /critical\.scss$/,
                     chunks: 'all',
                     enforce: false, // Force creating a separate bundle
+                    priority: 2,
                 },
                 enhanced: {
                     name: 'enhanced', // For separating enhanced.scss
                     test: /enhanced\.scss$/,
                     chunks: 'all',
                     enforce: false, // Force creating a separate bundle
+                    priority: 1,
                 },
                 default: false,
             },
         },
     },
+    stats: {
+        warnings: false,
+    },
     devServer: {
         static: {
             directory: path.resolve(__dirname, 'dist'),
+            watch: true,
         },
         compress: true,
         port: 3000,
-        hot: true, // 🔥 Enable HMR!
-        liveReload: false, // DISABLE liveReload as it reloads the page
-        watchFiles: ['src/**/*.{html,js,scss}', 'index.html'],
-        open: true,
-        client: {
-            overlay: false, // Здесь отключается overlay с ошибками и предупреждениями в браузере
+        hot: true,
+        liveReload: true,
+        watchFiles: {
+            paths: ['index.html'],
         },
-
+        headers: {
+            'Cache-Control': 'no-store', // Disable caching
+        },
+        client: {
+            overlay: false, // disable overlay with errors and warnings in the browser
+        },
     },
 };
-
 
 

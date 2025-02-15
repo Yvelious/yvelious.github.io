@@ -1,4 +1,7 @@
 
+import Collapse from 'bootstrap/js/dist/collapse';
+
+
 /* add to accordion
  /* ---------------------------------------------------------------------- */
 

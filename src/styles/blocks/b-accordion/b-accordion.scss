@@ -2,12 +2,20 @@
 ---------------------------------------------------------
 */
 
+// for accrodiong
 
-.b-accordion .accordion-group {
+$accordion-border-radius: 4px;
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/accordion"; // Аккордеон
+@import "bootstrap/scss/transitions"; // Переходы
+
+.b-accordion_item  {
     margin-bottom: 6px;
     background-color: #fff;
     background-color: rgba(255,255,255, .5);
     border: none;
+    border-radius: $accordion-border-radius;
 }
 
 .b-accordion .accordion-inner {
