@@ -2,7 +2,7 @@
     padding-top:36%;
     position:relative;
     z-index:999;
-    left:30%;
+    left:20%;
 }
 
 
@@ -76,8 +76,8 @@ to {
     -ms-animation-iteration-count: infinite;
     -ms-animation-timing-function: linear;
 }
-.b-circle__heading {
-    font:40px/40px "univers", Tahoma, sans-serif;
+.b-circle__position {
+    font:36px/40px "univers", Tahoma, sans-serif;
     color: #fff;
     margin-bottom: 0;
     text-transform: none;
@@ -86,8 +86,8 @@ to {
     font-size: 13px;
     color:#f2f2f2;
 }
-.b-circle__position {
-    font-size: 13px;
+.b-circle__name {
+    font-size: 16px;
     line-height: 18px;
     color:#f2f2f2;
 }
@@ -96,6 +96,11 @@ to {
     top:30%;
     left:-15%;
     z-index:999;
+  width: 100px; /* Пример размера, на ваш выбор */
+  height: 100px; /* Обязательно установить */
+  border-radius: 50%; /* Делаем изображение круглым */
+  object-fit: cover; /* Обрезка изображения, чтобы оно заполнило круг */
+
 }
 a.b-circle__links_cv {
     font-size: 20px;
