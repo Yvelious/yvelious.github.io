@@ -29,19 +29,6 @@ $(function () {
  /* ---------------------------------------------------------------------- */
 
 
-$(function(){
-
-    $(".b-nav .nav li").click(function(){
-        $(".b-nav .nav li").removeClass("active");
-        $(this).addClass("active");
-    });
-
-    $(".b-home-btn").click(function(){
-        $(".b-nav .nav li").removeClass("active");
-
-    });
-
-})
 
 
 /* darkbox
@@ -60,20 +47,18 @@ $(function ts() {
     var _page =  $(window).width();
 
     if (_page > 768) {
-
-            $(".b-page-wrap").scrollable({ circular: false, mousewheel: false,  vertical:true }).navigator({
+          /*  $(".b-page-wrap").scrollable({ circular: false, mousewheel: false,  vertical:true }).navigator({
             navi: ".b-nav",
             naviItem: 'li',
-            activeClass: 'active',
+            activeClass: '',
             history: true
-
-            });
+            });*/
     } else {
 
 
          // Add smooth-scroll class to your links
-    $('.b-nav li a').on('click', function(e) {
-        e.preventDefault();
+    $('.b-header li a').on('click', function(e) {
+       /* e.preventDefault();
 
         // Get href of link
         var scrollTarget = $(this).attr('href');
@@ -82,7 +67,7 @@ $(function ts() {
         var targetPosition = $(scrollTarget).offset().top;
 
         $('html,body').animate({scrollTop: targetPosition}, 300);
-
+*/
     });
 
     }

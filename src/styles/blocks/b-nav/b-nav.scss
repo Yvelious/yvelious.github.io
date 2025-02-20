@@ -1,11 +1,8 @@
-.b-nav {
+.b-header {
     background-color:rgba(255,255,255, .5);
     overflow: hidden;
     text-align: center;
-    -webkit-box-shadow: 0 1px 2px rgba(0,0,0, .2);
-       -moz-box-shadow: 0 1px 2px rgba(0,0,0, .2);
-            box-shadow: 0 1px 2px rgba(0,0,0, .2);
-
+    box-shadow: 0 1px 2px rgba(0,0,0, .2);
     position: fixed;
     z-index: 9999;
     width: 100%;
@@ -13,51 +10,58 @@
     display: flex;
 }
 
-.b-nav nav {
+.b-nav {
     display: inline-block;
     text-align: center;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding: 0 15px;
+    }
+
+    a#{&}__link {
+        font-family: "univers", serif;
+        font-size: 22px;
+        color: #a20000 !important;
+        text-shadow: 1px 1px 1px rgba(255,255,255, .6) !important;
+        padding: 2px 4px;
+
+        &:hover {
+            background-color:transparent;
+            color: #020202 !important;
+            box-shadow: none;
+        }
+    }
 }
 
-.b-nav-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    padding: 0 15px;
+.b-wrap {
+    @each $section in about, experience, folio, contact {
+        &:has(##{$section}:target) > .b-header a.b-nav__link[href="##{$section}"] {
+            background-color: transparent;
+            color: #020202 !important;
+            box-shadow: none;
+        }
+    }
 }
 
-.b-nav nav .active .b-nav__link,
-.b-nav nav .active .b-nav__link:hover,
-.b-nav nav .b-nav__link:hover {
-    background-color:transparent;
-    box-shadow: none;
-}
-
-a.b-nav__link {
-    font-family: "univers", serif;
-    font-size: 22px;
-    color: #a20000 !important;
-    text-shadow: 1px 1px 1px rgba(255,255,255, .6) !important;
-}
-
-a.b-nav__link:hover,
-.nav .active a.b-nav__link,
+.b-nav .active a.b-nav__link,
 .active a.b-nav__link:hover{
-
     color: #020202 !important;
 }
-
 
 a.active a.b-nav__link:focus {
     background: none;
 }
+
 
 .navbar .nav .active > a:focus {
     background: none;
     box-shadow: none;
     outline: none;
 }
-
 
 .navbar-toggle {
     display:none;
@@ -95,10 +99,10 @@ a.active a.b-nav__link:focus {
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) { 
 
-    .b-nav {
+    .b-header {
         background-color: #faddcb;
     }
-    .b-nav nav li {
+    .b-header nav li {
         width: 100%;
         display: block;
         float: none;
@@ -146,7 +150,7 @@ a.active a.b-nav__link:focus {
         }
 
 
-    .b-nav nav {
+    .b-header nav {
         display: block;
     }
 

@@ -3,6 +3,11 @@ html, body {
     min-width: 300px;
 }
 
+.b-wrap {
+    scroll-behavior: smooth;
+}
+
+
 body {
     background-color: #ed5a00;
     background-image: url('~@i/bg-body.png');
