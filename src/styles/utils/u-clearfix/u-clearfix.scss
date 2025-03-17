@@ -1,0 +1,33 @@
+/* =U-CLEARING
+---------------------------------------------------------
+*/
+
+.u-clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    line-height:0;
+    font-size: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.u-clear {
+    clear: both;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+}
+
+/*ie*/
+
+.u-clearfix {
+    zoom: 1
+}
+
+/* END U-CLEARING
+---------------------------------------------------------
+*/
+
+
+

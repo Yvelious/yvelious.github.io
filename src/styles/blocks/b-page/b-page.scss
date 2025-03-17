@@ -1,7 +1,7 @@
 
 .b-page-wrap {
 
-   
+
     position: relative;
     margin: auto;
     height: 100%;
@@ -25,7 +25,7 @@
 }
 
 .b-page > .span12 {
-    
+
     display: table;
     height: 100%;
 }
@@ -51,12 +51,12 @@
 //}
 
 
-@media (max-width: 767px) { 
+@media (max-width: 767px) {
 
 .b-page {
     height: auto;
     width: 100%;
-   
+
 }
 
 .b-page-wrap .items {
@@ -65,4 +65,6 @@
 }
 
 }
+
+
 

@@ -4,14 +4,8 @@
     text-align: center;
 }
 
-
- 
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) { 
-	.b-copy {
-		text-align: center;
-	}
-
- }
- 
-
+@media (max-width: 767px) {
+    .b-copy {
+        text-align: center;
+    }
+}

@@ -1,59 +1,40 @@
 .b-carousel {
-
     max-width: 100%;
-
 }
-
 
 .b-carousel .carousel-caption {
-
     padding: 4px 10px;
     padding-top: 6px;
-
 }
 
-
-
 .carousel-control {
-
     width: 20px;
     height: 20px;
     line-height: 20px;
     text-decoration: none !important;
-    color:#fff !important;
-
+    color: $color-white !important;
 }
 
 .carousel-control a:hover {
-
     text-decoration: none;
 }
 
-@media (max-width: 767px) { 
-
-#myCarousel {
-    text-align: center;
-    float: none;
+@media (max-width: 767px) {
+    #myCarousel {
+        text-align: center;
+        float: none;
+    }
 }
 
+@media (max-width: 480px) {
+    .b-carousel .carousel-caption {
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .carousel-caption h4,
+    .carousel-caption span {
+        text-align: center;
+        float: none;
+    }
 }
-
-@media (max-width: 480px) { 
-	
-.b-carousel .carousel-caption {
-	overflow: hidden;
-	text-align: center;
-}
-
-.carousel-caption h4,
-.carousel-caption span {
-	text-align: center;
-	float: none;
-}
-
- }
- 
-
-
-
-

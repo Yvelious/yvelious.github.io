@@ -1,0 +1,63 @@
+
+
+// General colors
+$color-white: #fff;
+$color-black: #000;
+$color-red: #a20000;
+$color-orange: #e14400;
+$color-light-orange: #f6ac7f;
+$color-dark-red: #770000;
+$color-light-gray: rgba(255, 255, 255, 0.5);
+$color-dark-gray: #020202;
+
+// transparent color
+$color-white-transparent-20: rgba($color-white, 0.2);
+$color-white-transparent-50: rgba($color-white, 0.5);
+$color-white-transparent-60: rgba($color-white, 0.6);
+$color-white-transparent-90: rgba($color-white, 0.9);
+$color-black-transparent-20: rgba($color-black, 0.2);
+$color-black-transparent-30: rgba($color-black, 0.3);
+$color-black-transparent-40: rgba($color-black, 0.4);
+$color-black-transparent-60: rgba($color-black, 0.6);
+
+// back
+$background-main: $color-white-transparent-50;
+$background-header: hsla(0, 0%, 100%, 0.5);
+$background-footer: $color-orange;
+$background-preloader: $color-light-orange;
+$background-preloader-bar: $color-orange;
+$background-preloader-overlay: $color-light-orange;
+$background-carousel: $color-white;
+$background-carousel-caption: $color-white;
+$background-carousel-control: $color-white;
+$background-carousel-control-hover: $color-white;
+$background-circle: $color-red;
+$background-circle-hover: $color-dark-red;
+$background-circle-inner: $color-white;
+$background-label: $color-orange;
+$background-label-shadow: $color-black-transparent-40;
+$background-home-btn: $color-red;
+$background-home-btn-shadow: $color-black-transparent-30;
+$background-darkbox: $color-black;
+$background-darkbox-canvas: $color-black;
+$background-darkbox-shadow: $color-black;
+
+// text colors
+$text-main: $color-dark-gray;
+$text-link: $color-red;
+$text-link-hover: $color-red;
+$text-heading: $color-white;
+$text-paragraph: $color-white;
+$text-list: $color-white;
+$text-table: $color-white;
+$text-footer: $color-white;
+$text-preloader-percentage: $color-white;
+$text-carousel-caption: $color-white;
+$text-circle-position: $color-white;
+$text-circle-aka: $color-light-gray;
+$text-circle-name: $color-light-gray;
+$text-circle-link: $color-white;
+$text-circle-link-hover: $color-light-gray;
+$text-label: $color-white;
+$text-home-btn: $color-white;
+$text-darkbox-button: $color-white;

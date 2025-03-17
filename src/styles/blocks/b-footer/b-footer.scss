@@ -1,21 +1,15 @@
 .b-footer {
     position: fixed;
     width: 100%;
-    bottom:0;
-    background-color: #e14400;
+    bottom: 0;
+    background-color: $background-footer;
     height: 44px;
-    -webkit-box-shadow: 0 -1px 2px rgba(255,255,255, .2), inset  0 1px 10px rgba(0,0,0, .2);
-       -moz-box-shadow: 0 -1px 2px rgba(255,255,255, .2), inset  0 1px 10px rgba(0,0,0, .2);
-            box-shadow: 0 -1px 2px rgba(255,255,255, .2), inset  0 1px 10px rgba(0,0,0, .2);
-    border-top: 1px solid #a00000;
-
+    box-shadow: 0 -1px 2px $color-white-transparent-20, inset 0 1px 10px $color-black-transparent-20;
+    border-top: 1px solid $color-dark-red;
 }
 
-
-@media (max-width: 480px) { 
-
-	.b-footer {
-		position: relative;
-	}
-
+@media (max-width: 480px) {
+    .b-footer {
+        position: relative;
+    }
 }
