@@ -1,132 +1,155 @@
-.b-nav {
-    display: inline-block;
-    text-align: center;
-
-    &__list {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-        padding: 0 15px;
-    }
-
-    a#{&}__link {
-        font-family: "univers", serif;
-        font-size: 22px;
-        color: $text-link;
-        text-shadow: 1px 1px 1px $color-white-transparent-60 !important;
-        padding: 2px 4px;
-
-        &:hover {
-            background-color: transparent;
-            color: $text-main !important;
-            box-shadow: none;
-        }
-        &:focus {
-            background: none;
-        }
-    }
+@keyframes slideIn {
+		from {
+				transform: translateX(100%);
+				opacity: 0;
+		}
+		to {
+				transform: translateX(0);
+				opacity: 1;
+		}
 }
+
+$pages: home, about, experience, folio, contact;
 
 .b-wrap {
-    @each $section in about, experience, folio, contact {
-        &:has(##{$section}:target) > .b-header a.b-nav__link[href="##{$section}"] {
-            background-color: transparent;
-            color: $text-main;
-            box-shadow: none;
-            text-decoration: none;
-        }
-    }
+		@each $section in $pages {
+				&:has(##{$section}:target) > .b-header a.b-nav__link[href="##{$section}"] {
+						background-color: transparent;
+						color: $text-main;
+						box-shadow: none;
+						text-decoration: none;
+				}
+		}
 }
 
-.b-nav .active a.b-nav__link,
-.active a.b-nav__link:hover {
-    color: $text-main !important;
+.b-nav {
+		text-align: center;
+
+		@include media-breakpoint-down(lg) {
+				height: 100vh;
+				background-color: #fff;
+				max-width: 100% !important;
+
+				&--open {
+						position: relative;
+						transform: translateX(0%);
+						animation: slideIn 0.4s cubic-bezier(.65,0,.35,1);
+				}
+
+				&--close {
+						position:absolute;
+						transform: translateX(100%);
+				}
+		}
+
+
+
+		&__list {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				height: 100%;
+				padding: 0 15px;
+				margin-bottom: 0;
+
+				@include media-breakpoint-down(lg) {
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+				}
+		}
+
+		&__link,
+		&__link:link,
+		&__link:visited {
+				font-family: "univers", serif;
+				font-size: 32px;
+				line-height: 2;
+				color: $text-link;
+				text-shadow: 1px 1px 1px $color-white-transparent-60 !important;
+				padding: 2px 4px;
+
+				&:hover {
+						background-color: transparent;
+						color: $text-main !important;
+						box-shadow: none;
+				}
+
+				&:focus {
+						background: none;
+				}
+
+				@include media-breakpoint-up(lg) {
+						& {
+								font-size: 24px;
+						}
+				}
+		}
 }
 
-.navbar .nav .active > a:focus {
-    background: none;
-    box-shadow: none;
-    outline: none;
+
+//@function breakpoint-map-to-css-vars($map) {
+//		$result: ();
+//		@each $key, $value in $map {
+//				$result: map-merge($result, ("--#{$key}": #{$value}));
+//		}
+//		@return $result;
+//}
+//
+//:root {
+//		@each $key, $value in breakpoint-map-to-css-vars($grid-breakpoints) {
+//				#{$key}: "#{$value}";
+//		}
+//}
+
+
+@function map-to-string($map) {
+		$result: "";
+		@each $key, $value in $map {
+				$result: "#{$result}#{$key}: #{$value}, ";
+		}
+		@return $result;
 }
 
+// Пример использования
+
+
+
+
+
+body::before {
+		content: map-to-string($grid-breakpoints);
+		display: none;
+}
+
+
+
+
+// Hamburger menu
 .navbar-toggle {
-    display: none;
+		display: block;
+		position: absolute;
+		top: 12px;
+		right: 25px;
+		padding: 0;
+		background: none;
+		border: none;
+		z-index: 999;
+
+		@include media-breakpoint-up(lg) {
+				display: none;
+		}
 }
 
-@media (max-width: 979px) {
-    .nav-collapse .nav > li {
-        float: left;
-    }
-
-    .nav-collapse, .nav-collapse.collapse {
-        height: auto;
-    }
-
-    .nav-collapse .nav > li > a {
-        font-weight: normal;
-    }
-
-    .nav-collapse .nav > li > a:hover, .nav-collapse .dropdown-menu a:hover {
-        background: none;
-    }
+.navbar-toggle .icon-bar {
+		display: block;
+		width: 18px;
+		height: 3px;
+		background-color: $text-link;
+		border-radius: 0;
+		margin-bottom: 3px;
 }
 
-@media (max-width: 767px) {
-    .b-header {
-        background-color: $background-header;
-    }
-    .b-header nav li {
-        width: 100%;
-        display: block;
-        float: none;
-    }
-
-    .navbar-toggle {
-        display: block;
-        position: absolute;
-        top: 10px;
-        right: 25px;
-        padding: 0;
-        background: none;
-        border: none;
-        z-index: 999;
-    }
-
-    .navbar-toggle .icon-bar {
-        display: block;
-        width: 18px;
-        height: 3px;
-        background-color: $text-link;
-        border-radius: 0;
-        margin-bottom: 3px;
-    }
-
-    .navbar-toggle:hover .icon-bar {
-        background-color: $color-orange;
-    }
-
-    .nav-collapse, .nav-collapse.collapse {
-        height: 0;
-    }
-
-    .nav-collapse .nav > li > a {
-        -webkit-border-radius: 0;
-        border-radius: 0;
-    }
-
-    .b-header nav {
-        display: block;
-    }
-
-    .nav-collapse .nav > li > a:hover,
-    .nav-collapse .dropdown-menu a:hover {
-        background-color: $color-white;
-    }
-}
-
-@media (min-width: 768px) {
-    .nav-collapse, .nav-collapse.collapse {
-        height: auto !important;
-    }
+.navbar-toggle:hover .icon-bar {
+		background-color: $color-orange;
 }

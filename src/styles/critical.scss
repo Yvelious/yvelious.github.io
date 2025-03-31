@@ -1,5 +1,7 @@
-@import "bootstrap/scss/bootstrap-grid";
 @import "_variables";
+@import "bootstrap/scss/bootstrap-grid";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/utilities";
 @import "utils/u-reset/u-reset";
 @import "blocks/i-preloader/i-preloader";
 @import "utils/u-inline-block/u-inline-block";
