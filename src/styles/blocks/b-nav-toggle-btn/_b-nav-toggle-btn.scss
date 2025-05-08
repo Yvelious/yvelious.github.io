@@ -1,0 +1,90 @@
+// Hamburger menu
+$size: 18px;
+
+.b_navbar-toggle-btn {
+		cursor: pointer;
+		font-family: "univers", serif;
+		height: $size;
+		position: absolute;
+		right: 25px;
+		top: 12px;
+		width: $size;
+		z-index: 999;
+
+		@include media-breakpoint-up(lg) {
+				display: none;
+		}
+
+		&__icon-bar {
+				background-color: $text-link;
+				display: block;
+				height: 3px;
+				margin-bottom: 3px;
+				transition: transform 0.1s ease;
+				width: 100%;
+
+				&:nth-child(1) {
+						top: 0;
+						transform-origin: top left;
+				}
+
+				&:nth-child(2) {
+						transform-origin: center;
+				}
+
+				&:nth-child(3) {
+						bottom: 0;
+						transform-origin: bottom left;
+				}
+		}
+}
+
+.b-nav--open + .b_navbar-toggle-btn {
+		top: 20px;
+
+		.b_navbar-toggle-btn__icon-bar {
+				position: absolute;
+				width: $size * sqrt(2);
+
+				&:nth-child(2) {
+						opacity: 0;
+				}
+		}
+
+		&:before {
+				color: $text-link;
+				content: 'Close';
+				font-size: 24px;
+				top: -(24px - $size) / 2;
+				left: -300%;
+				line-height: 1;
+				position: relative;
+		}
+
+		&:after {
+				background: $color-orange;
+				border-radius: 50%;
+				content: '';
+				height: 100%;
+				left: 0;
+				opacity: 0;
+				position: absolute;
+				top: 0;
+				width: 100%;
+				z-index: -1;
+		}
+
+		&:hover::before {
+				color: $black;
+		}
+
+		&:hover::after {
+				opacity: 0.2;
+		}
+
+		@each $item, $transform in (1: rotate(45deg) translate(0, -1px), 3: rotate(-45deg) translate(-2px, 4px)) {
+				.b_navbar-toggle-btn__icon-bar:nth-child(#{$item}) {
+						transform: $transform;
+				}
+		}
+}

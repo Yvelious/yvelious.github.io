@@ -42,8 +42,6 @@ $pages: home, about, experience, folio, contact;
 				}
 		}
 
-
-
 		&__list {
 				display: flex;
 				justify-content: space-between;
@@ -85,71 +83,4 @@ $pages: home, about, experience, folio, contact;
 						}
 				}
 		}
-}
-
-
-//@function breakpoint-map-to-css-vars($map) {
-//		$result: ();
-//		@each $key, $value in $map {
-//				$result: map-merge($result, ("--#{$key}": #{$value}));
-//		}
-//		@return $result;
-//}
-//
-//:root {
-//		@each $key, $value in breakpoint-map-to-css-vars($grid-breakpoints) {
-//				#{$key}: "#{$value}";
-//		}
-//}
-
-
-@function map-to-string($map) {
-		$result: "";
-		@each $key, $value in $map {
-				$result: "#{$result}#{$key}: #{$value}, ";
-		}
-		@return $result;
-}
-
-// Пример использования
-
-
-
-
-
-body::before {
-		content: map-to-string($grid-breakpoints);
-		display: none;
-}
-
-
-
-
-// Hamburger menu
-.navbar-toggle {
-		display: block;
-		position: absolute;
-		top: 12px;
-		right: 25px;
-		padding: 0;
-		background: none;
-		border: none;
-		z-index: 999;
-
-		@include media-breakpoint-up(lg) {
-				display: none;
-		}
-}
-
-.navbar-toggle .icon-bar {
-		display: block;
-		width: 18px;
-		height: 3px;
-		background-color: $text-link;
-		border-radius: 0;
-		margin-bottom: 3px;
-}
-
-.navbar-toggle:hover .icon-bar {
-		background-color: $color-orange;
 }
