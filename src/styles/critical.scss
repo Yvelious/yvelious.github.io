@@ -1,4 +1,5 @@
 @import "_variables";
+@import "_functions";
 @import "bootstrap/scss/bootstrap-grid";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/utilities";
@@ -13,6 +14,7 @@
 @import "blocks/b-page/b-page";
 @import "blocks/b-header/b-header";
 @import "blocks/b-nav/b-nav";
+@import "blocks/b-nav-toggle-btn/_b-nav-toggle-btn";
 @import "blocks/b-circle/b-circle";
 @import "blocks/b-footer/b-footer";
 @import "blocks/b-copy/b-copy";

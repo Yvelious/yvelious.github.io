@@ -1,0 +1,15 @@
+@function map-to-string($map) {
+		$result: "";
+		@each $key, $value in $map {
+				$result: "#{$result}#{$key}: #{$value}, ";
+		}
+		@return $result;
+}
+
+@function breakpoint-map-to-css-vars($map) {
+		$result: ();
+		@each $key, $value in $map {
+				$result: map-merge($result, ("--#{$key}": #{$value}));
+		}
+		@return $result;
+}

@@ -1,40 +1,38 @@
 html, body {
-    height: 100%;
-    min-width: 300px;
+		height: 100%;
+		min-width: 300px;
 }
 
-.b-wrap {
-    scroll-behavior: smooth;
+body::before {
+		content: map-to-string($grid-breakpoints);
+		display: none;
 }
 
 
 body {
-    background-color: #ed5a00;
-    background-image: url('~@i/bg-body.png');
-    background-position: center;
-    background-repeat: repeat-x;
-    background-attachment: fixed;
+		background-color: #ed5a00;
+		background-image: url('~@i/bg-body.png');
+		background-position: center;
+		background-repeat: repeat-x;
+		background-attachment: fixed;
 }
 
-
 .b-wrap {
-    height: 100%;
-    position : relative;
-    overflow: hidden;
-
+		height: 100%;
+		position: relative;
+		overflow: hidden;
+		scroll-behavior: smooth;
 }
 
 
 /* Landscape phone to portrait tablet */
-@media (max-width: 767px) { 
-    .b-wrap {
-    height: auto;
-    position: relative;
-    overflow: visible;
-
+@media (max-width: 767px) {
+		.b-wrap {
+				height: auto;
+				position: relative;
+				overflow: visible;
+		}
 
 }
-
- }
 
 
