@@ -1,101 +1,33 @@
 import Collapse from 'bootstrap/js/dist/collapse';
+import { onHashChange, triggerClickOnHashLink, initHashTag } from './_hash';
+import { getBreakpointsObjectFromCss } from './_breakpoints';
+import toggleNavBtn from './_toggle_nav_btn'
 
 
-
-
-
-
-
-
-
-function getBreakpointsObjectFromCss() {
-    const breakpoints = getComputedStyle(document.body, ':before').getPropertyValue('content').replace(/\"/g, '').trim();
-    const breakpointsArray = breakpoints.split(', ').map(item => item.split(': '));
-    return Object.fromEntries(breakpointsArray);
-}
+initHashTag();
+window.addEventListener('hashchange', onHashChange);
+window.addEventListener('popstate', triggerClickOnHashLink);
 
 const breakpointsObject = getBreakpointsObjectFromCss();
 const breakpointMinLg = window.matchMedia(`(min-width: ${breakpointsObject.lg})`);
 
-const toggleNav = () => {
-    const nav = document.querySelector(".b-nav");
-    nav.classList.toggle("b-nav--close");
-    nav.classList.toggle("b-nav--open");
-};
-const toggleButton = document.querySelector(".navbar-toggle");
-toggleButton.addEventListener("click", toggleNav);
+handleMinLg(breakpointMinLg);
+breakpointMinLg.addEventListener('change', handleMinLg);
 
-function onHashChange() {
-    // Получаем текущий хэштэг
-    const currentHash = window.location.hash;
-    // if (!currentHash) {
-    //     window.location.hash = "#home";
-    // }
-    const nav = document.querySelector('.b-nav');
-    nav.classList.remove('b-nav--open');
-    nav.classList.add('b-nav--close');
-
-
-    console.log(3333);
-}
-
-// Добавляем обработчик события hashchange
-window.addEventListener('hashchange', onHashChange);
-
-// Вызываем функцию сразу, чтобы обработать текущий хэштэг при загрузке страницы
-onHashChange();
-
-function triggerClickOnHashLink() {
-    const currentHash = window.location.hash;
-    if (currentHash) {
-        const link = document.querySelector(`a[href="${currentHash}"]`);
-        if (link) {
-            link.click();
-        }
-    }
-}
-
-window.addEventListener('popstate', triggerClickOnHashLink);
-
-// Пример использования history.pushState
-function addHashTag(hash) {
-    if (history.pushState) {
-        history.pushState(null, null, '#' + hash);
-        triggerClickOnHashLink();
-    } else {
-        window.location.hash = hash;
-    }
-}
-
-// Пример вызова функции
-addHashTag('home');
 function handleMinLg (e) {
     if(e.matches) {
-
         if (e.matches) {
             const nav = document.querySelector('.b-nav');
             nav.classList.remove('b-nav--open');
             nav.classList.add('b-nav--close');
-
-            console.log(111);
-
         }
-    } else {
-
-
-
-
-        // document.querySelectorAll(".b-nav__link").forEach(link => {
-        //     link.addEventListener("click", () => {
-        //         const navToggle = document.querySelector(".navbar-toggle");
-        //         navToggle.click();
-        //     });
-        // });
     }
 }
 
-handleMinLg(breakpointMinLg);
-breakpointMinLg.addEventListener('change', handleMinLg);
+document.addEventListener("DOMContentLoaded", () => {
+    const navToggle = new toggleNavBtn();
+    navToggle.init();
+});
 
 /* add to accordion
  /* ---------------------------------------------------------------------- */
