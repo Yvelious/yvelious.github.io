@@ -1,88 +1,98 @@
-/* =ACCORDION
----------------------------------------------------------
-*/
-
-// for accrodiong
-
+// Variables
 $accordion-border-radius: 4px;
+$accordion-bg: rgba(255, 255, 255, .5);
+$accordion-border-color: #ED5A00;
+$accordion-active-bg: #fff9c1;
+$accordion-padding: 18px;
+$accordion-toggle: (
+    size: 24px,
+    width: 30px,
+    right-space: 18px
+);
+
+// Imports
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
-@import "bootstrap/scss/accordion"; // Аккордеон
-@import "bootstrap/scss/transitions"; // Переходы
+@import "bootstrap/scss/accordion";
+@import "bootstrap/scss/transitions";
 
-.b-accordion_item  {
-    margin-bottom: 6px;
-    background-color: #fff;
-    background-color: rgba(255,255,255, .5);
-    border: none;
-    border-radius: $accordion-border-radius;
-}
-
-.b-accordion .accordion-inner {
-    border-top: 1px solid #ED5A00;
-    padding-bottom: 0;
-    padding-top: 18px;
-}
-
-.b-accordion p,
-.b-accordion ul,
-.b-accordion ol,
-.b-accordion h4 {
-    color: $text-main;
-}
-
-.carousel-caption h4,
-.carousel-caption h4 a,
-.carousel-caption span {
-    color:#fff;
-    margin-bottom: 6px;
-    font-size: 13px;
-    font-family: Verdana, sans-serif;
-    line-height: 20px;
-
-}
-
-.b-accordion .accordion-heading {
-    padding-left: 16px;
-    margin-bottom: 0;
-    position: relative;
-}
-
-.b-accordion .accordion-heading a {
-    font-size: 20px;
-    padding: 0;
-    text-decoration: none;
-}
-
-.b-accordion .accordion-body.in {
-    background-color: #fff9c1;
-    border-radius: 4px;
-}
-
-.b-accordion .accordion-toggle:before,
-.b-accordion .active .collapsed.accordion-toggle:before {
-    content:'+';
+// Mixins
+@mixin accordion-toggle-base {
+    content: '+';
     position: absolute;
-    right:18px;
-    font-size: 24px;
+    right: map-get($accordion-toggle, 'right-space');
+    font: {
+        size: map-get($accordion-toggle, 'size');
+        weight: bold;
+        family: Arial, sans-serif;
+    }
     text-align: center;
-    font-weight: bold;
-    font-family:Arial, sans-serif;
-    background: rgba(255, 255, 255, .5);
-    width: 30px;
+    background: $accordion-bg;
+    width: map-get($accordion-toggle, 'width');
     height: 100%;
 }
 
+// Main Styles
+.b-accordion {
+    &_item {
+        margin-bottom: 6px;
+        background-color: $accordion-bg;
+        border: none;
+        border-radius: $accordion-border-radius;
+    }
 
-.b-accordion .active .accordion-toggle:before {
-    content:'-';
-    background: #fff;
+    .accordion {
+        &-inner {
+            border-top: 1px solid $accordion-border-color;
+            padding: $accordion-padding 0 0;
+        }
+
+        &-heading {
+            padding-left: 16px;
+            margin-bottom: 0;
+            position: relative;
+
+            a {
+                font-size: 20px;
+                padding: 0;
+                text-decoration: none;
+            }
+        }
+
+        &-body {
+            &.in {
+                background-color: $accordion-active-bg;
+                border-radius: $accordion-border-radius;
+            }
+        }
+
+        &-toggle {
+            &:before {
+                @include accordion-toggle-base;
+            }
+
+            &:hover {
+                &:before {
+                    background: #fff !important;
+                }
+            }
+        }
+    }
+
+    .active {
+        .accordion-toggle {
+            &:before {
+                content: '-';
+                background: #fff;
+            }
+
+            &.collapsed:before {
+                content: '+';
+            }
+        }
+    }
+
+    p, ul, ol, h4 {
+        color: $text-main;
+    }
 }
-
-.b-accordion .accordion-toggle:hover:before {
-    background: #fff !important;
-}
-
-/* =END ACCORDION
----------------------------------------------------------
-*/
