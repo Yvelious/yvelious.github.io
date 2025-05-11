@@ -1,11 +1,11 @@
+$tablet-bp: 767px;
+
 .b-copy {
     font-size: 12px;
     padding-top: 14px;
     text-align: center;
-}
 
-@media (max-width: 767px) {
-    .b-copy {
+    @media (max-width: $tablet-bp) {
         text-align: center;
     }
 }
