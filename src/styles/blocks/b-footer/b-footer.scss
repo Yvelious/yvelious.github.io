@@ -1,15 +1,16 @@
+$mobile-bp: 480px;
+
 .b-footer {
     position: fixed;
     width: 100%;
     bottom: 0;
     background-color: $background-footer;
     height: 44px;
-    box-shadow: 0 -1px 2px $color-white-transparent-20, inset 0 1px 10px $color-black-transparent-20;
+    box-shadow: 0 -1px 2px $color-white-transparent-20, 
+                inset 0 1px 10px $color-black-transparent-20;
     border-top: 1px solid $color-dark-red;
-}
-
-@media (max-width: 480px) {
-    .b-footer {
+    
+    @media (max-width: $mobile-bp) {
         position: relative;
     }
 }
