@@ -1,40 +1,43 @@
-.b-carousel {
-    max-width: 100%;
-}
+$mobile-bp: 767px;
+$small-mobile-bp: 480px;
 
-.b-carousel .carousel-caption {
+.b-carousel {
+  max-width: 100%;
+
+  .carousel-caption {
     padding: 4px 10px;
     padding-top: 6px;
+
+    @media (max-width: $small-mobile-bp) {
+      overflow: hidden;
+      text-align: center;
+
+      h4,
+      span {
+        text-align: center;
+        float: none;
+      }
+    }
+  }
 }
 
 .carousel-control {
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
-    text-decoration: none !important;
-    color: $color-white !important;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-decoration: none !important;
+  color: $color-white !important;
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
-.carousel-control a:hover {
-    text-decoration: none;
-}
-
-@media (max-width: 767px) {
-    #myCarousel {
-        text-align: center;
-        float: none;
-    }
-}
-
-@media (max-width: 480px) {
-    .b-carousel .carousel-caption {
-        overflow: hidden;
-        text-align: center;
-    }
-
-    .carousel-caption h4,
-    .carousel-caption span {
-        text-align: center;
-        float: none;
-    }
+#myCarousel {
+  @media (max-width: $mobile-bp) {
+    text-align: center;
+    float: none;
+  }
 }
