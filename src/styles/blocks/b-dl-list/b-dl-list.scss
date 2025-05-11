@@ -1,27 +1,36 @@
+$mobile-bp: 320px;
+
 .b-dl-list {
     margin-bottom: 18px;
     float: left;
-}
-
-.b-dl-list dt {
-    float: left;
-    clear: both;
-    text-align: right;
-    width: 160px;
-    padding-right: 10px;
-}
-
-.b-dl-list dd {
-    float: left;
-}
-
-@media (max-width: 320px) {
-    .b-dl-list dt {
-        text-align: left;
-        float: none;
+    width: 100%; // добавляем полную ширину
+    
+    dt {
+        float: left;
+        clear: both;
+        text-align: right;
+        width: 160px;
+        padding-right: 10px;
+        margin-bottom: 5px; // добавляем отступ снизу
+        
+        @media (max-width: $mobile-bp) {
+            text-align: left;
+            float: none;
+            width: 100%; // полная ширина на мобильных
+            padding-right: 0;
+        }
     }
-
-    .b-dl-list dd {
-        margin-bottom: 8px;
+    
+    dd {
+        float: left;
+        margin-left: 0; // сбрасываем стандартный отступ
+        margin-bottom: 5px; // добавляем отступ снизу
+        
+        @media (max-width: $mobile-bp) {
+            margin-bottom: 15px;
+            float: none;
+            width: 100%; // полная ширина на мобильных
+            padding-left: 10px; // добавляем отступ слева
+        }
     }
 }
