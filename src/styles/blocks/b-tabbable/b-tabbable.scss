@@ -1,139 +1,105 @@
 .b-tabbable {
-
     position: relative;
 
+    .well {
+        background: none;
+        border: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .nav-tabs {
+        margin-right: 2px;
+        border: 0;
+        margin-left: 20px;
+        margin-bottom: 2px;
+    }
+
+    .tab-content {
+        background: rgba(255, 255, 255, 0.5);
+        position: relative;
+        -webkit-border-radius: 0 4px 4px 4px;
+        -moz-border-radius: 0 4px 4px 4px;
+        border-radius: 0 4px 4px 4px;
+
+        li {
+            color: #020202;
+        }
+    }
+
+    .tab-pane {
+        min-height: 340px;
+        min-width: 530px;
+        padding-bottom: 0;
+
+        li {
+            padding-bottom: 2px;
+        }
+    }
+
+    .label {
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
+    .nav-tabs > li > a {
+        background: #fff;
+        padding: 10px 20px;
+    }
+
+    .nav {
+        > li > a:hover {
+            background: rgba(255, 255, 255, 0.5);
+            border: none;
+        }
+
+        .active > a {
+            border: 0;
+            text-decoration: none;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.5);
+            color: #E14400;
+        }
+
+        li > a {
+            border: 0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .active > a:hover {
+            border: 0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }
 }
 
-.b-tabbable .well {
-    background: none;
-    border: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-.b-tabbable .nav-tabs {
-    margin-right: 2px;
-    border: 0;
-    margin-left: 20px;
-    margin-bottom: 2px;
-
-}
-
-.b-tabbable .tab-content {
-
-    background: rgba(255,255,255, .5);
-    position: relative;
-
-
-    -webkit-border-radius: 0 4px 4px 4px;
-    -moz-border-radius: 0 4px 4px 4px;
-    border-radius: 0 4px 4px 4px;
-
-
-}
-
-
-
-.b-tabbable .tab-pane {
-    min-height: 340px;
-    min-width: 530px;
-    padding-bottom: 0;
-    
-
-}
-
-.b-tabbable .tab-pane li {
-
-    padding-bottom: 2px;
-}
-
-.b-tabbable .label {
-
-    margin-bottom: 10px;
-    display: inline-block;
-}
-
-.b-tabbable .tab-content li {
-    color:#020202
-}
-
-
-.b-tabbable .nav-tabs > li > a {
-    background:#fff;
-    padding:10px 20px;
-
-}
-
-.b-tabbable .nav > li > a:hover,
-.b-tabbable .nav > li > a:hover {
-    background: rgba(255,255,255, .5);
-    border: none;
-
-}
-
-
-.b-tabbable  .nav .active >  a,
-.b-tabbable  .nav li >  a,
-.b-tabbable  .nav .active >  a:hover {
-    border: 0;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.b-tabbable  .nav .active >  a {
-
-    background: rgba(255,255,255, .5);
-    color:#E14400
-}
-
-
-
-
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) { 
-
+@media (max-width: 767px) {
     .b-tabbable .tab-pane {
         min-width: 300px;
     }
 
-.nav-tabs {
-   text-align: center; 
-   margin-left: 0 !important;
+    .nav-tabs {
+        text-align: center;
+        margin-left: 0 !important;
 
+        li {
+            text-align: center;
+            display: inline-block;
+            float: none;
+        }
+    }
+
+    .tab-pane .span3.well {
+        width: auto;
+        display: inline-block;
+        vertical-align: top;
+    }
 }
 
-
-.nav-tabs li {
-    
-    text-align: center;
-    display: inline-block;
-    float: none;
-}
-
-
-.tab-pane .span3.well {
-    width: auto;
-    display: inline-block;
-    vertical-align: top;  
-
-}
-
-
- }
-
-
-@media (max-width:979px) { 
-
-
-
-.tab-pane .offset1 {
-
-    margin-left: 0;
-    
-
-}
-
-
-
-
+@media (max-width: 979px) {
+    .tab-pane .offset1 {
+        margin-left: 0;
+    }
 }

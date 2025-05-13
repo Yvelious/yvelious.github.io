@@ -1,92 +1,71 @@
-
 html, body {
-	background-color: #F6AC7F;
+    background-color: #F6AC7F;
 }
 
-body{
-	display:none;
+body {
+    display: none;
 }
+
 #jpreOverlay {
-	background-color: #F6AC7F;
+    background-color: #F6AC7F;
 }
-#jpreSlide{
 
-
-top:100%
-
+#jpreSlide {
+    top: 100%;
 }
-#jpreLoader{
 
-
-	width:100%;
-	height: 4px;
-	background-color: #fff;
-  top: 0;
-
+#jpreLoader {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    top: 0;
 }
 
 #jpreBar {
-
-	background-color: #E14400;
-	height: 4px;		
-	animation: progress 2s linear infinite;
-	-moz-animation: progress 2s linear infinite;
-	-webkit-animation: progress 2s linear infinite;
-	-ms-animation: progress 2s linear infinite;
-	-o-animation: progress 2s linear infinite;	
+    background-color: #E14400;
+    height: 4px;
+    animation: progress 2s linear infinite;
+    -moz-animation: progress 2s linear infinite;
+    -webkit-animation: progress 2s linear infinite;
+    -ms-animation: progress 2s linear infinite;
+    -o-animation: progress 2s linear infinite;
 }
+
 #jprePercentage {
-	color:#fff;
-	line-height: 26px;
-  font-size: 20px;
-	font-family:Verdana;
-	text-align:center;
-  display: none;
-
-	top: -100%;
-	
-
+    color: #fff;
+    line-height: 26px;
+    font-size: 20px;
+    font-family: Verdana;
+    text-align: center;
+    display: none;
+    top: -100%;
 }
 
-
+@mixin progress-keyframes {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -60px -60px;
+    }
+}
 
 @-webkit-keyframes progress {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -60px -60px;
-  }
+    @include progress-keyframes;
 }
+
 @-moz-keyframes progress {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -60px -60px;
-  }
+    @include progress-keyframes;
 }
+
 @-ms-keyframes progress {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -60px -60px;
-  }
+    @include progress-keyframes;
 }
+
 @-o-keyframes progress {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -60px -60px;
-  }
+    @include progress-keyframes;
 }
+
 @keyframes progress {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -60px -60px;
-  }
+    @include progress-keyframes;
 }
