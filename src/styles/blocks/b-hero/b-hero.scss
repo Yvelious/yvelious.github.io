@@ -1,0 +1,150 @@
+// Keyframes
+@keyframes spin {
+		to {
+				transform: rotate(360deg);
+		}
+}
+
+.b-hero-wrap {
+		height: 100vh;
+		padding: 0;
+		text-align: center;
+
+		@include media-breakpoint-up(md) {
+				height: 320px;
+				inset: 0;
+				margin: auto;
+				position: absolute;
+				width: 320px;
+
+				&:hover > .b-hero {
+						border-radius: $border-radius-circle;
+				}
+		}
+}
+
+.b-hero {
+		background: {
+				color: $color-dark-red;
+				image: radial-gradient(circle at 45px 75px, $color-light-red 0%, $color-dark-red 100%);
+		}
+		height: 100%;
+		position: absolute;
+		width: 100%;
+		backface-visibility: hidden; // turn on hardware-accelerated
+
+		@include media-breakpoint-up(md) {
+				animation: {
+						duration: $animation-duration-3;
+						iteration-count: infinite;
+						name: spin;
+						timing-function: linear;
+				}
+				border-radius: 110px;
+				transition: border-radius 0.3s ease;
+				will-change: transform;
+		}
+
+		&__hgroup {
+				padding-top: 60px;
+				position: relative;
+
+				@include media-breakpoint-up(md) {
+						left: 20%;
+						padding-top: 32%;
+						z-index: 1;
+				}
+		}
+
+		&__userpic {
+				border-radius: $border-radius-circle;
+				height: 180px;
+				margin: 22% auto 0;
+				object-fit: cover;
+				position: relative;
+				width: 180px;
+
+				@include media-breakpoint-up(md) {
+						height: 100px;
+						inset: 0 auto 0 -15%;
+						margin: auto;
+						position: absolute;
+						width: 100px;
+				}
+		}
+
+		&__role {
+				font: {
+						family: "univers", Tahoma, sans-serif;
+						size: clamp(24px, 8vw, 48px);
+				}
+				line-height: 1.2;
+				margin-bottom: 18px;
+				padding: 0 20px;
+				white-space: nowrap;
+
+				@include media-breakpoint-up(md) {
+						color: $color-white;
+						font-size: 36px;
+						margin-bottom: 0;
+						padding: 0;
+						text-align: left;
+						text-transform: none;
+				}
+		}
+
+		&__name {
+				color: $color-light-orange;
+				font: {
+						family: "univers", Tahoma, sans-serif;
+						size: clamp(18px, 6vw, 32px);
+				}
+				line-height: 1.2;
+				margin-bottom: 10px;
+
+				@include media-breakpoint-up(md) {
+						font-size: 24px;
+						text-align: left;
+				}
+		}
+
+		&__cv-btn:any-link {
+				align-items: center;
+				background: rgba(255, 255, 255, 0.2);
+				border-radius: 8px;
+				color: $color-white;
+				display: flex;
+				font: {
+						family: "univers", sans-serif;
+						size: 28px;
+				}
+				gap: 8px;
+				line-height: 2;
+				margin: 34px auto;
+				padding: 0 18px;
+				text-decoration: none;
+				width: fit-content;
+
+				&:hover {
+						background: rgba(255, 255, 255, 0.3);
+				}
+
+				@include media-breakpoint-up(md) {
+						float: left;
+						font-size: 22px;
+						margin-top: 0;
+						padding: 0 10px;
+				}
+
+				> .b-icon-download {
+						width: 18px;
+						@include media-breakpoint-up(md) {
+								width: 14px;
+						}
+				}
+
+		}
+}
+
+
+

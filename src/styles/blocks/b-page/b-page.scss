@@ -33,13 +33,15 @@
     width: 100%;
     position: relative;
 }
-
-@media (max-width: 767px) {
+@include media-breakpoint-down(md) {
     .b-page {
         height: auto;
         width: 100%;
     }
-    
+    .b-page-wrap {
+        max-width: 100%;
+    }
+
     .b-page-wrap .items {
         position: relative;
         height: auto;
