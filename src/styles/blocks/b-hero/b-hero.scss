@@ -16,10 +16,9 @@
 				margin: auto;
 				position: absolute;
 				width: 320px;
+				text-align:left;
 
-				&:hover > .b-hero {
-						border-radius: $border-radius-circle;
-				}
+
 		}
 }
 
@@ -31,7 +30,6 @@
 		height: 100%;
 		position: absolute;
 		width: 100%;
-		backface-visibility: hidden; // turn on hardware-accelerated
 
 		@include media-breakpoint-up(md) {
 				animation: {
@@ -42,7 +40,12 @@
 				}
 				border-radius: 110px;
 				transition: border-radius 0.3s ease;
+				backface-visibility: hidden; // turn on hardware-accelerated
 				will-change: transform;
+
+				.b-hero-wrap:hover > & {
+						border-radius: $border-radius-circle;
+				}
 		}
 
 		&__hgroup {
@@ -60,13 +63,12 @@
 				border-radius: $border-radius-circle;
 				height: 180px;
 				margin: 22% auto 0;
-				object-fit: cover;
 				position: relative;
 				width: 180px;
 
 				@include media-breakpoint-up(md) {
 						height: 100px;
-						inset: 0 auto 0 -15%;
+						inset: 0 auto 0 -50px;
 						margin: auto;
 						position: absolute;
 						width: 100px;
@@ -88,7 +90,6 @@
 						font-size: 36px;
 						margin-bottom: 0;
 						padding: 0;
-						text-align: left;
 						text-transform: none;
 				}
 		}
@@ -104,7 +105,6 @@
 
 				@include media-breakpoint-up(md) {
 						font-size: 24px;
-						text-align: left;
 				}
 		}
 
@@ -130,19 +130,13 @@
 				}
 
 				@include media-breakpoint-up(md) {
-						float: left;
-						font-size: 22px;
-						margin-top: 0;
-						padding: 0 10px;
+						font-size: 24px;
+						margin: 0; // needs that element align left
 				}
 
 				> .b-icon-download {
 						width: 18px;
-						@include media-breakpoint-up(md) {
-								width: 14px;
-						}
 				}
-
 		}
 }
 
