@@ -1,5 +1,6 @@
-@import "_variables";
-@import "_functions";
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
 @import "bootstrap/scss/bootstrap-grid";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/utilities";

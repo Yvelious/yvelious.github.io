@@ -1,0 +1,17 @@
+@mixin animation-defaults {
+		backface-visibility: hidden;
+		will-change: transform;
+}
+
+@mixin spin-animation($name, $duration, $iterations, $timingFunction, $angle: 360deg) {
+		--rotation-angle: #{$angle};
+
+		animation: {
+				duration: $duration;
+				iteration-count: $iterations;
+				name: $name;
+				timing-function: $timingFunction;
+		}
+
+		@include animation-defaults;
+}

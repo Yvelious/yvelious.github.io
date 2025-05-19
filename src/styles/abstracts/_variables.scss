@@ -62,8 +62,16 @@ $text-home-btn: $color-white;
 $text-darkbox-button: $color-white;
 
 
-$animation-duration-3: 3s;
-$border-radius-circle: 50%;
+:root {
+		--animation-duration-long: 3s;
+		--animation-duration-short: 0.5s;
+		--border-radius-circle: 50%;
+		--font-family-primary: "univers", Tahoma, sans-serif;
+}
+
+
+
+
 
 
 

@@ -1,24 +1,21 @@
-// Keyframes
-@keyframes spin {
-		to {
-				transform: rotate(360deg);
-		}
-}
 
 .b-hero-wrap {
+		--b-hero-size: 360px;
 		height: 100vh;
 		padding: 0;
 		text-align: center;
+		user-select: none;
 
 		@include media-breakpoint-up(md) {
-				height: 320px;
+				align-items: center;
+				display: flex;
+				gap: calc(var(--b-hero-size) * 0.09);
+				height: var(--b-hero-size);
 				inset: 0;
 				margin: auto;
 				position: absolute;
-				width: 320px;
-				text-align:left;
-
-
+				text-align: left;
+				width: var(--b-hero-size);
 		}
 }
 
@@ -32,55 +29,51 @@
 		width: 100%;
 
 		@include media-breakpoint-up(md) {
-				animation: {
-						duration: $animation-duration-3;
-						iteration-count: infinite;
-						name: spin;
-						timing-function: linear;
-				}
-				border-radius: 110px;
-				transition: border-radius 0.3s ease;
-				backface-visibility: hidden; // turn on hardware-accelerated
-				will-change: transform;
-
+				@include spin-animation(spin, var(--animation-duration-long), infinite, linear);
+				border-radius: var(--border-radius-circle);
+				transition: border-radius var(--animation-duration-short) ease-out;
 				.b-hero-wrap:hover > & {
-						border-radius: $border-radius-circle;
+						animation: none;
+						@include spin-animation(spin-hover, var(--animation-duration-short), 1, ease-out, 90deg);
+
+						border-radius: calc(var(--b-hero-size) / 4);
+						transform: rotate(90deg);
 				}
 		}
+
 
 		&__hgroup {
 				padding-top: 60px;
 				position: relative;
+				user-select: text;
 
 				@include media-breakpoint-up(md) {
-						left: 20%;
-						padding-top: 32%;
-						z-index: 1;
+						padding-top: 0;
 				}
 		}
 
 		&__userpic {
-				border-radius: $border-radius-circle;
-				height: 180px;
-				margin: 22% auto 0;
+				border-radius: var(--border-radius-circle);
+				height: calc(var(--b-hero-size) / 2);
+				margin: 24% auto 0;
 				position: relative;
-				width: 180px;
+				width: calc(var(--b-hero-size) / 2);
 
 				@include media-breakpoint-up(md) {
-						height: 100px;
-						inset: 0 auto 0 -50px;
-						margin: auto;
-						position: absolute;
-						width: 100px;
+						--userpic-size: calc(var(--b-hero-size) / 3);
+						height: var(--userpic-size);
+						margin: 0;
+						margin-left: calc(var(--b-hero-size) / -6);
+						width: var(--userpic-size);
 				}
 		}
 
 		&__role {
 				font: {
-						family: "univers", Tahoma, sans-serif;
+						family: var(--font-family-primary);
 						size: clamp(24px, 8vw, 48px);
 				}
-				line-height: 1.2;
+				line-height: 1;
 				margin-bottom: 18px;
 				padding: 0 20px;
 				white-space: nowrap;
@@ -97,14 +90,14 @@
 		&__name {
 				color: $color-light-orange;
 				font: {
-						family: "univers", Tahoma, sans-serif;
-						size: clamp(18px, 6vw, 32px);
+						family: var(--font-family-primary);
+						size: clamp(18px, 8vw, 36px);
 				}
-				line-height: 1.2;
-				margin-bottom: 10px;
+				line-height: 1;
+				margin-bottom: 14px;
 
 				@include media-breakpoint-up(md) {
-						font-size: 24px;
+						font-size: 22px;
 				}
 		}
 
@@ -114,8 +107,9 @@
 				border-radius: 8px;
 				color: $color-white;
 				display: flex;
+				transition: background-color 0.2s ease-out;
 				font: {
-						family: "univers", sans-serif;
+						family: var(--font-family-primary);
 						size: 28px;
 				}
 				gap: 8px;
@@ -140,5 +134,22 @@
 		}
 }
 
+// Keyframes
+@keyframes spin {
+		0% {
+				transform: rotate(0deg);
+		}
+		100% {
+				transform: rotate(var(--rotation-angle, 360deg));
+		}
+}
 
+@keyframes spin-hover {
+		0% {
+				transform: rotate(0deg);
+		}
+		100% {
+				transform: rotate(var(--rotation-angle, 90deg));
 
+		}
+}
