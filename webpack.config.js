@@ -143,7 +143,12 @@ module.exports = {
 
         ],
     },
-
+    cache: {
+        type: 'filesystem',
+        buildDependencies: {
+            config: [__filename],
+        },
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template: './index.html',
@@ -197,6 +202,9 @@ module.exports = {
         }),
     ],
     optimization: {
+        moduleIds: 'deterministic',
+        chunkIds: 'deterministic',
+        runtimeChunk: 'single',
         minimizer: [
             `...`, // Extend Webpack's default JS minimizers
             new TerserPlugin({
@@ -252,6 +260,9 @@ module.exports = {
             overlay: false, // disable overlay with errors and warnings in the browser
         },
     },
+    performance: isProd ? {
+    hints: 'warning',
+    maxEntrypointSize: 512000,    // 500KB
+    maxAssetSize: 512000          // 500KB
+} : false
 };
-
-
