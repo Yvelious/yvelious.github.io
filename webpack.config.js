@@ -65,7 +65,7 @@ class optimizedCriticalandEnhancedCSSPlugin {
 
 module.exports = {
     mode: isProd ? "production" : "development",
-    devtool: 'source-map', // Setting up source maps for faster debugging
+    devtool: isProd ? false : 'source-map', // Setting up source maps for faster debugging
     entry: {
         main: './src/main.js',
     },
