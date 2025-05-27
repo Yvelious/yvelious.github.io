@@ -5,15 +5,12 @@ const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-// const InlineCriticalCSSPlugin = require('./InlineCriticalCSSPlugin'); // Укажите путь к файлу плагина
-
 const isProd = process.env.NODE_ENV === "production";
-const isDev = process.env.NODE_ENV === "development";
 const isDevServer = process.env.NODE_ENV === "server";
 
 const getCssFilename = (isProd, chunkName) => {
     if (isProd) {
-        // needs because stranged case created main instead enhance
+        // needs because a stringed case created main instead of enhance
         if (chunkName === 'main') {
             return 'enhanced.[contenthash].css';
         }
@@ -27,41 +24,41 @@ class optimizedCriticalandEnhancedCSSPlugin {
             HtmlWebpackPlugin.getHooks(compilation).alterAssetTags.tap(
                 'InlineCriticalCSSPlugin',
                 (data) => {
-                    // get source of critical css
+                    // get a source of critical CSS
                     const criticalCSS = compilation.assets['critical.css']
                         ? compilation.assets['critical.css'].source()
                         : '';
 
-                    // create tag <style> with critical css
+                    // create tag <style> with critical CSS
                     const inlineStyleTag = {
                         tagName: 'style',
                         voidTag: false,
-                        attributes: { type: 'text/css' },
+                        attributes: {type: 'text/css'},
                         innerHTML: criticalCSS,
                     };
 
-                    // remove  link to critical css
+                    // remove a link to critical CSS
                     data.assetTags.styles = data.assetTags.styles.filter(tag =>
                         !tag.attributes?.href?.includes('critical')
                     );
                     data.assetTags.styles = data.assetTags.styles.map(tag => {
-                        if (/^enhanced.*\.css$/i.test(tag.attributes?.href)) {
-                            tag.attributes.rel = 'preload';
-                            tag.attributes.as = 'style';
-                            tag.attributes.onload = "this.onload=null;this.rel='stylesheet'";
+                            if (/^enhanced.*\.css$/i.test(tag.attributes?.href)) {
+                                tag.attributes.rel = 'preload';
+                                tag.attributes.as = 'style';
+                                tag.attributes.onload = "this.onload=null;this.rel='stylesheet'";
+                            }
+                            return tag;
                         }
-                        return tag;
-                    }
                     );
 
-                    // add inline css inside <head>
+                    // add inline CSS inside <head>
                     data.assetTags.styles.unshift(inlineStyleTag);
                     return data;
                 }
             );
         });
     }
-};
+}
 
 module.exports = {
     mode: isProd ? "production" : "development",
@@ -109,7 +106,7 @@ module.exports = {
                                 ],
                             },
                         },
-                    }]:[]),
+                    }] : []),
                     {
                         loader: 'sass-loader',
                         options: {sourceMap: true}
@@ -155,7 +152,7 @@ module.exports = {
             filename: 'index.html',
             inject: true,
         }),
-        ...(isProd ?  [new optimizedCriticalandEnhancedCSSPlugin()] : []),
+        ...(isProd ? [new optimizedCriticalandEnhancedCSSPlugin()] : []),
         ...(!isDevServer ? [
             new MiniCssExtractPlugin({
                 filename: (pathData) => getCssFilename(isProd, pathData.chunk.name),
@@ -206,7 +203,7 @@ module.exports = {
         chunkIds: 'deterministic',
         runtimeChunk: 'single',
         minimizer: [
-            `...`, // Extend Webpack's default JS minimizers
+            `...`, // Extend Webpack's default JS minimizes
             new TerserPlugin({
                 terserOptions: {
                     format: {
@@ -239,7 +236,7 @@ module.exports = {
         },
     },
     stats: {
-        warnings: false,
+        warnings: false, // Disable warnings in the console
     },
     devServer: {
         static: {
@@ -261,8 +258,8 @@ module.exports = {
         },
     },
     performance: isProd ? {
-    hints: 'warning',
-    maxEntrypointSize: 512000,    // 500KB
-    maxAssetSize: 512000          // 500KB
-} : false
+        hints: 'warning',
+        maxEntrypointSize: 512000,    // 500KB
+        maxAssetSize: 512000          // 500KB
+    } : false
 };
