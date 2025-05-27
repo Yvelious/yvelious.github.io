@@ -15,15 +15,12 @@ handleMinLg(breakpointMinLg);
 breakpointMinLg.addEventListener('change', handleMinLg);
 
 function handleMinLg (e) {
-    if(e.matches) {
-        if (e.matches) {
-            const nav = document.querySelector('.b-nav');
-            nav.classList.remove('b-nav--open');
-            nav.classList.add('b-nav--close');
-        }
+    if (e.matches) {
+        const nav = document.querySelector('.b-nav');
+        nav.classList.remove('b-nav--open');
+        nav.classList.add('b-nav--close');
     }
 }
-
 document.addEventListener("DOMContentLoaded", () => {
     const navToggle = new toggleNavBtn();
     navToggle.init();
@@ -32,19 +29,13 @@ document.addEventListener("DOMContentLoaded", () => {
 /* add to accordion
  /* ---------------------------------------------------------------------- */
 
-
 $(function () {
-
-
-
     $(".b-accordion .accordion-group").click(function () {
             $(".accordion-group").removeClass("active");
             $(this).addClass("active")
         }
     );
-})
-;
-
+});
 
 /* tabs
  /* ---------------------------------------------------------------------- */
