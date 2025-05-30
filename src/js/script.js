@@ -1,8 +1,9 @@
-import Collapse from 'bootstrap/js/dist/collapse';
+import { initPreloader } from './_preload';
 import { onHashChange, triggerClickOnHashLink, initHashTag } from './_hash';
 import { getBreakpointsObjectFromCss } from './_breakpoints';
-import toggleNavBtn from './_toggle_nav_btn'
+import toggleNavBtn from './_toggle_nav_btn';
 
+initPreloader();
 
 initHashTag();
 window.addEventListener('hashchange', onHashChange);
@@ -98,16 +99,3 @@ $(function ts() {
  /* ---------------------------------------------------------------------- */
 
 
-/* preloader
- /* ---------------------------------------------------------------------- */
-
-$(document).ready(function () {
-    $('body').jpreLoader(
-        {
-            loaderVPos: '0'
-
-
-        }
-    );
-
-});

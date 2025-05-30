@@ -10,8 +10,6 @@ class toggleNavBtn {
         this.nav.classList.toggle("b-nav--open");
     }
 
-
-
     init() {
         this.toggleButton.addEventListener("click", this.toggleNav.bind(this));
     }
