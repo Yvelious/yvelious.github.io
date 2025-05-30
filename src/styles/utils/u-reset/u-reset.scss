@@ -1,103 +1,105 @@
-/* 
-html5doctor.com Reset Stylesheet
-v1.6.1
-Last Updated: 2010-09-17
-Author: Richard Clark - http://richclarkdesign.com 
-Twitter: @rich_clark
-test111111
-*/
+*,
+*::before,
+*::after {
+    /* Use a more intuitive box-sizing model */
+    box-sizing: border-box;
+    /* https://www.youtube.com/watch?v=cH8VbLM1958 */
+    min-width: 0;
+    /* Remove all margins and padding */
+    margin: 0;
+    padding: 0;
 
-html, body, button, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
+}
+
+/* Only show focus outline when the user is tabbing (not when clicking) */
+/* Except for input and textarea */
+*:focus:not(:is(input, textarea)) {
+    outline: none;
+}
+
+*:focus-visible {
+    outline: 1px solid blue;
+}
+
+html {
+    /* Allow percentage-based heights */
+    /* Setting width: 100% isn't required because it is a default for block-level elements (html and body are block level) */
+    height: 100%;
+
+    /* Sets font-size to 10px.
+  Percent units are used to ensure font will scale if user has a custom font-size browser setting (for ally).
+  Using 10px as the base to make it easy to set font sizes in elements. Example: for 16px, use 1.6rem, for 32px, use 3.2rem, ...  */
+    font-size: calc(100% / 16 * 10);
+    line-height: 1.5;
+    /* Prevent the browser from synthesizing missing typefaces */
+    font-synthesis: none;
+    font-smooth: always;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+    /* Prevent mobile browsers increasing font-size */
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+
+    color: black;
 }
 
 body {
-    line-height:1;
+    height: 100%;
+
+    /* Prevent the rubber band effect when the user scrolls to the top or bottom of the page (WebKit only) */
+    overscroll-behavior: none;
+
+    /* UI controls color (example: range input) */
+    accent-color: black;
+
+    /* Because overscroll-behavior: none only works on WebKit, a background color is set that will show when overscroll occurs  */
+    background: white;
 }
 
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section {
-    display:block;
+p {
+    /* Prevents orphans (ensures the final line of text has at least two words). */
+    text-wrap: pretty;
+    /* Avoid text overflow */
+    overflow-wrap: break-word;
 }
 
-nav ul {
-    list-style:none;
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+    /* Stronger effect than 'pretty'. Attempts to make each line of text the same length */
+    text-wrap: balance;
 }
 
-blockquote, q {
-    quotes:none;
+strong {
+    overflow-wrap: break-word;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content:'';
-    content:none;
+/* Remove unintuitive behaviour such as gaps around media elements.  */
+img, picture, video, canvas, svg, iframe {
+    display: block;
+}
+
+input,
+textarea,
+button,
+button:disabled {
+    font: inherit;
+    color: inherit;
+    border: none;
+    border-radius: 0;
+    background: none;
+}
+
+fieldset {
+    border: none;
 }
 
 a {
-    margin:0;
-    padding:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
+    text-decoration: none;
+    color: inherit;
 }
 
-/* change colours to suit your needs */
-ins {
-    background-color:#ff9;
-    color:#000;
-    text-decoration:none;
-}
-
-/* change colours to suit your needs */
-mark {
-    background-color:#ff9;
-    color:#000;
-    font-style:italic;
-    font-weight:bold;
-}
-
-del {
-    text-decoration: line-through;
-}
-
-abbr[title], dfn[title] {
-    border-bottom:1px dotted;
-    cursor:help;
-}
-
-table {
-    border-collapse:collapse;
-    border-spacing:0;
-}
-
-/* change border colour to suit your needs */
-hr {
-    display:block;
-    height:1px;
-    border:0;
-    border-top:1px solid #cccccc;
-    margin:1em 0;
-    padding:0;
-}
-
-input, select {
-    vertical-align:middle;
+ul, ol {
+    list-style: none;
 }
