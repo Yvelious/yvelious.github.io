@@ -14,21 +14,16 @@ export function initPreloader() {
         if (styleTag?.sheet) {
             try {
                 for (const rule of styleTag.sheet.cssRules) {
-                    console.log(rule.type);
                     if (rule.type === CSSRule.STYLE_RULE) {
                         const bgImage = rule.style.backgroundImage;
-                        console.log(bgImage);
                         if (bgImage && bgImage.includes('url(')) {
-                            console.log(22);
                             const match = bgImage.match(/url\(["']?(.*?)["']?\)/);
                             const url = match?.[1];
-                            console.log(url);
                             const selector = rule.selectorText;
                             if (url && selector) {
                                 const elements = document.querySelectorAll(selector);
                                 elements.forEach(el => {
                                     const rect = el.getBoundingClientRect();
-                                    console.log(rect);
                                     if (rect.top < window.innerHeight && rect.bottom > 0) {
                                         cssBgUrls.push(url);
                                     }
@@ -41,8 +36,6 @@ export function initPreloader() {
                 console.warn('Error:', e);
             }
         }
-        console.log(cssBgUrls);
-
 
         const total = visibleImages.length + cssBgUrls.length + 1;
 
@@ -75,8 +68,6 @@ export function initPreloader() {
             bg.onload = bg.onerror = updateProgress;
             bg.src = url;
         });
-
-        console.log(document.fonts);
 
         if (document.fonts) {
             document.fonts.ready.then(updateProgress);
