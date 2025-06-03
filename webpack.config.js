@@ -150,6 +150,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './index.html',
             filename: 'index.html',
+            favicon: './i/favicon.ico',
             inject: true,
         }),
         ...(isProd ? [new optimizedCriticalandEnhancedCSSPlugin()] : []),
