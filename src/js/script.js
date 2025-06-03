@@ -1,4 +1,4 @@
-import { initPreloader } from './_preload';
+import { initPreloader } from './_preloader';
 import { onHashChange, triggerClickOnHashLink, initHashTag } from './_hash';
 import { getBreakpointsObjectFromCss } from './_breakpoints';
 import toggleNavBtn from './_toggle_nav_btn';

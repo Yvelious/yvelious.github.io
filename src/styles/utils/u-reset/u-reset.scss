@@ -40,7 +40,6 @@ html {
     -moz-text-size-adjust: none;
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
-
     color: black;
 }
 
@@ -53,7 +52,6 @@ body {
     /* UI controls color (example: range input) */
     accent-color: black;
 
-    /* Because overscroll-behavior: none only works on WebKit, a background color is set that will show when overscroll occurs  */
 }
 
 p {

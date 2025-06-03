@@ -4,6 +4,7 @@ html, body {
 }
 
 body {
+    font-family: 'Tahoma', sans-serif;
     &::before {
         content: map-to-string($grid-breakpoints);
         display: none;

@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlInlineScriptPlugin = require('html-inline-script-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -33,7 +34,10 @@ class optimizedCriticalandEnhancedCSSPlugin {
                     const inlineStyleTag = {
                         tagName: 'style',
                         voidTag: false,
-                        attributes: {type: 'text/css'},
+                        attributes: {
+                            type: 'text/css',
+                            id: 'critical-css',
+                        },
                         innerHTML: criticalCSS,
                     };
 
@@ -65,6 +69,7 @@ module.exports = {
     devtool: isProd ? false : 'source-map', // Setting up source maps for faster debugging
     entry: {
         main: './src/main.js',
+        preloader: './src/js/_preloader.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -152,6 +157,10 @@ module.exports = {
             filename: 'index.html',
             favicon: './i/favicon.ico',
             inject: true,
+            chunks: ['preloader', 'main'],
+        }),
+        new HtmlInlineScriptPlugin({
+            scriptMatchPattern: [/preloader\..*\.js$/],
         }),
         ...(isProd ? [new optimizedCriticalandEnhancedCSSPlugin()] : []),
         ...(!isDevServer ? [
