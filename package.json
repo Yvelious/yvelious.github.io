@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prod": "NODE_ENV=production webpack",
     "dev": "NODE_ENV=development webpack",
-    "server": "NODE_ENV=server webpack-dev-server"
+    "server": "NODE_ENV=server webpack-dev-server",
+    "server-prod": "NODE_ENV=production webpack-dev-server"
   },
   "keywords": [],
   "author": "",

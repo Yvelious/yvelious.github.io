@@ -68,8 +68,7 @@ module.exports = {
     mode: isProd ? "production" : "development",
     devtool: isProd ? false : 'source-map', // Setting up source maps for faster debugging
     entry: {
-        main: './src/main.js',
-        preloader: './src/js/_preloader.js',
+        main: './src/main.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -157,10 +156,7 @@ module.exports = {
             filename: 'index.html',
             favicon: './i/favicon.ico',
             inject: true,
-            chunks: ['preloader', 'main'],
-        }),
-        new HtmlInlineScriptPlugin({
-            scriptMatchPattern: [/preloader\..*\.js$/],
+            chunks: ['main'],
         }),
         ...(isProd ? [new optimizedCriticalandEnhancedCSSPlugin()] : []),
         ...(!isDevServer ? [
