@@ -40,25 +40,19 @@ $accordion-toggle: (
         border: none;
         border-radius: $accordion-border-radius;
     }
+    &__btn {
+        padding-left: 16px;
+        margin-bottom: 0;
+        position: relative;
+        font-size: 16px;
+    }
+
+    &__inner {
+        border-top: 1px solid $accordion-border-color;
+        padding: $accordion-padding 0 0;
+    }
 
     .accordion {
-        &-inner {
-            border-top: 1px solid $accordion-border-color;
-            padding: $accordion-padding 0 0;
-        }
-
-        &-heading {
-            padding-left: 16px;
-            margin-bottom: 0;
-            position: relative;
-
-            a {
-                font-size: 20px;
-                padding: 0;
-                text-decoration: none;
-            }
-        }
-
         &-body {
             &.in {
                 background-color: $accordion-active-bg;

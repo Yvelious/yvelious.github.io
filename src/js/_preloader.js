@@ -58,15 +58,33 @@ export function initPreloader() {
         };
 
         visibleImages.forEach(img => {
-            const image = new Image();
-            image.onload = image.onerror = updateProgress;
-            image.src = img.src;
+            // const image = new Image();
+            // image.onload = image.onerror = updateProgress;
+            // image.src = img.src;
+            if (img.complete) {
+                updateProgress();
+            } else {
+                img.addEventListener('load', updateProgress, { once: true });
+                img.addEventListener('error', updateProgress, { once: true });
+            }
+
+            console.log(img);
+
         });
 
         cssBgUrls.forEach(url => {
             const bg = new Image();
-            bg.onload = bg.onerror = updateProgress;
-            bg.src = url;
+            const onLoad = () => {
+                updateProgress();
+                bg.onload = bg.onerror = null;
+            };
+            if (bg.complete) {
+                updateProgress();
+            } else {
+                bg.onload = onLoad;
+                bg.onerror = onLoad;
+                bg.src = url;
+            }
         });
 
         if (document.fonts) {

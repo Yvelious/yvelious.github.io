@@ -9,6 +9,7 @@
           content="JS, HTML, CSS, Javascript, Frontend developer, Web design, CV, Resume, Stanislav Levyshchev">
     <meta name="viewport" content="width=320, initial-scale=1.0, maximum-scale=5.0"/>
     <link rel="apple-touch-icon" href="apple_icon.png"/>
+    <link rel="preload" href="/assets/fonts/univers_condensed_medium-webfont.woff" as="font" type="font/woff2" crossorigin>
     <script>
         document.documentElement.id = "js"
     </script>
@@ -70,17 +71,16 @@
                     <div class="b-page__inner">
                         <h1>About</h1>
                         <div class="b-accordion accordion row" id="accordion">
-
                             <div class="accordion" id="accordionExample">
                                 <div class="accordion-item col-12 b-accordion_item">
-                                    <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    <button class="b-accordion__btn accordion-button collapsed" data-bs-toggle="collapse"
                                             data-bs-target="#collapsePersonal" aria-expanded="false"
                                             aria-controls="collapsePersonal">
                                         <span class="dashed">Личные данные</span>
                                     </button>
                                     <div id="collapsePersonal" class="accordion-collapse collapse"
                                          aria-labelledby="headingPersonal" data-bs-parent="#accordionExample">
-                                        <div class="accordion-inner">
+                                        <div class="b-accordion__inner accordion-inner">
                                             <!--                                            <figure class="pull-left b-photo"><img src="i/Yvelious.png" alt=""-->
                                             <!--                                                                                   class="img-polaroid "></figure>-->
                                             <dl class="b-dl-list">
@@ -100,14 +100,14 @@
                                     </div>
                                 </div>
                                 <div class="accordion-item col-12 b-accordion_item">
-                                    <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    <button class="b-accordion__btn accordion-button collapsed" data-bs-toggle="collapse"
                                             data-bs-target="#collapseAbout" aria-expanded="false"
                                             aria-controls="collapseAbout">
                                         <span class="dashed">Кратко о себе</span>
                                     </button>
                                     <div id="collapseAbout" class="accordion-collapse collapse"
                                          aria-labelledby="headingPersonal" data-bs-parent="#accordionExample">
-                                        <div class="accordion-inner">
+                                        <div class="b-accordion__inner accordion-inner">
                                             <p>Опыт работы в сфере разработки WEB-сайтов около 6 лет, cпециализируюсь на
                                                 HTML-верстке и WEB-дизайне. </p>
 
@@ -123,14 +123,14 @@
                                     </div>
                                 </div>
                                 <div class="accordion-item col-12 b-accordion_item">
-                                    <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    <button class="b-accordion__btn accordion-button collapsed" data-bs-toggle="collapse"
                                             data-bs-target="#collapseGoals" aria-expanded="false"
                                             aria-controls="collapseGoals">
                                         <span class="dashed">Цели</span>
                                     </button>
                                     <div id="collapseGoals" class="accordion-collapse collapse"
                                          aria-labelledby="headingGoals" data-bs-parent="#accordionExample">
-                                        <div class="accordion-inner">
+                                        <div class="b-accordion__inner accordion-inner">
                                             <ul class="b-vlist">
                                                 <li>Интересные проекты</li>
                                                 <li>Высокая заработная плата</li>
@@ -440,7 +440,7 @@
     <footer class="b-footer">
         <div class="container-fluid">
             <div class="row-fluid">
-                <p class="b-copy">Copyright © 2013-2025 Stanislav Levyshchev</p>
+                <p class="b-copy">Copyright © 2025 Stanislav Levyshchev</p>
                 <!--btn to home-->
                 <!--<a class="b-home-btn" href="#home">To home</a>-->
             </div>
