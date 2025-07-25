@@ -104,9 +104,8 @@ h6 {}
 
 /* =TEXT
 --------------------------------------------------------- */
-p, ul, ol, table {
-    font: 13px/18px Verdana, sans-serif;
-    color: #fff;
-    margin-bottom: 18px;
+p, ul, ol, table, dl {
+    font: 16px/1.5 Verdana, sans-serif;
+    color: $text-main;
 }
 

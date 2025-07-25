@@ -3,33 +3,11 @@
 
 .b-vlist {
     padding: 0;
-    list-style: none;
+    list-style: disc;
     margin-left: 1.3em;
-    
+
     li {
         padding-bottom: 5px;
-        
-        &:before {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            position: absolute;
-            margin-left: -1.3em;
-            content: "—";
-        }
-        
-        /* IE specific */
-        & {
-            zoom: expression(runtimeStyle.zoom = 1,insertBefore(createElement("m"),firstChild));
-        }
-        
-        m {
-            position: absolute;
-            margin-left: -1.3em;
-            text-decoration: none;
-            zoom: expression(runtimeStyle.zoom = 1,innerText = "—");
-            margin-top: -0.2em;
-        }
     }
 }
 

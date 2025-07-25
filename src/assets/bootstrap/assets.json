@@ -1,8 +1,0 @@
-{
-  "name": "bootstrap.css",
-  "version": "2.1.1",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/bowerjs/bootstrap.git"
-  }
-}

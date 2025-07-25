@@ -1,15 +1,13 @@
 .b-photo {
-    width: 80px;
-    height: auto;
-}
-
-.b-photo.pull-left {
-    margin-right: 18px;
-    margin-bottom: 14px;
-}
-
-@media (max-width: 767px) {
-    .b-photo {
-        display: none;
+    display:none;
+    @include media-breakpoint-up(md) {
+        & {
+            display: block;
+            height: auto;
+            width: 130px;
+            > img {
+                width: 100%;
+            }
+        }
     }
 }

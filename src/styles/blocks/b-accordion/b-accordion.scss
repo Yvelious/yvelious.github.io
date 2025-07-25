@@ -1,92 +1,38 @@
-// Variables
-$accordion-border-radius: 4px;
-$accordion-bg: rgba(255, 255, 255, .5);
-$accordion-border-color: #ED5A00;
-$accordion-active-bg: #fff9c1;
-$accordion-padding: 18px;
-$accordion-toggle: (
-    size: 24px,
-    width: 30px,
-    right-space: 18px
-);
-
-// Imports
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/mixins";
-@import "bootstrap/scss/accordion";
-@import "bootstrap/scss/transitions";
-
-// Mixins
-@mixin accordion-toggle-base {
-    content: '+';
-    position: absolute;
-    right: map-get($accordion-toggle, 'right-space');
-    font: {
-        size: map-get($accordion-toggle, 'size');
-        weight: bold;
-        family: Arial, sans-serif;
-    }
-    text-align: center;
-    background: $accordion-bg;
-    width: map-get($accordion-toggle, 'width');
-    height: 100%;
-}
-
-// Main Styles
 .b-accordion {
-    &_item {
-        margin-bottom: 6px;
-        background-color: $accordion-bg;
-        border: none;
-        border-radius: $accordion-border-radius;
-    }
-    &__btn {
-        padding-left: 16px;
-        margin-bottom: 0;
-        position: relative;
-        font-size: 16px;
-    }
+		--#{$prefix}accordion-btn-padding-x: 16px;
+		--#{$prefix}accordion-btn-padding-y: 16px;
 
-    &__inner {
-        border-top: 1px solid $accordion-border-color;
-        padding: $accordion-padding 0 0;
-    }
+		&__btn {
+				background-color: transparent;
+				color: $color-red;
+				cursor: pointer;
+				font-family: "univers", serif;
+				font-size: 34px;
+				line-height: 1;
+				position: relative;
+				transition: background-color 0.3s ease-out;
 
-    .accordion {
-        &-body {
-            &.in {
-                background-color: $accordion-active-bg;
-                border-radius: $accordion-border-radius;
-            }
-        }
+				&:hover,
+				&[aria-expanded="true"] {
+						background-color: $color-white-transparent-70;
+				}
+		}
 
-        &-toggle {
-            &:before {
-                @include accordion-toggle-base;
-            }
+		&_item {
+				background-color: $background-main;
+				border: none;
+				border-radius: $border-radius;
+				margin-bottom: 6px;
+				overflow: hidden;
+				padding: 0;
+		}
 
-            &:hover {
-                &:before {
-                    background: #fff !important;
-                }
-            }
-        }
-    }
-
-    .active {
-        .accordion-toggle {
-            &:before {
-                content: '-';
-                background: #fff;
-            }
-
-            &.collapsed:before {
-                content: '+';
-            }
-        }
-    }
-
-    p, ul, ol, h4 {
-        color: $text-main;
-    }
+		&__inner {
+				align-items: center;
+				background-color: $background-main;
+				display: flex;
+				padding: var(--#{$prefix}accordion-btn-padding-y) var(--#{$prefix}accordion-btn-padding-x);
+		}
 }
+
+

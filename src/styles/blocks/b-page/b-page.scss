@@ -1,3 +1,7 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
 .b-page-wrap {
     position: relative;
     margin: auto;
@@ -14,7 +18,13 @@
     position: relative;
     opacity: 0.4;
     transition: all 0.5s ease-in-out;
-    
+
+    &__title {
+        font-size: 50px;
+        line-height: 1.1;
+        font-family: "univers", serif;
+    }
+
     &:first-child {
         opacity: 1;
     }

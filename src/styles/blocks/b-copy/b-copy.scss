@@ -4,6 +4,7 @@ $tablet-bp: 767px;
     font-size: 12px;
     padding-top: 14px;
     text-align: center;
+    color: $color-white;
 
     @media (max-width: $tablet-bp) {
         text-align: center;
