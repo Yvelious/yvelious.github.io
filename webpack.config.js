@@ -212,7 +212,7 @@ module.exports = {
                     // Now specify optimizers via "presets"
                     plugins: [
                         ["imagemin-mozjpeg", { quality: 75 }], // JPEG compression
-                        ["imagemin-pngquant", { quality: 99-100 }], // PNG
+                        ["imagemin-pngquant", { quality: [0.65, 0.8] }],  // array 0..1,
                         [
                             "imagemin-svgo",
                             {
