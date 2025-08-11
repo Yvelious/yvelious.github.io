@@ -31,7 +31,7 @@ body {
 				background: linear-gradient(83.21deg, $white, $color-yellow);
 				content: "";
 				height: 80vh;
-				left: -50vw;
+				left: -40vw;
 				mask-image: radial-gradient(rgba(0, 0, 0, 0.7), transparent 65%);
 				position: fixed;
 				top: -20vh;
@@ -40,12 +40,10 @@ body {
 		}
 
 		&:after {
-				inset: auto -50vh -20vh auto
+				inset: auto -40vw -20vh auto
 		}
-}
 
-@include media-breakpoint-down(md) {
-		.b-wrap {
+		@include media-breakpoint-down(md) {
 				height: auto;
 				overflow: visible;
 				position: relative;
