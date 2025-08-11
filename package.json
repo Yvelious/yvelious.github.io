@@ -4,15 +4,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prod": "NODE_ENV=production webpack",
-    "dev": "NODE_ENV=development webpack",
-    "server": "NODE_ENV=server webpack-dev-server",
-    "server-prod": "NODE_ENV=production webpack-dev-server --mode production"
+    "prod": "webpack --node-env=production ",
+    "dev": "webpack --node-env=development",
+    "server": "webpack serve --node-env=server",
+    "server-prod": "webpack serve --node-env=production"
   },
   "keywords": [],
-  "author": "",
+  "author": "Stanislav Levyshchev",
   "license": "ISC",
-  "description": "",
+  "description": "My personal page with CV",
   "devDependencies": {
     "@babel/core": "^7.26.7",
     "@babel/preset-env": "^7.26.7",
@@ -25,12 +25,12 @@
     "html-webpack-plugin": "^5.6.3",
     "image-minimizer-webpack-plugin": "^4.1.3",
     "imagemin": "^9.0.0",
-    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-mozjpeg": "^7.0.0",
     "imagemin-pngquant": "^10.0.0",
     "imagemin-svgo": "^11.0.1",
     "mini-css-extract-plugin": "^2.9.2",
     "postcss-import": "^16.1.0",
-    "postcss-preset-env": "^10.1.4",
+    "postcss-preset-env": "^10.2.4",
     "sass": "^1.83.4",
     "sass-loader": "^16.0.4",
     "style-loader": "^4.0.0",
@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",
-    "bootstrap": "^5.3.3",
+    "bootstrap": "^5.3.7",
     "postcss-loader": "^8.1.1"
   }
 }
