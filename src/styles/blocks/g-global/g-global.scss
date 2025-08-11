@@ -24,13 +24,28 @@ body {
     position: relative;
     overflow: hidden;
     scroll-behavior: smooth;
+    &:before,
+    &:after {
+        position: fixed;
+        z-index: -1;
+        content: "";
+        height: 80vh;
+        width: 100vw;
+        top: -20vh;
+        left: -50vw;
+        background: linear-gradient(83.21deg, $white, $color-yellow);
+        mask-image: radial-gradient(rgba(0,0,0,0.7),transparent 65%);
+    }
+    &:after {
+        inset: auto -50vh -20vh auto
+    }
 }
 
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) {
+@include media-breakpoint-down(md) {
     .b-wrap {
         height: auto;
         position: relative;
         overflow: visible;
     }
 }
+
