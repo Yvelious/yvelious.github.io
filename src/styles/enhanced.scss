@@ -1,16 +1,20 @@
-// Base files (самые базовые):
+$enable-important-utilities: false;
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+
 @layer base, bootstrap, theme;
 
-@layer bootstrap {
-		@import "bootstrap/scss/bootstrap-grid";
-		@import "bootstrap/scss/variables";
-		@import "bootstrap/scss/utilities";
-		@import "bootstrap/scss/mixins";
-		@import "bootstrap/scss/accordion";
-		@import "bootstrap/scss/transitions";
-}
 @layer base {
 		@import "utils/u-reset/u-reset";
+}
+@layer bootstrap {
+		@import "bootstrap/scss/bootstrap-grid";
+		@import "bootstrap/scss/utilities";
+		@import "bootstrap/scss/accordion";
+		@import "bootstrap/scss/transitions";
+		@import "bootstrap/scss/bootstrap-grid";
 }
 @layer theme {
 		@import "abstracts/variables";
@@ -39,5 +43,3 @@
 		@import "blocks/hero-unit/hero-unit";
 		@import "blocks/i-darkbox/i-darkbox";
 }
-
-

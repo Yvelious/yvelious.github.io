@@ -26,51 +26,51 @@ $pages: home, about, experience, folio, contact;
 		text-align: center;
 
 		@include media-breakpoint-down(lg) {
-				height: 100vh;
 				background-color: #fff;
+				height: 100vh;
 				max-width: 100% !important;
 
 				&--open {
+						animation: slideIn 0.4s cubic-bezier(.65, 0, .35, 1);
 						position: relative;
 						transform: translateX(0%);
-						animation: slideIn 0.4s cubic-bezier(.65,0,.35,1);
 				}
 
 				&--close {
-						position:absolute;
+						position: absolute;
 						transform: translateX(100%);
 				}
 		}
 
 		&__list {
-				display: flex;
-				justify-content: space-between;
 				align-items: center;
+				display: flex;
+				flex-direction: column;
 				height: 100%;
-				padding: 0 6px;
+				justify-content: center;
 				margin-bottom: 0;
+				padding: 0 6px;
 
-				@include media-breakpoint-down(lg) {
-						flex-direction: column;
-						justify-content: center;
-						align-items: center;
+				@include media-breakpoint-up(lg) {
+						flex-direction: row;
+						justify-content: space-between;
 				}
 		}
 
 		&__link,
 		&__link:link,
 		&__link:visited {
+				color: $text-link;
 				font-family: "univers", serif;
 				font-size: 32px;
 				line-height: 2;
-				color: $text-link;
-				text-shadow: 1px 1px 1px $color-white-transparent-60 !important;
 				padding: 2px 4px;
+				text-shadow: 1px 1px 1px $color-white-transparent-60 !important;
 
 				&:hover {
 						background-color: transparent;
-						color: $text-main !important;
 						box-shadow: none;
+						color: $text-main !important;
 				}
 
 				&:focus {
@@ -78,9 +78,7 @@ $pages: home, about, experience, folio, contact;
 				}
 
 				@include media-breakpoint-up(lg) {
-						& {
-								font-size: 24px;
-						}
+						font-size: 24px;
 				}
 		}
 }

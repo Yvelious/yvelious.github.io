@@ -1,12 +1,8 @@
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
 
 @layer base, bootstrap, theme;
-
-@layer bootstrap {
-		@import "bootstrap/scss/mixins";
-		@import "bootstrap/scss/bootstrap-grid";
-}
 
 @layer theme {
 		@import "abstracts/variables";
@@ -14,5 +10,3 @@
 		@import "blocks/g-global/g-global";
 		@import "blocks/i-preloader/i-preloader";
 }
-
-

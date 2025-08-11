@@ -1,3 +1,5 @@
+@use "sass:map";
+
 @function map-to-string($map) {
 		$result: "";
 		@each $key, $value in $map {

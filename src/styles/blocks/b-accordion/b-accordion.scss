@@ -28,7 +28,6 @@
 		}
 
 		&__inner {
-				align-items: center;
 				background-color: $background-main;
 				display: flex;
 				padding: var(--#{$prefix}accordion-btn-padding-y) var(--#{$prefix}accordion-btn-padding-x);

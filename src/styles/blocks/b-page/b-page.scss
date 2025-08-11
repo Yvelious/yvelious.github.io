@@ -1,12 +1,8 @@
-@import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/mixins";
-
 .b-page-wrap {
     position: relative;
     margin: auto;
     height: 100%;
-    
+
     .items {
         position: relative;
         height: 500%;
