@@ -11,14 +11,21 @@ $color-dark-gray: #020202;
 
 // transparent color
 $color-white-transparent-20: rgba($color-white, 0.2);
+$color-white-transparent-30: rgba($color-white, 0.3);
+$color-white-transparent-40: rgba($color-white, 0.4);
 $color-white-transparent-50: rgba($color-white, 0.5);
 $color-white-transparent-60: rgba($color-white, 0.6);
 $color-white-transparent-70: rgba($color-white, 0.7);
+$color-white-transparent-80: rgba($color-white, 0.8);
 $color-white-transparent-90: rgba($color-white, 0.9);
 $color-black-transparent-20: rgba($color-black, 0.2);
 $color-black-transparent-30: rgba($color-black, 0.3);
 $color-black-transparent-40: rgba($color-black, 0.4);
+$color-black-transparent-50: rgba($color-black, 0.5);
 $color-black-transparent-60: rgba($color-black, 0.6);
+$color-black-transparent-70: rgba($color-black, 0.7);
+$color-black-transparent-80: rgba($color-black, 0.8);
+$color-black-transparent-90: rgba($color-black, 0.9);
 
 // back
 $background-main: $color-white-transparent-50;
@@ -71,6 +78,11 @@ $text-darkbox-button: $color-white;
 }
 
 
+$graph-colors: (
+		(size: 4, color: #9deb80),
+		(size: 2, color: #cd8cf4),
+		(size: 7, color: #efe877)
+);
 
 
 

@@ -1,0 +1,47 @@
+.b-experience-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		background-color: $color-white-transparent-80;
+		padding: 16px;
+		gap: 10px;
+		border-radius: 4px;
+}
+
+.b-experience {
+		position: relative;
+		padding-left: 50px;
+		flex-basis: calc(33% - 10px);
+
+		&:before {
+				left: 0;
+				color: $color-white;
+				font-size: 20px;
+				font-weight: bold;
+				display:flex;
+				align-items: center;
+				justify-content: center;
+				opacity: 0.8;
+				width: 40px;
+				aspect-ratio: 1 / 1;
+				top: 50%;
+				transform: translateY(-50%);
+				border-radius: var(--border-radius-circle);
+				position: absolute;
+		}
+
+		> li:first-child {
+				font-size: 18px;
+				font-weight: bold;
+		}
+}
+
+@each $item in $graph-colors {
+		$size: map-get($item, size);
+		$color: map-get($item, color);
+		$i: index($graph-colors, $item);
+
+		.b-experience:nth-child(#{$i}):before {
+				content: "#{$size}";
+				background-color: $color;
+		}
+}

@@ -2,7 +2,7 @@
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
 
-@layer base, bootstrap, theme;
+@layer base, bootstrap, theme, utilities;
 
 @layer theme {
 		@import "abstracts/variables";
