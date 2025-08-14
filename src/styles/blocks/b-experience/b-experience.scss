@@ -2,15 +2,17 @@
 		display: flex;
 		flex-wrap: wrap;
 		background-color: $color-white-transparent-80;
-		padding: 16px;
+		padding: 14px;
 		gap: 10px;
-		border-radius: 4px;
+		border-radius: 0 0 4px 4px;
 }
 
 .b-experience {
 		position: relative;
 		padding-left: 50px;
-		flex-basis: calc(33% - 10px);
+		//flex-basis: calc(33% - 10px);
+		//flex-shrink: 0;
+		flex-grow: 1;
 
 		&:before {
 				left: 0;
