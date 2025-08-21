@@ -80,6 +80,7 @@ module.exports = {
     devtool: isProd ? false : "source-map", // Setting up source maps for faster debugging
     entry: {
         main: "./src/main.js",
+        bootstrapReact: path.resolve(__dirname, "src/react/bootstrapReact.js")
     },
     output: {
         path: path.resolve(__dirname, "dist"),
@@ -93,7 +94,7 @@ module.exports = {
             "@fonts": path.resolve(__dirname, "src/assets/fonts/"),
             "@img": path.resolve(__dirname, "src/assets/bootstrap/img/"),
         },
-        extensions: [".js"], // Specify only js file extension
+        extensions: [".js", ".jsx", ".json"], // Specify only js file extension
     },
 
     module: {
@@ -170,12 +171,15 @@ module.exports = {
                 },
             },
             {
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader", // for ES6+ support
                     options: {
-                        presets: ["@babel/preset-env"],
+                        cacheDirectory: true, // Enable caching for faster rebuilds
+                        cacheCompression: isProd, // Compress cache in production
+                        compact: isProd, // Minify output in production
+                        presets: ["@babel/preset-env", "@babel/preset-react"],
                     },
                 },
             },
@@ -277,6 +281,13 @@ module.exports = {
                     enforce: true, // Force creating a separate bundle
                     priority: 1,
                 },
+                // reactVendor: {
+                //     test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+                //     name: "vendor-react",
+                //     chunks: "all",
+                //     priority: 20,
+                //     enforce: true
+                // },
                 default: false,
             },
         },
@@ -309,5 +320,5 @@ module.exports = {
               maxEntrypointSize: 512000, // 500KB
               maxAssetSize: 512000, // 500KB
           }
-        : false,
+        : { hints: false}
 };
