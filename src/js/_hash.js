@@ -1,4 +1,5 @@
 // hash.js
+
 export function onHashChange() {
     const currentHash = window.location.hash;
     const nav = document.querySelector('.b-nav');
@@ -7,8 +8,10 @@ export function onHashChange() {
 }
 
 export function triggerClickOnHashLink() {
+
     const currentHash = window.location.hash;
     if (currentHash) {
+        const targetSection= document.querySelector(':target')?.id;
         const link = document.querySelector(`a[href="${currentHash}"]`);
         if (link) {
             link.click();
@@ -25,5 +28,5 @@ export function initHashTag() {
     } else {
         window.location.hash = currentHash;
     }
-    triggerClickOnHashLink();
+    triggerClickOnHashLink(); //will trigger first load page oder reload
 }
