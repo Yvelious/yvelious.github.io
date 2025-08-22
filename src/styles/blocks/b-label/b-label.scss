@@ -1,0 +1,20 @@
+.b-label {
+		display: block;
+		margin-bottom: 8px;
+		text-align: center;
+		color: $color-dark-gray;
+		background-color: $color-white-transparent-50;
+		border-radius: 4px;
+		font-family: univers, serif;
+		padding: 6px;
+		font-weight: bold;
+
+		&_placeholder {
+				padding: 8px;
+				line-height: 1.1;
+				color: $color-red;
+				border-radius: 4px 4px 0 0;
+				background-color: $color-white-transparent-70;
+
+		}
+}

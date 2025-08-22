@@ -39,6 +39,7 @@
     width: 100%;
     position: relative;
 }
+
 @include media-breakpoint-down(md) {
     .b-page {
         height: auto;

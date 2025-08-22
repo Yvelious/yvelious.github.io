@@ -1,4 +1,5 @@
 import React, { useState, Suspense } from "react";
+const LazyGraph = React.lazy(() => import("./Graph"));
 
 
 export default function App() {
@@ -10,6 +11,7 @@ export default function App() {
             <button onClick={() => setShowGraph(true)}>Показать граф</button>
             {showGraph && (
                 <Suspense fallback={<div>Загрузка графа...</div>}>
+                    <LazyGraph />
                 </Suspense>
             )}
         </div>

@@ -16,6 +16,9 @@
 		@import "bootstrap/scss/accordion";
 		@import "bootstrap/scss/transitions";
 		@import "bootstrap/scss/bootstrap-grid";
+		@import "bootstrap/scss/utilities";
+		@import "bootstrap/scss/utilities/api";
+
 }
 
 @layer theme {
@@ -46,6 +49,7 @@
 		@import "blocks/i-darkbox/i-darkbox";
 		@import "blocks/b-experience-graphic/b-experience-graphic";
 		@import "blocks/b-experience/b-experience";
+		@import "blocks/b-nav-submenu/b-nav-submenu";
 }
 
 @layer utilities {

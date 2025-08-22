@@ -1,0 +1,40 @@
+.b-nav-submenu {
+		display: flex;
+		//gap: 1px;
+		gap: 6px;
+		float:right;
+		background-color: $color-white-transparent-50;
+		padding: 6px;
+		border-radius: 4px;
+		margin-top: 6px;
+		box-shadow: 0 -1px 1px 0 $color-black-transparent-20;
+
+		&__list {
+				color: $color-red;
+				cursor: pointer;
+				font-family: univers, serif;
+				font-size: 18px;
+				padding: 0 10px;
+				border-radius: 4px;
+
+				&.active {
+						background-color: $color-white;
+						&:hover {
+								background-color: $color-white;
+						}
+				}
+				&:hover {
+						background-color: $color-white-transparent-50;
+				}
+
+
+				//&:first-child {
+				//		border-radius: 4px 0 0 4px;
+				//}
+				//
+				//&:last-child {
+				//		border-radius: 0 4px 4px 0;
+				//}
+
+		}
+}

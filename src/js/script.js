@@ -6,6 +6,8 @@ initPreloader();
 initHashTag();
 
 let menuClicked = false;
+let reactLoaded = false;
+
 window.addEventListener('hashchange', function (event) {
     onHashChange()
     if (!menuClicked) { // if menu was not clicked, only history button clicked in browser
@@ -35,8 +37,14 @@ document.addEventListener("DOMContentLoaded", () => {
 const navLinks = document.querySelectorAll(".b-nav__link");
 
 navLinks.forEach(link => {
-    link.addEventListener("click", function(e) {
+    link.addEventListener("click", async function(e) {
         menuClicked = true;
+        if (e.target.hash == "#skills" && !reactLoaded) {
+            console.log("#skills");
+            const { mountReact } = await import("../react/bootstrapReact.js");
+            mountReact();
+            reactLoaded = true;
+        }
     });
 });
 
