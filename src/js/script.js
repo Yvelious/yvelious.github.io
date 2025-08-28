@@ -32,21 +32,48 @@ function handleMinLg (e) {
 document.addEventListener("DOMContentLoaded", () => {
     const navToggle = new toggleNavBtn();
     navToggle.init();
-});
 
-const navLinks = document.querySelectorAll(".b-nav__link");
 
-navLinks.forEach(link => {
-    link.addEventListener("click", async function(e) {
-        menuClicked = true;
-        if (e.target.hash == "#skills" && !reactLoaded) {
-            console.log("#skills");
-            const { mountReact } = await import("../react/bootstrapReact.js");
-            mountReact();
-            reactLoaded = true;
-        }
+    const navLinks = document.querySelectorAll(".b-nav__link");
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function(e) {
+            menuClicked = true; // set the flag when a menu link is clicked
+        });
+    });
+
+    const accordionButtons = document.querySelectorAll('#skills-section .b-switcher__btn');
+
+    accordionButtons.forEach(btn => {
+        btn.addEventListener('click', e => {
+            if (btn.disabled) {
+                e.stopImmediatePropagation();
+                e.preventDefault();
+                return;
+            }
+            accordionButtons.forEach(item => {
+                item.disabled = false;
+            })
+            btn.disabled = true; // disable the clicked button
+        });
     });
 });
+
+//create min-height for skills section to avoid layout shift on switcher btn click
+const skillsSection =  document.querySelector('#skills-section');
+const skillsSectionHeight= skillsSection.offsetHeight;
+skillsSection.style.minHeight = `${skillsSectionHeight}px`;
+
+
+
+const graphBtn = document.querySelector('.b-graph-btn');
+graphBtn.addEventListener('click', async () => {
+    if (!reactLoaded) {
+        const {mountReact} = await import( '../react/bootstrapReact.js');
+        mountReact();
+        reactLoaded = true
+    }
+})
 
 
 /* add to accordion

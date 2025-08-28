@@ -204,20 +204,20 @@
 
             <!--skills page-->
             <section class="b-page b-page_skills row d-flex align-items-center" id="skills">
-                <div class="col-12">
-                    <div class="row">
+                <div class="col-12" id="skills-section">
+                    <div class="row" >
                         <div class="col-8">
                             <h1 class="b-page__title">Skills</h1>
                         </div>
-                        <div class="col-4">
-                            <ul class="b-nav-submenu">
-                                <li class="b-nav-submenu__list">Graph View</li>
-                                <li class="b-nav-submenu__list active">Text View</li>
-                            </ul>
+                        <div class="col-4 d-flex align-items-start justify-content-end">
+                            <div class="b-switcher">
+                                <button class="b-switcher__btn b-text-btn active" data-bs-toggle="collapse" data-bs-target="#skill-text">Text View</button>
+                                <button class="b-switcher__btn b-graph-btn" data-bs-toggle="collapse" data-bs-target="#skill-graph">Graph View</button>
+                                <div class="b-switcher__status"></div>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="row">
+                    <div data-bs-parent="#skills-section" id="skill-text" class="collapse show row">
                         <div class="col-3">
                             <div class="hero-unit p-0 pb-1">
                                 <h2 class="b-label b-label_placeholder mb-4">Core Web Development</h2>
@@ -340,6 +340,13 @@
                                     <li>Scrum</li>
                                     <li>Kanban</li>
                                 </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-bs-parent="#skills-section" id="skill-graph" class="row collapse b-graph-wrap">
+                        <div class="col-12">
+                            <div class="hero-unit">
+                                <div id="react-root"></div>
                             </div>
                         </div>
                     </div>

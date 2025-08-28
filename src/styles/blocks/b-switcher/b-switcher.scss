@@ -1,0 +1,59 @@
+// Переменные компонентов (можно вынести в общий файл переменных)
+$switcher-radius: 4px;
+$switcher-gap: 4px;
+$switcher-inset: 4px;
+
+.b-switcher {
+		background-color: $color-white-transparent-50;
+		border-radius: $switcher-radius;
+		box-shadow: 0 -1px 1px 0 $color-black-transparent-20, 0 1px 1px 0 $color-white-transparent-70;
+		display: flex;
+		gap: $switcher-gap;
+		margin-top: 8px;
+		position: relative;
+		user-select: none;
+		isolation: isolate; //  stacking context
+		-webkit-tap-highlight-color: transparent;
+
+		&__btn {
+				position: relative;
+				z-index: 1;
+				border-radius: $switcher-radius;
+				color: $color-red;
+				cursor: pointer;
+				font-family: univers, serif;
+				font-size: 18px;
+				padding: 10px;
+				transition: color .2s ease;
+
+				&:hover {
+						color: $color-dark-red;
+				}
+
+				&:focus-visible {
+						outline: 2px solid $color-dark-red;
+						outline-offset: 2px;
+						border-radius: $switcher-radius;
+				}
+
+				&[aria-expanded="false"] {
+						&:first-child ~ .b-switcher__status {
+								transform: translateX(calc(100% + #{$switcher-gap}));
+						}
+				}
+		}
+
+		&__status {
+				background-color: $color-white-transparent-90;
+				border-radius: $switcher-radius;
+				position: absolute;
+				pointer-events: none;
+				top: $switcher-inset;
+				bottom: $switcher-inset;
+				left: $switcher-inset;
+				width: calc(50% - (#{$switcher-gap} / 2 + #{$switcher-inset}));
+				transform: translateX(0);
+				transition: transform .3s ease;
+				z-index: 0;
+		}
+}

@@ -33,6 +33,8 @@ img {
          url('~@fonts/univers_condensed_medium-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap; // speeds up font loading
+
 }
 
 /* =LINKS
