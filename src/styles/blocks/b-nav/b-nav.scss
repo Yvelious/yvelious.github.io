@@ -9,7 +9,7 @@
 		}
 }
 
-$pages: home, about, experience, folio, contact;
+$pages: home, about, experience, skills, contact;
 
 .b-wrap {
 		@each $section in $pages {
@@ -19,6 +19,11 @@ $pages: home, about, experience, folio, contact;
 						box-shadow: none;
 						text-decoration: none;
 				}
+				// for header change background color without opacity when graph shows
+				&:has(#skills:target):has(.b-graph-btn[aria-expanded=true]) > .b-header {
+						background-color: $color-lighter-orange;
+				}
+
 		}
 }
 

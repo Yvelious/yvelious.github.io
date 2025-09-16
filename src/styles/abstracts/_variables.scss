@@ -5,6 +5,7 @@ $color-yellow: #f7de00;
 $color-light-red: rgba(220, 10, 10, 1);
 $color-orange: #e14400;
 $color-light-orange: #f6ac7f;
+$color-lighter-orange: #fbd7c2;
 $color-dark-red: #770000;
 $color-light-gray: rgba(255, 255, 255, 0.5);
 $color-dark-gray: #020202;
@@ -28,8 +29,8 @@ $color-black-transparent-80: rgba($color-black, 0.8);
 $color-black-transparent-90: rgba($color-black, 0.9);
 
 // back
-$background-main: $color-white-transparent-50;
-$background-header: hsla(0, 0%, 100%, 0.5);
+$background-surface: $color-white-transparent-50;
+$background-header: $color-white-transparent-50;
 $background-footer: $color-orange;
 $background-preloader: $color-light-orange;
 $background-preloader-bar: $color-orange;

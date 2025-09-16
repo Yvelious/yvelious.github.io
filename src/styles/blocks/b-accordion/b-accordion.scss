@@ -19,7 +19,7 @@
 		}
 
 		&_item {
-				background-color: $background-main;
+				background-color: $background-surface;
 				border: none;
 				border-radius: $border-radius;
 				margin-bottom: 6px;
@@ -28,7 +28,7 @@
 		}
 
 		&__inner {
-				background-color: $background-main;
+				background-color: $background-surface;
 				display: flex;
 				padding: var(--#{$prefix}accordion-btn-padding-y) var(--#{$prefix}accordion-btn-padding-x);
 		}

@@ -4,7 +4,7 @@ $switcher-gap: 4px;
 $switcher-inset: 4px;
 
 .b-switcher {
-		background-color: #fbd7c2;
+		background-color: $color-lighter-orange;
 		border-radius: $switcher-radius;
 		box-shadow: 0 -1px 1px 0 $color-black-transparent-20, 0 1px 1px 0 $color-white-transparent-70;
 		display: flex;
