@@ -1,5 +1,6 @@
 import { onHashChange, triggerClickOnHashLink, initHashTag } from './_hash';
 import { getBreakpointsObjectFromCss } from './_breakpoints';
+import { preloaderReactLoaded } from './_preloader';
 import toggleNavBtn from './_toggle_nav_btn';
 import {initPreloader} from "./_preloader";
 initPreloader();
@@ -66,11 +67,17 @@ skillsSection.style.minHeight = `${skillsSectionHeight}px`;
 
 
 
+
+
+
 const graphBtn = document.querySelector('.b-graph-btn');
 graphBtn.addEventListener('click', async () => {
     if (!reactLoaded) {
+        preloaderReactLoaded(4); //25%
         const {mountReact} = await import( '../react/bootstrapReact.js');
-        mountReact();
+        preloaderReactLoaded(3); // 33%
+        await mountReact();
+        preloaderReactLoaded(2); // 50%
         reactLoaded = true
     }
 })

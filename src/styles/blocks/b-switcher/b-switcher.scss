@@ -4,7 +4,7 @@ $switcher-gap: 4px;
 $switcher-inset: 4px;
 
 .b-switcher {
-		background-color: $color-white-transparent-50;
+		background-color: #fbd7c2;
 		border-radius: $switcher-radius;
 		box-shadow: 0 -1px 1px 0 $color-black-transparent-20, 0 1px 1px 0 $color-white-transparent-70;
 		display: flex;
@@ -14,6 +14,7 @@ $switcher-inset: 4px;
 		user-select: none;
 		isolation: isolate; //  stacking context
 		-webkit-tap-highlight-color: transparent;
+		z-index: 4;
 
 		&__btn {
 				position: relative;

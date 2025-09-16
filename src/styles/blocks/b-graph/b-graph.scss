@@ -1,1 +1,8 @@
-.b-graph-wrap {}
+.b-graph-wrap {
+		position:fixed;
+		inset: 0;
+		background-color: $color-light-orange;
+		z-index: 3;
+		margin: 0;
+		padding: 0;
+}
