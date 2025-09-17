@@ -8,6 +8,7 @@ initHashTag();
 
 let menuClicked = false;
 let reactLoaded = false;
+let graphShow = false;
 
 window.addEventListener('hashchange', function (event) {
     onHashChange()
@@ -34,12 +35,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const navToggle = new toggleNavBtn();
     navToggle.init();
 
-
     const navLinks = document.querySelectorAll(".b-nav__link");
 
     navLinks.forEach(link => {
         link.addEventListener("click", function(e) {
             menuClicked = true; // set the flag when a menu link is clicked
+            // hide graph page when use navigation of site
+            if(graphShow) {
+                const switcherBtnText = document.querySelector('.b-text-btn');
+                switcherBtnText.click();
+                graphShow = false;
+            }
         });
     });
 
@@ -60,16 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-//create min-height for skills section to avoid layout shift on switcher btn click
-const skillsSection =  document.querySelector('#skills-section');
-const skillsSectionHeight= skillsSection.offsetHeight;
-skillsSection.style.minHeight = `${skillsSectionHeight}px`;
-
-
-
-
-
-
 const graphBtn = document.querySelector('.b-graph-btn');
 graphBtn.addEventListener('click', async () => {
     if (!reactLoaded) {
@@ -80,6 +76,7 @@ graphBtn.addEventListener('click', async () => {
         preloaderReactLoaded(2); // 50%
         reactLoaded = true
     }
+    graphShow = true;
 })
 
 

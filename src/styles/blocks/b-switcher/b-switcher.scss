@@ -58,3 +58,19 @@ $switcher-inset: 4px;
 				z-index: 0;
 		}
 }
+// use visibility:hidden instead display:block at the switcher
+#skills-section {
+		& > .collapse:not(.show) {
+				display: flex;
+				visibility: hidden;
+		}
+
+		& > .collapse.show {
+				display: flex;
+				visibility: visible;
+		}
+
+		& > .collapsing {
+				height: inherit;
+		}
+}
