@@ -22,8 +22,8 @@ export default function Graph({ data = defaultData, onLoaded}) {
         const set = new Set();
         const traverse = (id) => {
             data.links.forEach((link, index) => {
-                console.log(index);
-                console.log(link);
+                // console.log(index);
+                // console.log(link);
                 const sourceId = link.source.id ?? link.source;
                 const targetId = link.target.id ?? link.target;
                 if (sourceId === id && !set.has(targetId)) {

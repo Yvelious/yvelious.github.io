@@ -1,56 +1,62 @@
 .b-page-wrap {
-    position: relative;
-    margin: auto;
-    height: 100%;
+		height: 100%;
+		margin: auto;
+		position: relative;
 
-    .items {
-        position: relative;
-        height: 500%;
-    }
+		.items {
+				height: 500%;
+				position: relative;
+		}
 }
 
 .b-page {
-    height: 20%;
-    position: relative;
-    opacity: 0.4;
-    transition: all 0.5s ease-in-out;
+		height: 20%;
+		opacity: 0.4;
+		position: relative;
+		transition: all 0.5s ease-in-out;
 
-    &__title {
-        font-size: 50px;
-        line-height: 1.1;
-        font-family: "univers", serif;
-    }
+		&__title {
+				font-family: "univers", serif;
+				font-size: 50px;
+				line-height: 1.1;
+		}
 
-    &:first-child {
-        opacity: 1;
-    }
-    
-    &:target {
-        opacity: 1;
-    }
-    
-    > .span12 {
-        display: table;
-        height: 100%;
-    }
+		&:first-child {
+				opacity: 1;
+		}
+
+		&:target {
+				opacity: 1;
+		}
+
+		> .span12 {
+				display: table;
+				height: 100%;
+		}
 }
 
 #home.b-page {
-    width: 100%;
-    position: relative;
+		position: relative;
+		width: 100%;
 }
 
 @include media-breakpoint-down(md) {
-    .b-page {
-        height: auto;
-        width: 100%;
-    }
-    .b-page-wrap {
-        max-width: 100%;
-    }
+		.b-page {
+				height: auto;
+				width: 100%;
+		}
+		.b-page-wrap {
+				max-width: 100%;
+		}
 
-    .b-page-wrap .items {
-        position: relative;
-        height: auto;
-    }
+		.b-page-wrap .items {
+				height: auto;
+				position: relative;
+		}
 }
+
+
+
+
+
+
