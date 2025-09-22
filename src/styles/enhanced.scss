@@ -12,12 +12,29 @@
 }
 
 @layer bootstrap {
+
 		@import "bootstrap/scss/bootstrap-grid";
 		@import "bootstrap/scss/accordion";
 		@import "bootstrap/scss/transitions";
-		@import "bootstrap/scss/bootstrap-grid";
 		@import "bootstrap/scss/utilities";
+		$utilities: map-merge(
+				$utilities,
+				(
+				"height": (
+						property: height,
+						class: h,
+						responsive: true,
+						values: (
+								25: 25%,
+								50: 50%,
+								75: 75%,
+								100: 100%
+						)
+				)
+				)
+		);
 		@import "bootstrap/scss/utilities/api";
+
 }
 
 @layer theme {
@@ -53,6 +70,7 @@
 		@import "blocks/b-social-list/b-social-list";
 		@import "blocks/b-icon-bg/b-icon-bg";
 }
+
 @layer utilities {
 		@import "utils/u-clearfix/u-clearfix";
 		@import "utils/u-min-height/u-min-height";
