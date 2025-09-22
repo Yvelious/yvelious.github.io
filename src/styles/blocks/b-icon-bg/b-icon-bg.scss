@@ -1,0 +1,30 @@
+.b-icon-bg {
+		&:before {
+				background-position: right;
+				background-repeat: no-repeat;
+				background-size: contain;
+				content: '';
+				height: 100%;
+				opacity: .2;
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 100%;
+				z-index: -1;
+		}
+
+		&--mail:before {
+				background-image: url('~@i/icons/icon-mail.svg');
+
+		}
+
+		&--cv:before {
+				background-image: url('~@i/icons/icon-cv.svg');
+		}
+
+		&--network:before {
+				background-image: url('~@i/icons/icon-network.svg');
+		}
+}
+
+

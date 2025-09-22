@@ -2,15 +2,15 @@ $width-icon: 40px;
 
 .b-social-list {
 		&__item {
-				display: flex;
 				align-items: center;
+				display: flex;
 				gap: 10px;
 				padding-bottom: 20px;
 				> img {
-						width: $width-icon;
 						border: 2px solid #770000;
-						padding: 2px;
 						border-radius: 6px;
+						padding: 2px;
+						width: $width-icon;
 				}
 				> a {
 						font-size: calc($width-icon/1.5);
@@ -19,5 +19,4 @@ $width-icon: 40px;
 						padding-left: calc($width-icon + 10px)
 				}
 		}
-
 }
