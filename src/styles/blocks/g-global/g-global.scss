@@ -47,8 +47,6 @@ body {
 		}
 
 		@include media-breakpoint-down(md) {
-				height: auto;
-				overflow: visible;
 				position: relative;
 		}
 }
