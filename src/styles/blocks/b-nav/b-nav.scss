@@ -54,7 +54,6 @@ $pages: home, about, experience, skills, contact;
 				height: 100%;
 				justify-content: center;
 				margin-bottom: 0;
-				padding: 0 6px;
 
 				@include media-breakpoint-up(lg) {
 						flex-direction: row;
@@ -69,7 +68,7 @@ $pages: home, about, experience, skills, contact;
 				font-family: "univers", serif;
 				font-size: 32px;
 				line-height: 2;
-				padding: 2px 4px;
+				padding: 2px 0;
 				text-shadow: 1px 1px 1px $color-white-transparent-60 !important;
 
 				&:hover {

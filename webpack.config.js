@@ -209,7 +209,7 @@ module.exports = {
               ]
             : []),
         new ImageMinimizerPlugin({
-            //exclude: /(?:^|[/\\])bg-body[\w-]*\.png$/i,// Exclude specific images from optimization like this bg-bodyd0fbbb9d0ae0aef8bb65.png
+            exclude: /(?:^|[/\\])portret[\w-]*\.jpg$/i,// Exclude specific images from optimization like this bg-bodyd0fbbb9d0ae0aef8bb65.png
             minimizer: {
                 implementation: ImageMinimizerPlugin.imageminGenerate, // Specify the optimization method
                 options: {

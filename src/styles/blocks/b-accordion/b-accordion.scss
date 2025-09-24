@@ -29,7 +29,6 @@
 
 		&__inner {
 				background-color: $background-surface;
-				display: flex;
 				padding: var(--#{$prefix}accordion-btn-padding-y) var(--#{$prefix}accordion-btn-padding-x);
 		}
 }
