@@ -14,11 +14,16 @@
 		opacity: 0.4;
 		position: relative;
 		transition: all 0.5s ease-in-out;
+		margin: 0;
 
 		&__title {
+				text-align: center;
 				font-family: "univers", serif;
 				font-size: 50px;
 				line-height: 1.1;
+				@include media-breakpoint-up(md) {
+						text-align: left;
+				}
 		}
 
 		&:first-child {
@@ -39,24 +44,3 @@
 		position: relative;
 		width: 100%;
 }
-
-@include media-breakpoint-down(md) {
-		.b-page {
-				height: auto;
-				width: 100%;
-		}
-		.b-page-wrap {
-				max-width: 100%;
-		}
-
-		.b-page-wrap .items {
-				height: auto;
-				position: relative;
-		}
-}
-
-
-
-
-
-

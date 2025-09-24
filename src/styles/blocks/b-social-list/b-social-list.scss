@@ -1,22 +1,36 @@
-$width-icon: 40px;
-
 .b-social-list {
+		--width-icon: 30px;
+		display: flex;
+		flex-wrap: wrap;
+
+		@include media-breakpoint-up(md) {
+				--width-icon: 40px;
+		}
+
 		&__item {
+				width: 50%;
+
 				align-items: center;
 				display: flex;
 				gap: 10px;
 				padding-bottom: 20px;
+				@include media-breakpoint-up(md) {
+						width: 100%;
+				}
+
 				> img {
 						border: 2px solid #770000;
 						border-radius: 6px;
 						padding: 2px;
-						width: $width-icon;
+						// 3. Используем CSS-переменную, которая будет изменяться
+						width: var(--width-icon);
 				}
+
 				> a {
-						font-size: calc($width-icon/1.5);
+						font-size: calc(var(--width-icon) / 1.5);
 						line-height: 1.5;
-						margin-left: - calc($width-icon + 10px);
-						padding-left: calc($width-icon + 10px)
+						margin-left: calc(-1 * (var(--width-icon) + 10px));
+						padding-left: calc(var(--width-icon) + 10px);
 				}
 		}
 }

@@ -311,7 +311,11 @@ module.exports = {
             "Cache-Control": "no-store", // Disable caching
         },
         client: {
-            overlay: false, // disable overlay with errors and warnings in the browser
+            overlay: {
+                warnings: false, // прячет warning overlay
+                errors: true,    // ошибки оставляем
+            },
+            logging: 'error', // убирает логи про warning/info, оставляет только error
         },
     },
     performance: isProd
