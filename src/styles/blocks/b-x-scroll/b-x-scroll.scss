@@ -9,7 +9,8 @@
 				white-space: nowrap;
 				width: calc(100% + var(--bs-gutter-x));
 				> .col {
-						width: 86%;
+						//width: 86%;
+						width: 300px;
 				}
 
 				&::-webkit-scrollbar {

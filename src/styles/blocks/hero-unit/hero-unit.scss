@@ -8,6 +8,11 @@
     &:last-child {
         margin-right: 0;
     }
+    @include media-breakpoint-down(md) {
+        .b-x-scroll & {
+            min-height: 100%;
+        }
+    }
 
 }
 
