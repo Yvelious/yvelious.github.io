@@ -15,6 +15,9 @@ $switcher-inset: 4px;
 		isolation: isolate; //  stacking context
 		-webkit-tap-highlight-color: transparent;
 		z-index: 4;
+		@include media-breakpoint-down(md) {
+				width: 120px;
+		}
 
 		&__btn {
 				position: relative;
@@ -26,6 +29,13 @@ $switcher-inset: 4px;
 				font-size: 18px;
 				padding: 10px;
 				transition: color .2s ease;
+				@include media-breakpoint-down(md) {
+						line-height: 2;
+						overflow: hidden;
+						height: 34px;
+						padding-top: 0;
+						padding-bottom: 0;
+				}
 
 				&:hover {
 						color: $color-dark-red;

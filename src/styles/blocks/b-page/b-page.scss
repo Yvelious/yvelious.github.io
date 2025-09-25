@@ -17,13 +17,10 @@
 		margin: 0;
 
 		&__title {
-				text-align: center;
+				text-align: left;
 				font-family: "univers", serif;
 				font-size: 50px;
 				line-height: 1.1;
-				@include media-breakpoint-up(sm) {
-						text-align: left;
-				}
 		}
 
 		&:first-child {

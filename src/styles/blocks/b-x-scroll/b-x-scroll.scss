@@ -1,0 +1,37 @@
+.b-x-scroll {
+		@include media-breakpoint-down(md) {
+				flex-wrap: nowrap;
+				margin-left: calc(-0.5 * var(--bs-gutter-x));
+				-webkit-overflow-scrolling: touch;
+				overflow-x: auto;
+				overflow-y: hidden;
+				scroll-behavior: smooth;
+				white-space: nowrap;
+				width: calc(100% + var(--bs-gutter-x));
+				> .col {
+						width: 86%;
+				}
+
+				&::-webkit-scrollbar {
+						display: none;
+				}
+				ul {
+						display: inline-flex;
+						flex-wrap: wrap;
+				}
+
+				li {
+						background-color: #fff;
+						border-radius: 6px;
+						display: inline;
+						line-height: 1.5;
+						margin: 2px;
+						padding: 0 4px;
+
+				}
+		}
+
+
+
+
+}
