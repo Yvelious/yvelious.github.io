@@ -26,7 +26,7 @@ jobs:
 
       - name: Build with version
         run: |
-          npm run build
+          npm run prod
           sed -i "s|<!--VERSION-->|${VERSION}|g" dist/index.html
 
       - name: Deploy to repo-deploy
