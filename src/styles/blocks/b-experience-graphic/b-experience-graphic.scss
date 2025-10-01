@@ -1,8 +1,12 @@
 .b-experience-graphic {
-		padding-top: 260px;
+		padding-top: 180px;
 		overflow: hidden;
 		position: relative;
 		display: flex;
+		@include media-breakpoint-up(md) {
+				padding-top: 260px;
+
+		}
 
 		&:before {
 				content: "";
@@ -12,19 +16,6 @@
 				height: 100%;
 				background: url('~@i/grid-white.webp');
 				mask-image: radial-gradient(rgba(0, 0, 0, 0.6), transparent 75%);
-		}
-
-		&:after {
-				content: "Career Timeline";
-				position: absolute;
-				font-size: 24px;
-				color: $color-dark-red;
-				top: 30px;
-				left: 12px;
-				padding: 10px;
-				border-radius: 4px;
-				background: $color-white-transparent-80;
-				font-family: univers, serif;
 		}
 
 		&__item {
@@ -41,30 +32,67 @@
 		&__graph {
 				border-radius: var(--border-radius-circle);
 				width: 100%;
-				opacity: 0.8;
 				aspect-ratio: 1 / 0.7;
 				z-index: -1;
 				position: absolute;
+				opacity: .7;
 		}
 
 		&__year {
-				background: linear-gradient(90deg, $color-orange, $color-light-orange);
-				padding: 2px;
-				width: 100%;
+				display: none;
+
+				@include media-breakpoint-up(md) {
+						background: linear-gradient(90deg, $color-orange, $color-light-orange);
+						padding: 2px;
+						width: 100%;
+						display: block;
+
+				}
 		}
 
+		&__label {
+				position: absolute;
+				font-size: 24px;
+				color: $color-dark-red;
+				top: 30px;
+				left: 12px;
+				padding: 10px;
+				border-radius: 4px 0 0 4px;
+				background: $white;
+				font-family: univers, serif;
+				z-index: 2;
+
+				> span {
+						border-radius: 0 4px 4px 0;
+						font-family: univers, serif;
+						background: $color-dark-red;
+						position: absolute;
+						font-size: 24px;
+						padding: 10px 5px;
+						top: 0;
+						color: $white;
+						z-index: -1;
+						left: 100%;
+						font-weight: bold;
+
+				}
+		}
 }
+// create map of colors  from $graph-colors
+$colors: ();
 
 @each $item in $graph-colors {
 		$size: map-get($item, size);
 		$color: map-get($item, color);
 		$i: index($graph-colors, $item);
+		$colors: append($colors, map-get($item, color), comma);
 
 		.b-experience-graphic__item:nth-child(#{$i}) {
 				width: #{$size * 8%} !important;
-
-				> .b-experience-graphic__graph {
-						background-color: $color;
-				}
 		}
+}
+
+.b-experience-graphic__graph {
+		--canvas-color: #{join($colors, ';')}; // CSS variable with colors
+
 }

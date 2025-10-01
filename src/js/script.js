@@ -9,6 +9,7 @@ initHashTag();
 let menuClicked = false;
 let reactLoaded = false;
 let graphShow = false;
+let expierienceJsLoaded = false;
 
 window.addEventListener('hashchange', function (event) {
     onHashChange()
@@ -31,13 +32,25 @@ function handleMinLg (e) {
         nav.classList.add('b-nav--close');
     }
 }
+
+const loadRoundAnimationCanvas = (hash) => {
+    if (hash == "#experience" && !expierienceJsLoaded) {
+        import('./_roundAnimationCanvas').then(module => {
+            module.default();
+            expierienceJsLoaded = true;
+        });
+    }
+};
 document.addEventListener("DOMContentLoaded", () => {
     const navToggle = new toggleNavBtn();
     navToggle.init();
 
+    loadRoundAnimationCanvas(window.location.hash);
+
     const navLinks = document.querySelectorAll(".b-nav__link");
 
     navLinks.forEach(link => {
+
         link.addEventListener("click", function(e) {
             menuClicked = true; // set the flag when a menu link is clicked
             // hide graph page when use navigation of site
@@ -46,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 switcherBtnText.click();
                 graphShow = false;
             }
+            loadRoundAnimationCanvas(link.hash);
         });
     });
 
@@ -77,17 +91,6 @@ graphBtn.addEventListener('click', async () => {
         reactLoaded = true
     }
     graphShow = true;
-})
+});
 
-
-/* add to accordion
- /* ---------------------------------------------------------------------- */
-
-// $(function () {
-//     $(".b-accordion .accordion-group").click(function () {
-//             $(".accordion-group").removeClass("active");
-//             $(this).addClass("active")
-//         }
-//     );
-// });
 

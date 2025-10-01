@@ -1,33 +1,68 @@
 .b-experience-wrap {
+		background-color: $color-white-transparent-70;
+		border-radius: 0 0 4px 4px;
 		display: flex;
 		flex-wrap: wrap;
-		background-color: $color-white-transparent-80;
+		// gap: 10px;
 		padding: 14px;
-		gap: 10px;
-		border-radius: 0 0 4px 4px;
 }
 
 .b-experience {
-		position: relative;
-		padding-left: 50px;
-		//flex-basis: calc(33% - 10px);
 		flex-grow: 1;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 60px;
+		flex-basis: calc(50% - 10px);
+		position: relative;
+		border-radius: 4px;
+		transition: all 0.3s ease-out;
+		&:hover {
+				background: linear-gradient(180deg, $white, transparent);
+				box-shadow: 0 -1px 1px 0 rgba($black, .15);
+		}
+
+		&:nth-child(odd) {
+				@include media-breakpoint-up(sm) {
+						text-align: right;
+						padding-right: 60px;
+						padding-left: 0;
+						&:before {
+								left: auto;
+								right: 10px;
+						}
+						&:after {
+								left: auto;
+								right: 14px;
+						}
+				}
+		}
+		@include media-breakpoint-down(sm){
+				flex-basis: 100%;
+		}
 
 		&:before {
-				left: 0;
+				align-items: center;
+				aspect-ratio: 1 / 1;
+				border-radius: var(--border-radius-circle);
 				color: $color-white;
+				display: flex;
 				font-size: 20px;
 				font-weight: bold;
-				display:flex;
-				align-items: center;
 				justify-content: center;
+				left: 10px;
 				opacity: 0.8;
-				width: 40px;
-				aspect-ratio: 1 / 1;
-				top: 50%;
-				transform: translateY(-50%);
-				border-radius: var(--border-radius-circle);
 				position: absolute;
+				top: calc(50% - 5px);
+				transform: translateY(-50%);
+				width: 40px;
+		}
+
+		&:after {
+				content: "years";
+				font-size: 12px;
+				left: 12px;
+				position: absolute;
+				top: calc(50% + 15px);
 		}
 
 		> li:first-child {
@@ -45,4 +80,24 @@
 				content: "#{$size}";
 				background-color: $color;
 		}
+		.b-experience:nth-child(#{$i}):after {
+				color: $color;
+		}
+		#experience:has(.b-experience:nth-child(#{$i}):hover) .b-experience-graphic__item:not(:nth-child(#{$i})) > .b-experience-graphic__graph  {
+				opacity: .2;
+				transition: opacity 0.5s ease-out;
+		}
+		#experience:has(.b-experience:nth-child(#{$i}):hover) .b-experience-graphic__item:nth-child(#{$i}) > .b-experience-graphic__graph  {
+				opacity: .8;
+		}
+		#experience:has(.b-experience:nth-child(#{$i}):hover) .b-experience-graphic__item:nth-child(#{$i})   {
+				width: 100% !important;
+				transition: width 0.5s ease-out;
+		}
 }
+
+
+
+
+
+
