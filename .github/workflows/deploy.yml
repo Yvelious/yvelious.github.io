@@ -27,13 +27,12 @@ jobs:
       - name: Build with version
         run: |
           npm run build
-          # Пример: вставляем версию в index.html
           sed -i "s|<!--VERSION-->|${VERSION}|g" dist/index.html
 
       - name: Deploy to repo-deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.DEPLOY_KEY }}
-          external_repository: Yvelious/gh-pages   # ← замени на свой
-          publish_branch: master                       # ← или gh-pages
+          external_repository: Yvelious/gh-pages
+          publish_branch: master
           publish_dir: ./dist
