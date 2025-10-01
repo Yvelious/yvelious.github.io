@@ -1,0 +1,39 @@
+name: Build and Deploy to GitHub Pages Repo
+
+on:
+  push:
+    tags:
+      - "prod-*"
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22
+
+      - run: npm ci
+
+      - name: Get version from tag
+        id: get_version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/prod-}" >> $GITHUB_ENV
+
+      - name: Build with version
+        run: |
+          npm run build
+          # Пример: вставляем версию в index.html
+          sed -i "s|<!--VERSION-->|${VERSION}|g" dist/index.html
+
+      - name: Deploy to repo-deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.DEPLOY_KEY }}
+          external_repository: Yvelious/gh-pages   # ← замени на свой
+          publish_branch: master                       # ← или gh-pages
+          publish_dir: ./dist
