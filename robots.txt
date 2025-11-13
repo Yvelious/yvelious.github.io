@@ -1,0 +1,21 @@
+User-agent: *
+# We allow content to be indexed
+Allow: /content/
+Allow: /notes/
+Allow: /ru/
+Allow: /en/
+Allow: /de/
+Allow: /assets/img/
+
+# We prohibit service directories
+Disallow: /drafts/
+Disallow: /scripts/
+Disallow: /node_modules/
+Disallow: /_layouts/
+Disallow: /_components/
+Disallow: /_assets/
+Disallow: /api/
+
+
+# Additionally: disable indexing of query parameters
+Clean-param: ?ref ?utm_source ?utm_medium ?utm_campaign
