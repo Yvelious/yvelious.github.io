@@ -15,7 +15,7 @@
 
             // Loading GTM when the browser "does nothing"
             if ("requestIdleCallback" in w) {
-                w.requestIdleCallback(loadGTM, { timeout: 500 });
+                w.requestIdleCallback(loadGTM, { timeout: 800 });
             } else {
                 w.addEventListener("load", loadGTM);
             }
