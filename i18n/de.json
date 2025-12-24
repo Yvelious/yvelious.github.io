@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über mich",
+    "experience": "Erfahrung",
+    "skills": "Kompetenzen",
+    "notes": "Notizen",
+    "contacts": "Kontakte",
+    "downloadCv": "Lebenslauf herunterladen"
+  },
+  "header": {
+    "title": "Frontend-Entwickler | Stanislav Levyshchev | Persönliche Seite",
+    "name": "Stanislav Levyshchev",
+    "specialization": "Frontend Entwickler",
+    "experienceYears": "10+ Jahre Erfahrung"
+  },
+  "about": {
+    "heading": "Über mich",
+    "personalInfo": "Persönliche Informationen",
+    "name": "Name:",
+    "nameValue": "Stanislav Levyshchev",
+    "specializationLabel": "Spezialisierung:",
+    "specializationValue": "Frontend-Entwickler",
+    "experienceLabel": "Erfahrung:",
+    "experienceValue": "10+ Jahre",
+    "dob": "Geburtsdatum:",
+    "dobValue": "26. Februar 1983",
+    "location": "Ort:",
+    "locationValue": "Stuttgart, Deutschland",
+    "languages": "Sprachen:",
+    "languagesValue": "Deutsch (B1), Englisch (B1), Russisch (Muttersprache), Ukrainisch (Muttersprache)",
+    "summaryHeading": "Zusammenfassung",
+    "summaryText": "Ich bin ein erfahrener Frontend-Entwickler mit über 10 Jahren Erfahrung in der Erstellung hochwertiger, skalierbarer und nutzerorientierter Web-Anwendungen. Mein Schwerpunkt liegt auf React sowie modernem JavaScript, HTML5 und CSS3. Ich habe an Projekten von Start-ups bis Unternehmenssystemen gearbeitet und lege Wert auf saubere Architektur, Codequalität und UX.",
+    "goalsHeading": "Ziele & Prioritäten",
+    "goalsText": "Ich suche eine stabile, langfristige Position, in der ich meine Fähigkeiten einsetzen, mich gemeinsam mit dem Team weiterentwickeln und einen echten Beitrag leisten kann.",
+    "goalsList": {
+      "item0": "An spannenden und wirkungsvollen Projekten arbeiten",
+      "item1": "Langfristige Festanstellung",
+      "item2": "Wettbewerbsfähige Vergütung",
+      "item3": "Ständiges Lernen und Wissensaustausch"
+    }
+  },
+  "experience": {
+    "heading": "Erfahrung",
+    "timelineHeading": "Karriereverlauf",
+    "role": {
+      "item0": "Frontend Entwickler",
+      "item1": "Frontend Entwickler",
+      "item2": "Frontend Entwickler",
+      "item3": "Frontend Entwickler"
+    },
+    "years": "Jahre",
+    "hire_me": "Mich einstellen"
+  },
+  "skills": {
+    "heading": "Kompetenzen",
+    "text_view": "Text",
+    "graph_view": "Graph",
+    "coreHeading": "Kern-Webentwicklung",
+    "languages": "Programmiersprachen",
+    "frameworks": "Frameworks und Bibliotheken",
+    "stateMgmt": "State-Management",
+    "uiStyling": "UI & Styling",
+    "toolingHeading": "Tooling & Infrastruktur",
+    "infra": "Ökosystem & Infrastruktur",
+    "apiDataFetching": "API und Datenabruf",
+    "analyticsOptimization": "Analytics & Optimierung",
+    "pwaOffline": "PWA und Offline-Fähigkeiten",
+    "cloudInfrastructure": "Cloud und Infrastruktur",
+    "workflow": "Arbeitsablauf & Zusammenarbeit",
+    "buildTooling": "Build-Prozesse & Tools",
+    "testing": "Testen",
+    "ideTools": "IDE & Werkzeuge",
+    "graphicsTools": "UI/UX & Grafik",
+    "git": "Versionskontrolle",
+    "collaboration": "Tools für Zusammenarbeit",
+    "management": "Projektmanagement"
+  },
+  "contacts": {
+    "heading": "Kontakte",
+    "text": {
+      "item0": "Suchen Sie einen erfahrenen Frontend-Entwickler mit starken UI/UX-Fähigkeiten? Glückwunsch – Sie haben ihn gefunden. Lassen Sie uns verbinden!",
+      "item1": "Haben Sie meinen Lebenslauf noch nicht angeschaut?"
+    }
+  },
+  "footer": { "text": "© 2025 Entworfen und entwickelt von mir mit Liebe." },
+  "download_cv": "Lebenslauf"
+}

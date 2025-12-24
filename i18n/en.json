@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "notes": "Notes",
+    "contacts": "Contacts",
+    "downloadCv": "Download CV"
+  },
+  "header": {
+    "title": "Frontend Developer | Stanislav Levyshchev | Personal Site",
+    "name": "Stanislav Levyshchev",
+    "specialization": "Frontend Developer",
+    "experienceYears": "10+ years experience"
+  },
+  "about": {
+    "heading": "About Me",
+    "personalInfo": "Personal Information",
+    "name": "Name:",
+    "nameValue": "Stanislav Levyshchev",
+    "specializationLabel": "Specialization",
+    "specializationValue": "Frontend Developer",
+    "experienceLabel": "Experience:",
+    "experienceValue": "10+ years",
+    "dob": "Date of Birth:",
+    "dobValue": "February 26, 1983",
+    "location": "Location:",
+    "locationValue": "Stuttgart, Germany",
+    "languages": "Languages:",
+    "languagesValue": "German (B1), English (B1), Russian (native), Ukrainian (native)",
+    "summaryHeading": "Summary",
+    "summaryText": "I am an experienced frontend developer with 10+ years of experience building scalable and user-friendly web applications. My main focus is React, modern JavaScript, HTML5, CSS3, and responsive, high-performance design. I have worked on a wide range of projects — from startups to enterprise systems — with strong attention to clean architecture, code quality, and UX.",
+    "goalsHeading": "Goals & Priorities",
+    "goalsList": {
+    "item0": "Work on challenging and impactful projects",
+    "item1": "Long-term stable employment",
+    "item2": "Competitive salary",
+    "item3": "Continuous learning and knowledge sharing"
+  },
+    "goalsText": "I'm looking for a stable, long-term role where I can apply my skills, grow with the team, and make a real impact."
+  },
+  "experience": {
+    "heading": "Experience",
+    "timelineHeading": "Career Path",
+    "role": {
+      "item0": "Frontend Developer",
+      "item1": "Frontend Developer",
+      "item2": "Frontend Developer",
+      "item3": "Frontend Developer"
+    },
+    "years": "years",
+    "hire_me": "Hire Me"
+  },
+  "skills": {
+    "heading": "Skills",
+    "text_view": "Text view",
+    "graph_view": "Graph view",
+    "coreHeading": "Core Web Development",
+    "languages": "Languages",
+    "frameworks": "Frameworks & Libraries",
+    "stateMgmt": "State Management",
+    "uiStyling": "UI & Styling",
+    "toolingHeading": "Tooling & Infrastructure",
+    "infra": "Ecosystem & Infrastructure",
+    "apiDataFetching": "API & Data Fetching",
+    "analyticsOptimization": "Analytics & Optimization",
+    "pwaOffline": "PWA & Offline Capabilities",
+    "cloudInfrastructure": "Cloud & Infrastructure",
+    "workflow": "Workflow & Collaboration",
+    "buildTooling": "Build & Tooling",
+    "testing": "Testing",
+    "ideTools": "IDEs & Utilities",
+    "graphicsTools": "UI/UX & Graphics",
+    "git": "Version Control",
+    "collaboration": "Collaboration Tools",
+    "management": "Project Management"
+  },
+  "contacts": {
+    "heading": "Contacts",
+    "text": {
+      "item0": "Looking for an experienced frontend developer with strong UI/UX skills? You found him! Let's connect.",
+      "item1": "Have you not seen my CV yet?"
+    }
+  },
+  "footer": { "text": "© 2025 Designed and developed by me with love." },
+  "download_cv": "Download CV"
+}
