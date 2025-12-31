@@ -30,7 +30,10 @@
     "languages": "Languages:",
     "languagesValue": "German (B1), English (B1), Russian (native), Ukrainian (native)",
     "summaryHeading": "Summary",
-    "summaryText": "I am an experienced frontend developer with 10+ years of experience building scalable and user-friendly web applications. My main focus is React, modern JavaScript, HTML5, CSS3, and responsive, high-performance design. I have worked on a wide range of projects — from startups to enterprise systems — with strong attention to clean architecture, code quality, and UX.",
+    "summaryText": {
+      "item0":"I'm a seasoned Frontend Developer with over 10 years of experience building high-quality, scalable, and user-centric websites and web services. My main expertise lies in React, and I have a strong background in modern JavaScript, HTML5, CSS3, and responsive design.",
+      "item1":"Throughout my career, I've worked on a wide range of projects — from startups to enterprise systems — always focusing on clean code, maintainable architecture, and excellent user experience. I thrive in collaborative environments and continuously seek out new technologies and best practices to improve my skills."
+    },
     "goalsHeading": "Goals & Priorities",
     "goalsList": {
     "item0": "Work on challenging and impactful projects",
