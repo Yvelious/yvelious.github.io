@@ -76,6 +76,9 @@
     "collaboration": "Инструменты для командной работы",
     "management": "Управление проектами"
   },
+  "notes": {
+    "heading": "Заметки"
+  },
   "contacts": {
     "heading": "Контакты",
     "text": {

@@ -76,6 +76,9 @@
     "collaboration": "Collaboration Tools",
     "management": "Project Management"
   },
+  "notes": {
+    "heading": "Notes"
+  },
   "contacts": {
     "heading": "Contacts",
     "text": {

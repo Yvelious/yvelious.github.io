@@ -1,0 +1,380 @@
+{
+  "de/BASH/bash-zamena-simvolicheskikh-ssylok-iskhodnymi-faylam": {
+    "filePath": "de/BASH/bash-zamena-simvolicheskikh-ssylok-iskhodnymi-faylam",
+    "title": "Ersetzen von symbolischen Links durch die ursprünglichen Dateien",
+    "tags": [
+      "bash",
+      "symlinks"
+    ]
+  },
+  "de/CSS/bootstrap-utility-api-i-utility-klassy-v-bootstrap": {
+    "filePath": "de/CSS/bootstrap-utility-api-i-utility-klassy-v-bootstrap",
+    "title": "Utility API und Utility-Klassen in Bootstrap 5",
+    "tags": [
+      "bootstrap",
+      "scss",
+      "utility"
+    ]
+  },
+  "de/CSS/css-stacking-context": {
+    "filePath": "de/CSS/css-stacking-context",
+    "title": "Stacking context in CSS",
+    "tags": [
+      "compositing_layers",
+      "stacking_context"
+    ]
+  },
+  "de/CSS/css-icpol-zovaniya-psedolkasa-has-v-sss": {
+    "filePath": "de/CSS/css-icpol-zovaniya-psedolkasa-has-v-sss",
+    "title": "Verwendung von :has() in CSS",
+    "tags": [
+      "css"
+    ]
+  },
+  "de/DevOps/mac-kak-podklyuchit-sya-k-ekranu-drugogo-komp-yutera-s-macos-cherez-vnc-v-lokal-noy-seti": {
+    "filePath": "de/DevOps/mac-kak-podklyuchit-sya-k-ekranu-drugogo-komp-yutera-s-macos-cherez-vnc-v-lokal-noy-seti",
+    "title": "So verbinden Sie sich mit dem Bildschirm eines anderen Computers, der unter macOS läuft, über VNC im lokalen Netzwerk",
+    "tags": [
+      "macos"
+    ]
+  },
+  "de/DevOps/mac-kak-ustanovit-ssh-soedinenie-mezhdu-dvumya-komp-yuterami-pod-upravleniem-macos-v-lokal-noy-seti": {
+    "filePath": "de/DevOps/mac-kak-ustanovit-ssh-soedinenie-mezhdu-dvumya-komp-yuterami-pod-upravleniem-macos-v-lokal-noy-seti",
+    "title": "So stellen Sie eine SSH-Verbindung zwischen zwei Computern mit macOS im lokalen Netzwerk her",
+    "tags": [
+      "macos",
+      "ssh"
+    ]
+  },
+  "de/DevOps/mac-montirovanie-papok-po-sshfs-mezhdu-dvumya-komp-yuterami-s-operatsionnoy-sistemoy-macos-v-lokal-noy-seti": {
+    "filePath": "de/DevOps/mac-montirovanie-papok-po-sshfs-mezhdu-dvumya-komp-yuterami-s-operatsionnoy-sistemoy-macos-v-lokal-noy-seti",
+    "title": "Ordner über SSHFS zwischen zwei Computern mit MacOS im lokalen Netzwerk einbinden",
+    "tags": [
+      "macos",
+      "sshfs"
+    ]
+  },
+  "de/DevOps/utils-pm2-menedzher-protsessov-dlya-nodejs": {
+    "filePath": "de/DevOps/utils-pm2-menedzher-protsessov-dlya-nodejs",
+    "title": "PM2 Prozessmanager für NodeJs",
+    "tags": [
+      "pm2",
+      "utils",
+      "devops"
+    ]
+  },
+  "de/DevOps/utils-upravlenie-neskol-kimi-versiyami-nodejs-ispol-zuya-nvm": {
+    "filePath": "de/DevOps/utils-upravlenie-neskol-kimi-versiyami-nodejs-ispol-zuya-nvm",
+    "title": "Verwenden von NVM zur Installation und zum Wechseln zwischen verschiedenen NodeJS-Versionen",
+    "tags": [
+      "utils",
+      "nvm",
+      "node"
+    ]
+  },
+  "de/GIT/git-nastroyka-ignorirovaniya-faylov-v-git": {
+    "filePath": "de/GIT/git-nastroyka-ignorirovaniya-faylov-v-git",
+    "title": "Konfiguration der Dateiausblendung in Git",
+    "tags": [
+      "git",
+      "gitignore"
+    ]
+  },
+  "de/GIT/git-raznitsa-mezhdu-git-add": {
+    "filePath": "de/GIT/git-raznitsa-mezhdu-git-add",
+    "title": "Unterschied zwischen \"git add .\" und \"git add -A\"",
+    "tags": [
+      "git",
+      "git_add"
+    ]
+  },
+  "de/GIT/git-razreshenie-konfliktov-v-git-s-pomoshch-yu-prinyatiya-vsekh-izmeneniy-odnoy-iz-storon": {
+    "filePath": "de/GIT/git-razreshenie-konfliktov-v-git-s-pomoshch-yu-prinyatiya-vsekh-izmeneniy-odnoy-iz-storon",
+    "title": "Konfliktlösungen in GIT durch Annahme aller Änderungen einer Seite",
+    "tags": [
+      "git"
+    ]
+  },
+  "de/JavaScript/responsive-kak-ispol-zovat-css-breakpoints-v-javascript-bez-dublirovaniya": {
+    "filePath": "de/JavaScript/responsive-kak-ispol-zovat-css-breakpoints-v-javascript-bez-dublirovaniya",
+    "title": "Wie man CSS Breakpoints in JavaScript ohne Duplikate verwendet",
+    "tags": [
+      "responsive",
+      "js",
+      "media_queries"
+    ]
+  },
+  "de/Webpack/webpack-raznitsa-mezhdu-flagami-node-env-i-mode-pri-zapuske-webpack-i-s-chem-ikh-edyat": {
+    "filePath": "de/Webpack/webpack-raznitsa-mezhdu-flagami-node-env-i-mode-pri-zapuske-webpack-i-s-chem-ikh-edyat",
+    "title": "Verständnis der Flags --mode und --node-env beim Start von Webpack",
+    "tags": [
+      "webpack"
+    ]
+  },
+  "de/Workflow/jira-tsikl-zhizni-zadachi": {
+    "filePath": "de/Workflow/jira-tsikl-zhizni-zadachi",
+    "title": "Lebenszyklus einer Aufgabe",
+    "tags": [
+      "jira",
+      "workflow",
+      "management"
+    ]
+  },
+  "de/index": {
+    "filePath": "de/index",
+    "title": "Willkommen in meinen Entwickler-Notizen",
+    "tags": []
+  },
+  "en/BASH/bash-zamena-simvolicheskikh-ssylok-iskhodnymi-faylam": {
+    "filePath": "en/BASH/bash-zamena-simvolicheskikh-ssylok-iskhodnymi-faylam",
+    "title": "Replacing Symbolic Links with Original Files",
+    "tags": [
+      "bash",
+      "symlinks"
+    ]
+  },
+  "en/CSS/bootstrap-utility-api-i-utility-klassy-v-bootstrap": {
+    "filePath": "en/CSS/bootstrap-utility-api-i-utility-klassy-v-bootstrap",
+    "title": "Utility API and Utility Classes in Bootstrap 5",
+    "tags": [
+      "bootstrap",
+      "scss",
+      "utility"
+    ]
+  },
+  "en/CSS/css-stacking-context": {
+    "filePath": "en/CSS/css-stacking-context",
+    "title": "Stacking context in CSS",
+    "tags": [
+      "compositing_layers",
+      "stacking_context"
+    ]
+  },
+  "en/CSS/css-icpol-zovaniya-psedolkasa-has-v-sss": {
+    "filePath": "en/CSS/css-icpol-zovaniya-psedolkasa-has-v-sss",
+    "title": "Usage of the `:has()` Pseudo-Class in CSS",
+    "tags": [
+      "css"
+    ]
+  },
+  "en/DevOps/mac-kak-podklyuchit-sya-k-ekranu-drugogo-komp-yutera-s-macos-cherez-vnc-v-lokal-noy-seti": {
+    "filePath": "en/DevOps/mac-kak-podklyuchit-sya-k-ekranu-drugogo-komp-yutera-s-macos-cherez-vnc-v-lokal-noy-seti",
+    "title": "How to connect to the screen of another computer running macOS via VNC on the local network",
+    "tags": [
+      "macos"
+    ]
+  },
+  "en/DevOps/mac-kak-ustanovit-ssh-soedinenie-mezhdu-dvumya-komp-yuterami-pod-upravleniem-macos-v-lokal-noy-seti": {
+    "filePath": "en/DevOps/mac-kak-ustanovit-ssh-soedinenie-mezhdu-dvumya-komp-yuterami-pod-upravleniem-macos-v-lokal-noy-seti",
+    "title": "How to Set Up an SSH Connection Between Two macOS Computers on a Local Network",
+    "tags": [
+      "macos",
+      "ssh"
+    ]
+  },
+  "en/DevOps/mac-montirovanie-papok-po-sshfs-mezhdu-dvumya-komp-yuterami-s-operatsionnoy-sistemoy-macos-v-lokal-noy-seti": {
+    "filePath": "en/DevOps/mac-montirovanie-papok-po-sshfs-mezhdu-dvumya-komp-yuterami-s-operatsionnoy-sistemoy-macos-v-lokal-noy-seti",
+    "title": "Mounting Folders via SSHFS Between Two macOS Computers on a Local Network",
+    "tags": [
+      "macos",
+      "sshfs"
+    ]
+  },
+  "en/DevOps/utils-pm2-menedzher-protsessov-dlya-nodejs": {
+    "filePath": "en/DevOps/utils-pm2-menedzher-protsessov-dlya-nodejs",
+    "title": "PM2 Process Manager for NodeJs",
+    "tags": [
+      "pm2",
+      "utils",
+      "devops"
+    ]
+  },
+  "en/DevOps/utils-upravlenie-neskol-kimi-versiyami-nodejs-ispol-zuya-nvm": {
+    "filePath": "en/DevOps/utils-upravlenie-neskol-kimi-versiyami-nodejs-ispol-zuya-nvm",
+    "title": "Using NVM to Install and Switch Between Different NodeJS Versions",
+    "tags": [
+      "utils",
+      "nvm",
+      "node"
+    ]
+  },
+  "en/GIT/git-nastroyka-ignorirovaniya-faylov-v-git": {
+    "filePath": "en/GIT/git-nastroyka-ignorirovaniya-faylov-v-git",
+    "title": "Configuring File Ignoring in Git",
+    "tags": [
+      "git",
+      "gitignore"
+    ]
+  },
+  "en/GIT/git-raznitsa-mezhdu-git-add": {
+    "filePath": "en/GIT/git-raznitsa-mezhdu-git-add",
+    "title": "Difference between \"git add\" . and \"git add -A\"",
+    "tags": [
+      "git",
+      "git_add"
+    ]
+  },
+  "en/GIT/git-razreshenie-konfliktov-v-git-s-pomoshch-yu-prinyatiya-vsekh-izmeneniy-odnoy-iz-storon": {
+    "filePath": "en/GIT/git-razreshenie-konfliktov-v-git-s-pomoshch-yu-prinyatiya-vsekh-izmeneniy-odnoy-iz-storon",
+    "title": "Resolving Conflicts in GIT by Taking All Changes from One Side",
+    "tags": [
+      "git"
+    ]
+  },
+  "en/JavaScript/responsive-kak-ispol-zovat-css-breakpoints-v-javascript-bez-dublirovaniya": {
+    "filePath": "en/JavaScript/responsive-kak-ispol-zovat-css-breakpoints-v-javascript-bez-dublirovaniya",
+    "title": "How to Use CSS Breakpoints in JavaScript Without Duplication",
+    "tags": [
+      "responsive",
+      "js",
+      "media_queries"
+    ]
+  },
+  "en/Webpack/webpack-raznitsa-mezhdu-flagami-node-env-i-mode-pri-zapuske-webpack-i-s-chem-ikh-edyat": {
+    "filePath": "en/Webpack/webpack-raznitsa-mezhdu-flagami-node-env-i-mode-pri-zapuske-webpack-i-s-chem-ikh-edyat",
+    "title": "Understanding the --mode and --node-env Flags When Starting Webpack",
+    "tags": [
+      "webpack"
+    ]
+  },
+  "en/Workflow/jira-tsikl-zhizni-zadachi": {
+    "filePath": "en/Workflow/jira-tsikl-zhizni-zadachi",
+    "title": "Task Life Cycle",
+    "tags": [
+      "jira",
+      "workflow",
+      "management"
+    ]
+  },
+  "en/index": {
+    "filePath": "en/index",
+    "title": "Welcome to my Dev Notes",
+    "tags": []
+  },
+  "index": {
+    "filePath": "index",
+    "title": "Welcome to my Dev Notes",
+    "tags": []
+  },
+  "ru/BASH/bash-zamena-simvolicheskikh-ssylok-iskhodnymi-faylam": {
+    "filePath": "ru/BASH/bash-zamena-simvolicheskikh-ssylok-iskhodnymi-faylam",
+    "title": "Замена символических ссылок исходными файлам",
+    "tags": [
+      "bash",
+      "symlinks"
+    ]
+  },
+  "ru/CSS/bootstrap-utility-api-i-utility-klassy-v-bootstrap": {
+    "filePath": "ru/CSS/bootstrap-utility-api-i-utility-klassy-v-bootstrap",
+    "title": "Utility API и Utility-классы в Bootstrap 5",
+    "tags": [
+      "bootstrap",
+      "scss",
+      "utility"
+    ]
+  },
+  "ru/CSS/css-stacking-context": {
+    "filePath": "ru/CSS/css-stacking-context",
+    "title": "Stacking context in CSS",
+    "tags": [
+      "compositing_layers",
+      "stacking_context"
+    ]
+  },
+  "ru/CSS/css-icpol-zovaniya-psedolkasa-has-v-sss": {
+    "filePath": "ru/CSS/css-icpol-zovaniya-psedolkasa-has-v-sss",
+    "title": "Иcпользования пседолкаса has в СSS",
+    "tags": [
+      "css"
+    ]
+  },
+  "ru/DevOps/mac-kak-podklyuchit-sya-k-ekranu-drugogo-komp-yutera-s-macos-cherez-vnc-v-lokal-noy-seti": {
+    "filePath": "ru/DevOps/mac-kak-podklyuchit-sya-k-ekranu-drugogo-komp-yutera-s-macos-cherez-vnc-v-lokal-noy-seti",
+    "title": "Как подключиться к экрану другого компьютера под управлением macOS через VNC в локальной сети",
+    "tags": [
+      "macos"
+    ]
+  },
+  "ru/DevOps/mac-kak-ustanovit-ssh-soedinenie-mezhdu-dvumya-komp-yuterami-pod-upravleniem-macos-v-lokal-noy-seti": {
+    "filePath": "ru/DevOps/mac-kak-ustanovit-ssh-soedinenie-mezhdu-dvumya-komp-yuterami-pod-upravleniem-macos-v-lokal-noy-seti",
+    "title": "Как установить SSH-соединение между двумя компьютерами  под управлением macOS в локальной сети",
+    "tags": [
+      "macos",
+      "ssh"
+    ]
+  },
+  "ru/DevOps/mac-montirovanie-papok-po-sshfs-mezhdu-dvumya-komp-yuterami-s-operatsionnoy-sistemoy-macos-v-lokal-noy-seti": {
+    "filePath": "ru/DevOps/mac-montirovanie-papok-po-sshfs-mezhdu-dvumya-komp-yuterami-s-operatsionnoy-sistemoy-macos-v-lokal-noy-seti",
+    "title": "Монтирование папок по SSHFS между двумя компьютерами с операционной системой MacOS в локальной сети",
+    "tags": [
+      "macos",
+      "sshfs"
+    ]
+  },
+  "ru/DevOps/utils-pm2-menedzher-protsessov-dlya-nodejs": {
+    "filePath": "ru/DevOps/utils-pm2-menedzher-protsessov-dlya-nodejs",
+    "title": "PM2 менеджер процессов для NodeJs",
+    "tags": [
+      "pm2",
+      "utils",
+      "devops"
+    ]
+  },
+  "ru/DevOps/utils-upravlenie-neskol-kimi-versiyami-nodejs-ispol-zuya-nvm": {
+    "filePath": "ru/DevOps/utils-upravlenie-neskol-kimi-versiyami-nodejs-ispol-zuya-nvm",
+    "title": "Используем NVM для установки и переключения между разными версиям NodeJS",
+    "tags": [
+      "utils",
+      "nvm",
+      "node"
+    ]
+  },
+  "ru/GIT/git-nastroyka-ignorirovaniya-faylov-v-git": {
+    "filePath": "ru/GIT/git-nastroyka-ignorirovaniya-faylov-v-git",
+    "title": "Настройка игнорирования файлов в Git",
+    "tags": [
+      "git",
+      "gitignore"
+    ]
+  },
+  "ru/GIT/git-raznitsa-mezhdu-git-add": {
+    "filePath": "ru/GIT/git-raznitsa-mezhdu-git-add",
+    "title": "Разница между git add. и git add -A",
+    "tags": [
+      "git",
+      "git_add"
+    ]
+  },
+  "ru/GIT/git-razreshenie-konfliktov-v-git-s-pomoshch-yu-prinyatiya-vsekh-izmeneniy-odnoy-iz-storon": {
+    "filePath": "ru/GIT/git-razreshenie-konfliktov-v-git-s-pomoshch-yu-prinyatiya-vsekh-izmeneniy-odnoy-iz-storon",
+    "title": "Разрешение конфликтов в GIT с помощью принятия всех изменений одной из сторон",
+    "tags": [
+      "git"
+    ]
+  },
+  "ru/JavaScript/responsive-kak-ispol-zovat-css-breakpoints-v-javascript-bez-dublirovaniya": {
+    "filePath": "ru/JavaScript/responsive-kak-ispol-zovat-css-breakpoints-v-javascript-bez-dublirovaniya",
+    "title": "Как использовать CSS breakpoints в JavaScript без дублирования",
+    "tags": [
+      "responsive",
+      "js",
+      "media_queries"
+    ]
+  },
+  "ru/Webpack/webpack-raznitsa-mezhdu-flagami-node-env-i-mode-pri-zapuske-webpack-i-s-chem-ikh-edyat": {
+    "filePath": "ru/Webpack/webpack-raznitsa-mezhdu-flagami-node-env-i-mode-pri-zapuske-webpack-i-s-chem-ikh-edyat",
+    "title": "Разбираемся с флагами --mode и --node-env при запуске Webpack",
+    "tags": [
+      "webpack"
+    ]
+  },
+  "ru/Workflow/jira-tsikl-zhizni-zadachi": {
+    "filePath": "ru/Workflow/jira-tsikl-zhizni-zadachi",
+    "title": "Цикл жизни задачи",
+    "tags": [
+      "jira",
+      "workflow",
+      "management"
+    ]
+  }
+}
