@@ -31,6 +31,14 @@
       "css"
     ]
   },
+  "de/DevOps/githubaction-prosmotr-statusov-vypolneniya-github-actions-cherez-terminal": {
+    "filePath": "de/DevOps/githubaction-prosmotr-statusov-vypolneniya-github-actions-cherez-terminal",
+    "title": "Überwachung des Status von GitHub Actions über das Terminal",
+    "tags": [
+      "git",
+      "ci"
+    ]
+  },
   "de/DevOps/mac-kak-podklyuchit-sya-k-ekranu-drugogo-komp-yutera-s-macos-cherez-vnc-v-lokal-noy-seti": {
     "filePath": "de/DevOps/mac-kak-podklyuchit-sya-k-ekranu-drugogo-komp-yutera-s-macos-cherez-vnc-v-lokal-noy-seti",
     "title": "So verbinden Sie sich mit dem Bildschirm eines anderen Computers, der unter macOS läuft, über VNC im lokalen Netzwerk",
@@ -155,6 +163,14 @@
     "title": "Usage of the `:has()` Pseudo-Class in CSS",
     "tags": [
       "css"
+    ]
+  },
+  "en/DevOps/githubaction-prosmotr-statusov-vypolneniya-github-actions-cherez-terminal": {
+    "filePath": "en/DevOps/githubaction-prosmotr-statusov-vypolneniya-github-actions-cherez-terminal",
+    "title": "Viewing GitHub Actions Execution Status via Terminal",
+    "tags": [
+      "git",
+      "ci"
     ]
   },
   "en/DevOps/mac-kak-podklyuchit-sya-k-ekranu-drugogo-komp-yutera-s-macos-cherez-vnc-v-lokal-noy-seti": {
@@ -286,6 +302,14 @@
     "title": "Иcпользования пседолкаса has в СSS",
     "tags": [
       "css"
+    ]
+  },
+  "ru/DevOps/githubaction-prosmotr-statusov-vypolneniya-github-actions-cherez-terminal": {
+    "filePath": "ru/DevOps/githubaction-prosmotr-statusov-vypolneniya-github-actions-cherez-terminal",
+    "title": "Просмотр статусов выполнения GitHub Actions через терминал",
+    "tags": [
+      "git",
+      "ci"
     ]
   },
   "ru/DevOps/mac-kak-podklyuchit-sya-k-ekranu-drugogo-komp-yutera-s-macos-cherez-vnc-v-lokal-noy-seti": {
