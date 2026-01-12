@@ -1,7 +1,409 @@
 {
+  "de/BASH/bash-zamena-simvolicheskikh-ssylok-iskhodnymi-faylam": {
+    "filePath": "de/BASH/bash-zamena-simvolicheskikh-ssylok-iskhodnymi-faylam",
+    "title": "Ersetzen von symbolischen Links durch Originaldateien",
+    "tags": [
+      "bash",
+      "symlinks"
+    ]
+  },
+  "de/CSS/bootstrap-utility-api-i-utility-klassy-v-bootstrap": {
+    "filePath": "de/CSS/bootstrap-utility-api-i-utility-klassy-v-bootstrap",
+    "title": "Utility API und Utility-Klassen in Bootstrap 5",
+    "tags": [
+      "bootstrap",
+      "scss",
+      "utility"
+    ]
+  },
+  "de/CSS/css-stacking-context": {
+    "filePath": "de/CSS/css-stacking-context",
+    "title": "Stacking context in CSS",
+    "tags": [
+      "compositing_layers",
+      "stacking_context"
+    ]
+  },
+  "de/DevOps/githubaction-kak-nastroit-posledovatel-nyy-zapusk-workflow-v-github-actions": {
+    "filePath": "de/DevOps/githubaction-kak-nastroit-posledovatel-nyy-zapusk-workflow-v-github-actions",
+    "title": "So richten Sie die sequenzielle Ausführung von Workflows in GitHub Actions ein",
+    "tags": [
+      "ci",
+      "git",
+      "githubaction"
+    ]
+  },
+  "de/DevOps/githubaction-prosmotr-statusov-vypolneniya-github-actions-cherez-terminal": {
+    "filePath": "de/DevOps/githubaction-prosmotr-statusov-vypolneniya-github-actions-cherez-terminal",
+    "title": "Überwachung der Ausführungsstatus von GitHub Actions über das Terminal",
+    "tags": [
+      "git",
+      "ci"
+    ]
+  },
+  "de/DevOps/mac-kak-podklyuchit-sya-k-ekranu-drugogo-komp-yutera-s-macos-cherez-vnc-v-lokal-noy-seti": {
+    "filePath": "de/DevOps/mac-kak-podklyuchit-sya-k-ekranu-drugogo-komp-yutera-s-macos-cherez-vnc-v-lokal-noy-seti",
+    "title": "Wie man sich über VNC mit dem Bildschirm eines anderen Computers unter macOS im lokalen Netzwerk verbindet",
+    "tags": [
+      "macos"
+    ]
+  },
+  "de/DevOps/mac-kak-ustanovit-ssh-soedinenie-mezhdu-dvumya-komp-yuterami-pod-upravleniem-macos-v-lokal-noy-seti": {
+    "filePath": "de/DevOps/mac-kak-ustanovit-ssh-soedinenie-mezhdu-dvumya-komp-yuterami-pod-upravleniem-macos-v-lokal-noy-seti",
+    "title": "Wie man eine SSH-Verbindung zwischen zwei Macs im lokalen Netzwerk einrichtet",
+    "tags": [
+      "macos",
+      "ssh"
+    ]
+  },
+  "de/DevOps/mac-montirovanie-papok-po-sshfs-mezhdu-dvumya-komp-yuterami-s-operatsionnoy-sistemoy-macos-v-lokal-noy-seti": {
+    "filePath": "de/DevOps/mac-montirovanie-papok-po-sshfs-mezhdu-dvumya-komp-yuterami-s-operatsionnoy-sistemoy-macos-v-lokal-noy-seti",
+    "title": "Mounting folders over SSHFS between two computers with MacOS in a local network",
+    "tags": [
+      "macos",
+      "sshfs"
+    ]
+  },
+  "de/DevOps/utils-pm2-menedzher-protsessov-dlya-nodejs": {
+    "filePath": "de/DevOps/utils-pm2-menedzher-protsessov-dlya-nodejs",
+    "title": "PM2 Prozessmanager für NodeJs",
+    "tags": [
+      "pm2",
+      "utilitäten",
+      "devops"
+    ]
+  },
+  "de/DevOps/utils-upravlenie-neskol-kimi-versiyami-nodejs-ispol-zuya-nvm": {
+    "filePath": "de/DevOps/utils-upravlenie-neskol-kimi-versiyami-nodejs-ispol-zuya-nvm",
+    "title": "Verwenden von NVM zur Installation und zum Wechsel zwischen verschiedenen NodeJS-Versionen",
+    "tags": [
+      "utils",
+      "nvm",
+      "node"
+    ]
+  },
+  "de/GIT/git-nastroyka-ignorirovaniya-faylov-v-git": {
+    "filePath": "de/GIT/git-nastroyka-ignorirovaniya-faylov-v-git",
+    "title": "Konfiguration der Dateiausblendung in Git",
+    "tags": [
+      "git",
+      "gitignore"
+    ]
+  },
+  "de/GIT/git-raznitsa-mezhdu-git-add": {
+    "filePath": "de/GIT/git-raznitsa-mezhdu-git-add",
+    "title": "Unterschied zwischen \"git add .\" und \"git add -A\"",
+    "tags": [
+      "git",
+      "git_add"
+    ]
+  },
+  "de/GIT/git-razreshenie-konfliktov-v-git-s-pomoshch-yu-prinyatiya-vsekh-izmeneniy-odnoy-iz-storon": {
+    "filePath": "de/GIT/git-razreshenie-konfliktov-v-git-s-pomoshch-yu-prinyatiya-vsekh-izmeneniy-odnoy-iz-storon",
+    "title": "Behebung von Konflikten in GIT durch Annahme aller Änderungen einer Seite",
+    "tags": [
+      "git"
+    ]
+  },
+  "de/JavaScript/responsive-kak-ispol-zovat-css-breakpoints-v-javascript-bez-dublirovaniya": {
+    "filePath": "de/JavaScript/responsive-kak-ispol-zovat-css-breakpoints-v-javascript-bez-dublirovaniya",
+    "title": "So verwenden Sie CSS-Breakpoints in JavaScript ohne Duplizierung",
+    "tags": [
+      "responsive",
+      "js",
+      "media_queries"
+    ]
+  },
+  "de/Webpack/webpack-raznitsa-mezhdu-flagami-node-env-i-mode-pri-zapuske-webpack-i-s-chem-ikh-edyat": {
+    "filePath": "de/Webpack/webpack-raznitsa-mezhdu-flagami-node-env-i-mode-pri-zapuske-webpack-i-s-chem-ikh-edyat",
+    "title": "Verstehen der Flags --mode und --node-env beim Start von Webpack",
+    "tags": [
+      "webpack"
+    ]
+  },
+  "de/Workflow/jira-tsikl-zhizni-zadachi": {
+    "filePath": "de/Workflow/jira-tsikl-zhizni-zadachi",
+    "title": "Lebenszyklus einer Aufgabe",
+    "tags": [
+      "jira",
+      "workflow",
+      "management"
+    ]
+  },
+  "en/BASH/bash-zamena-simvolicheskikh-ssylok-iskhodnymi-faylam": {
+    "filePath": "en/BASH/bash-zamena-simvolicheskikh-ssylok-iskhodnymi-faylam",
+    "title": "Replacing Symbolic Links with Original Files",
+    "tags": [
+      "bash",
+      "symlinks"
+    ]
+  },
+  "en/CSS/bootstrap-utility-api-i-utility-klassy-v-bootstrap": {
+    "filePath": "en/CSS/bootstrap-utility-api-i-utility-klassy-v-bootstrap",
+    "title": "Utility API and Utility Classes in Bootstrap 5",
+    "tags": [
+      "bootstrap",
+      "scss",
+      "utility"
+    ]
+  },
+  "en/CSS/css-stacking-context": {
+    "filePath": "en/CSS/css-stacking-context",
+    "title": "Stacking context in CSS",
+    "tags": [
+      "compositing_layers",
+      "stacking_context"
+    ]
+  },
+  "en/DevOps/githubaction-kak-nastroit-posledovatel-nyy-zapusk-workflow-v-github-actions": {
+    "filePath": "en/DevOps/githubaction-kak-nastroit-posledovatel-nyy-zapusk-workflow-v-github-actions",
+    "title": "How to Configure Sequential Execution of Workflows in GitHub Actions",
+    "tags": [
+      "ci",
+      "git",
+      "githubaction"
+    ]
+  },
+  "en/DevOps/githubaction-prosmotr-statusov-vypolneniya-github-actions-cherez-terminal": {
+    "filePath": "en/DevOps/githubaction-prosmotr-statusov-vypolneniya-github-actions-cherez-terminal",
+    "title": "Viewing GitHub Actions Execution Status via Terminal",
+    "tags": [
+      "git",
+      "ci"
+    ]
+  },
+  "en/DevOps/mac-kak-podklyuchit-sya-k-ekranu-drugogo-komp-yutera-s-macos-cherez-vnc-v-lokal-noy-seti": {
+    "filePath": "en/DevOps/mac-kak-podklyuchit-sya-k-ekranu-drugogo-komp-yutera-s-macos-cherez-vnc-v-lokal-noy-seti",
+    "title": "How to connect to the screen of another macOS computer via VNC on a local network",
+    "tags": [
+      "macos"
+    ]
+  },
+  "en/DevOps/mac-kak-ustanovit-ssh-soedinenie-mezhdu-dvumya-komp-yuterami-pod-upravleniem-macos-v-lokal-noy-seti": {
+    "filePath": "en/DevOps/mac-kak-ustanovit-ssh-soedinenie-mezhdu-dvumya-komp-yuterami-pod-upravleniem-macos-v-lokal-noy-seti",
+    "title": "How to Set Up an SSH Connection Between Two Computers Running macOS on a Local Network",
+    "tags": [
+      "macos",
+      "ssh"
+    ]
+  },
+  "en/DevOps/mac-montirovanie-papok-po-sshfs-mezhdu-dvumya-komp-yuterami-s-operatsionnoy-sistemoy-macos-v-lokal-noy-seti": {
+    "filePath": "en/DevOps/mac-montirovanie-papok-po-sshfs-mezhdu-dvumya-komp-yuterami-s-operatsionnoy-sistemoy-macos-v-lokal-noy-seti",
+    "title": "Mounting Folders via SSHFS Between Two macOS Computers in a Local Network",
+    "tags": [
+      "macos",
+      "sshfs"
+    ]
+  },
+  "en/DevOps/utils-pm2-menedzher-protsessov-dlya-nodejs": {
+    "filePath": "en/DevOps/utils-pm2-menedzher-protsessov-dlya-nodejs",
+    "title": "PM2 Process Manager for NodeJs",
+    "tags": [
+      "pm2",
+      "utils",
+      "devops"
+    ]
+  },
+  "en/DevOps/utils-upravlenie-neskol-kimi-versiyami-nodejs-ispol-zuya-nvm": {
+    "filePath": "en/DevOps/utils-upravlenie-neskol-kimi-versiyami-nodejs-ispol-zuya-nvm",
+    "title": "Using NVM for Installing and Switching Between Different NodeJS Versions",
+    "tags": [
+      "utils",
+      "nvm",
+      "node"
+    ]
+  },
+  "en/GIT/git-nastroyka-ignorirovaniya-faylov-v-git": {
+    "filePath": "en/GIT/git-nastroyka-ignorirovaniya-faylov-v-git",
+    "title": "Configuring File Ignoring in Git",
+    "tags": [
+      "git",
+      "gitignore"
+    ]
+  },
+  "en/GIT/git-raznitsa-mezhdu-git-add": {
+    "filePath": "en/GIT/git-raznitsa-mezhdu-git-add",
+    "title": "Difference between \"git add\" . and \"git add -A\"",
+    "tags": [
+      "git",
+      "git_add"
+    ]
+  },
+  "en/GIT/git-razreshenie-konfliktov-v-git-s-pomoshch-yu-prinyatiya-vsekh-izmeneniy-odnoy-iz-storon": {
+    "filePath": "en/GIT/git-razreshenie-konfliktov-v-git-s-pomoshch-yu-prinyatiya-vsekh-izmeneniy-odnoy-iz-storon",
+    "title": "Resolving Conflicts in GIT by Accepting All Changes from One Side",
+    "tags": [
+      "git"
+    ]
+  },
+  "en/JavaScript/responsive-kak-ispol-zovat-css-breakpoints-v-javascript-bez-dublirovaniya": {
+    "filePath": "en/JavaScript/responsive-kak-ispol-zovat-css-breakpoints-v-javascript-bez-dublirovaniya",
+    "title": "How to Use CSS Breakpoints in JavaScript Without Duplication",
+    "tags": [
+      "responsive",
+      "js",
+      "media_queries"
+    ]
+  },
+  "en/Webpack/webpack-raznitsa-mezhdu-flagami-node-env-i-mode-pri-zapuske-webpack-i-s-chem-ikh-edyat": {
+    "filePath": "en/Webpack/webpack-raznitsa-mezhdu-flagami-node-env-i-mode-pri-zapuske-webpack-i-s-chem-ikh-edyat",
+    "title": "Understanding the `--mode` and `--node-env` Flags When Launching Webpack",
+    "tags": [
+      "webpack"
+    ]
+  },
+  "en/Workflow/jira-tsikl-zhizni-zadachi": {
+    "filePath": "en/Workflow/jira-tsikl-zhizni-zadachi",
+    "title": "Task Life Cycle",
+    "tags": [
+      "jira",
+      "workflow",
+      "management"
+    ]
+  },
   "index": {
     "filePath": "index",
     "title": "Welcome to my Dev Notes",
+    "tags": []
+  },
+  "node_modules/@isaacs/balanced-match/license": {
+    "filePath": "node_modules/@isaacs/balanced-match/license",
+    "title": "LICENSE",
+    "tags": []
+  },
+  "node_modules/@isaacs/balanced-match/readme": {
+    "filePath": "node_modules/@isaacs/balanced-match/readme",
+    "title": "README",
+    "tags": []
+  },
+  "node_modules/@isaacs/brace-expansion/readme": {
+    "filePath": "node_modules/@isaacs/brace-expansion/readme",
+    "title": "README",
+    "tags": []
+  },
+  "node_modules/dotenv/changelog": {
+    "filePath": "node_modules/dotenv/changelog",
+    "title": "CHANGELOG",
+    "tags": []
+  },
+  "node_modules/dotenv/readme-es": {
+    "filePath": "node_modules/dotenv/readme-es",
+    "title": "README-es",
+    "tags": []
+  },
+  "node_modules/dotenv/readme": {
+    "filePath": "node_modules/dotenv/readme",
+    "title": "README",
+    "tags": []
+  },
+  "node_modules/dotenv/security": {
+    "filePath": "node_modules/dotenv/security",
+    "title": "SECURITY",
+    "tags": []
+  },
+  "node_modules/fs-extra/readme": {
+    "filePath": "node_modules/fs-extra/readme",
+    "title": "README",
+    "tags": []
+  },
+  "node_modules/glob/license": {
+    "filePath": "node_modules/glob/license",
+    "title": "LICENSE",
+    "tags": []
+  },
+  "node_modules/glob/readme": {
+    "filePath": "node_modules/glob/readme",
+    "title": "README",
+    "tags": []
+  },
+  "node_modules/graceful-fs/readme": {
+    "filePath": "node_modules/graceful-fs/readme",
+    "title": "README",
+    "tags": []
+  },
+  "node_modules/jsonfile/readme": {
+    "filePath": "node_modules/jsonfile/readme",
+    "title": "README",
+    "tags": []
+  },
+  "node_modules/lru-cache/license": {
+    "filePath": "node_modules/lru-cache/license",
+    "title": "LICENSE",
+    "tags": []
+  },
+  "node_modules/lru-cache/readme": {
+    "filePath": "node_modules/lru-cache/readme",
+    "title": "README",
+    "tags": []
+  },
+  "node_modules/minimatch/license": {
+    "filePath": "node_modules/minimatch/license",
+    "title": "LICENSE",
+    "tags": []
+  },
+  "node_modules/minimatch/readme": {
+    "filePath": "node_modules/minimatch/readme",
+    "title": "README",
+    "tags": []
+  },
+  "node_modules/minipass/readme": {
+    "filePath": "node_modules/minipass/readme",
+    "title": "README",
+    "tags": []
+  },
+  "node_modules/openai/changelog": {
+    "filePath": "node_modules/openai/changelog",
+    "title": "CHANGELOG",
+    "tags": []
+  },
+  "node_modules/openai/readme": {
+    "filePath": "node_modules/openai/readme",
+    "title": "README",
+    "tags": []
+  },
+  "node_modules/openai/src/_vendor/partial-json-parser/readme": {
+    "filePath": "node_modules/openai/src/_vendor/partial-json-parser/readme",
+    "title": "README",
+    "tags": []
+  },
+  "node_modules/openai/src/_vendor/zod-to-json-schema/readme": {
+    "filePath": "node_modules/openai/src/_vendor/zod-to-json-schema/readme",
+    "title": "README",
+    "tags": []
+  },
+  "node_modules/openai/src/core/readme": {
+    "filePath": "node_modules/openai/src/core/readme",
+    "title": "README",
+    "tags": []
+  },
+  "node_modules/openai/src/internal/readme": {
+    "filePath": "node_modules/openai/src/internal/readme",
+    "title": "README",
+    "tags": []
+  },
+  "node_modules/openai/src/internal/qs/license": {
+    "filePath": "node_modules/openai/src/internal/qs/license",
+    "title": "LICENSE",
+    "tags": []
+  },
+  "node_modules/openai/src/internal/qs/readme": {
+    "filePath": "node_modules/openai/src/internal/qs/readme",
+    "title": "README",
+    "tags": []
+  },
+  "node_modules/path-scurry/license": {
+    "filePath": "node_modules/path-scurry/license",
+    "title": "LICENSE",
+    "tags": []
+  },
+  "node_modules/path-scurry/readme": {
+    "filePath": "node_modules/path-scurry/readme",
+    "title": "README",
+    "tags": []
+  },
+  "node_modules/universalify/readme": {
+    "filePath": "node_modules/universalify/readme",
+    "title": "README",
     "tags": []
   },
   "ru/BASH/bash-zamena-simvolicheskikh-ssylok-iskhodnymi-faylam": {
@@ -29,9 +431,9 @@
       "stacking_context"
     ]
   },
-  "ru/CSS/css-icpol-zovaniya-psedolkasa-has-v-sss": {
-    "filePath": "ru/CSS/css-icpol-zovaniya-psedolkasa-has-v-sss",
-    "title": "Иcпользования пседолкаса has в СSS",
+  "ru/CSS/css-icpol-zovanie-psedolkasa-has-v-sss": {
+    "filePath": "ru/CSS/css-icpol-zovanie-psedolkasa-has-v-sss",
+    "title": "Иcпользование пседолкаса has в СSS",
     "tags": [
       "css"
     ]
@@ -42,7 +444,8 @@
     "tags": [
       "ci",
       "git",
-      "githubaction"
+      "githubaction",
+      "devops"
     ]
   },
   "ru/DevOps/githubaction-prosmotr-statusov-vypolneniya-github-actions-cherez-terminal": {
@@ -125,11 +528,6 @@
       "js",
       "media_queries"
     ]
-  },
-  "ru/TEST2/test-testiruem-stranitsu": {
-    "filePath": "ru/TEST2/test-testiruem-stranitsu",
-    "title": "~test~ тестируем страницу",
-    "tags": []
   },
   "ru/Webpack/webpack-raznitsa-mezhdu-flagami-node-env-i-mode-pri-zapuske-webpack-i-s-chem-ikh-edyat": {
     "filePath": "ru/Webpack/webpack-raznitsa-mezhdu-flagami-node-env-i-mode-pri-zapuske-webpack-i-s-chem-ikh-edyat",
