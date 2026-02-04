@@ -31,7 +31,7 @@
     "languagesValue": "Deutsch (B1), Englisch (B1), Russisch (Muttersprache), Ukrainisch (Muttersprache)",
     "summaryHeading": "Zusammenfassung",
     "summaryText": {
-      "item0": "Ich bin ein erfahrener Frontend-Entwickler mit über 10 Jahren Erfahrung in der Entwicklung hochwertiger, skalierbarer und benutzerzentrierter Websites und Web-Services. Mein Schwerpunkt liegt auf React, zudem verfüge ich über fundierte Kenntnisse in modernem JavaScript, HTML5, CSS3 sowie im Bereich Responsive Design.",
+      "item0": "Ich bin ein erfahrener <b>Frontend-Entwickler</b> mit über 10 Jahren Erfahrung in der Entwicklung hochwertiger, skalierbarer und benutzerzentrierter Websites und Web-Services. Mein Schwerpunkt liegt auf React, zudem verfüge ich über fundierte Kenntnisse in modernem JavaScript, HTML5, CSS3 sowie im Bereich Responsive Design.",
       "item1": "Im Laufe meiner Karriere habe ich an einer Vielzahl von Projekten gearbeitet — von Start-ups bis hin zu Enterprise-Systemen — und dabei stets großen Wert auf sauberen Code, wartbare Architekturen und eine exzellente User Experience gelegt. Ich arbeite gerne im Team und bilde mich kontinuierlich weiter, um neue Technologien und Best Practices zu erlernen und meine Fähigkeiten stetig zu verbessern."
     },
     "goalsHeading": "Ziele & Prioritäten",
@@ -90,5 +90,6 @@
     }
   },
   "footer": { "text": "© 2026 Entworfen und entwickelt von mir mit Liebe." },
-  "download_cv": "Lebenslauf"
+  "download_cv": "Lebenslauf",
+  "download_cv_href": "pdf/CV_Stanislav-Levyshchev_Frontend_DE.pdf"
 }

@@ -90,5 +90,7 @@
     }
   },
   "footer": { "text": "© 2026 Designed and developed by me with love." },
-  "download_cv": "Download CV"
+  "download_cv": "Download CV",
+  "download_cv_href": "pdf/CV_Stanislav-Levyshchev_Frontend_EN.pdf"
+
 }
